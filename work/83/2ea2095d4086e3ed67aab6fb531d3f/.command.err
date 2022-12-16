@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.002*1.72] collected minimizers
+[M::mm_idx_gen::0.003*2.14] sorted minimizers
+[M::main::0.003*2.13] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.003*2.05] mid_occ = 3
+[M::mm_idx_stat] kmer size: 14; skip: 5; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.003*2.00] distinct minimizers: 657 (99.85% are singletons); average occurrences: 1.002; average spacing: 2.951
+[M::worker_pipeline::0.005*2.06] mapped 5 sequences
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -ax splice -uf -k14 --secondary=no k12_16s_88_extended.fa native_2_16s.fastq
+[M::main] Real time: 0.005 sec; CPU: 0.011 sec; Peak RSS: 0.004 GB

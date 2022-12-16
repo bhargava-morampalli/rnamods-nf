@@ -1,0 +1,4 @@
+read_index	read_name	fast5_path	model_name	strand	num_events	num_steps	num_skips	num_stays	total_duration	shift	scale	drift	var
+0	ad01f2bb-a20b-4b75-97d2-72ca0bcd56b6	/scratch/bhargava/workflows/mapping-nf/results/fast5s_native_1_16s/native_1_16s-0.fast5	rna	template	2869	1433	31	1404	18.58	-4.405	0.906	0.000	1.379
+1	3a07b902-5453-4dbd-9a2b-02108676450d	/scratch/bhargava/workflows/mapping-nf/results/fast5s_native_1_16s/native_1_16s-0.fast5	rna	template	2099	945	36	1117	13.56	0.072	0.944	0.000	1.355
+2	a745210d-05f3-48ad-ab75-b170d1b7576b	/scratch/bhargava/workflows/mapping-nf/results/fast5s_native_1_16s/native_1_16s-0.fast5	rna	template	971	412	9	549	5.90	-6.218	0.938	0.000	1.385

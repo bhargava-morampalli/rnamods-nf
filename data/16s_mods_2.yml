@@ -1,0 +1,9 @@
+notes: Pairwise comparison without replicates with default parameter setting.
+
+data:
+    KO:
+        rep1: $baseDir/results/native_2_16s_eventalign
+    WT:
+        rep1: $baseDir/results/ivt_2_16s_eventalign
+
+out: $baseDir/results/xporefinal_16s

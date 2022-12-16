@@ -1,0 +1,379 @@
+    tomboresquiggle (singlefast5s, reference, multitosingle.out.multidone_ch)
+
+    nanodocpreprocess (singlefast5s, reference, tomboresquiggle.out.tombodone_ch)
+
+
+
+
+
+workflow.onComplete {
+        log.info ( workflow.success ? "\nDone! Workflow complete\n" : "Failed!" )
+}
+
+
+
+process minimap2 {
+    tag "mapping $sample_id to the reference fasta file using minimap2"
+
+    input:
+    path reference from params.fasta
+    sample_id, path(reads) from reads2_ch
+
+    output:
+    path sample_id into sam_ch
+
+    script:
+    minimap2 -t 28 -ax map-ont --secondary=no $reference $sample_id > ${sample_id}.sam
+
+}
+
+process quantification {
+    tag "$pair_id"
+
+    input:
+    path index from index_ch
+    tuple pair_id, path(reads) from read_pairs_ch
+
+    output:
+    path pair_id into quant_ch
+
+    script:
+    """
+    salmon quant --threads $task.cpus --libType=U -i $index -1 ${reads[0]} -2 ${reads[1]} -o $pair_id
+    """
+}
+
+
+.into { reads_ch; reads2_ch; reads3_ch; reads4_ch }
+
+/* 
+ * Process: performing QC on fastq files using FASTQC
+*/
+
+process fastqc {
+    tag "FASTQC on $reads"
+
+    input:
+    path reads from reads_ch
+
+    output:
+    path "fastqc_${reads}_logs" into fastqc_ch
+
+
+    script:
+    """
+    mkdir fastqc_${reads}_logs
+    fastqc -o fastqc_${reads}_logs -f fastq -q ${reads}
+    """
+}
+
+/* 
+ * Process: combining FASTQC reports with MultiQC
+*/
+
+
+process multiqc {
+    publishDir params.outdir, mode:'copy'
+
+    input:
+    path '*' from fastqc_ch.collect()
+
+    output:
+    path 'multiqc_report.html'
+
+    script:
+    """
+    multiqc .
+    """
+}
+
+params.multiqc = "$baseDir/multiqc"
+
+
+params.reads = "$baseDir/data/*.fastq"
+
+Channel
+    .fromPath( params.reads, checkIfExists: true )
+    .into { reads_ch }
+
+input:
+path reads from reads_ch
+
+output:
+path "${reads}_full.sam" into sam_ch
+
+script:
+minimap2 -ax splice -uf -k14 --secondary=no $reference $reads > ${reads}_full.sam
+
+samtools view -S -b longreads1kb.sam > longreads1kb.bam
+samtools sort longreads1kb.bam -o longreads1kb.sorted.bam
+
+include { flagstat as flagstat2 } from './flagstat'
+include { flagstat as flagstat3 } from './flagstat'
+
+
+NanoPlot -t 40 --bam 20191008_K12_b21_rrna.sorted.bam -o /stats --plots hex dot kde pauvre --title "plot" --store --raw --maxlength 10000 -p K12-MG1655-b21-rrna-
+
+
+sub1_norrna.sorted.bam
+
+change this file to test git push from code
+
+ -o ${bams.Parent}/${bams.baseName}-*.{png, html, txt, log}
+
+
+ withName:nanoplot {
+        container = 'file:///data/bhargava/containers/nanoplot.1.33.sif'
+
+include { separatereads } from './separatereads'
+
+params.intersams = "results/sams-intermediate"
+params.mappedlists = "results/mappedlists"
+params.mappedfastqs = "results/mappedfastqs"
+params.unmappedfastqs = "results/unmappedfastqs"
+
+    params.samscombined = "$baseDir/results/sams/*.sam"
+
+
+
+Channel
+    .fromPath(params.samscombined)
+    .set { samscombined }
+
+
+    multitosingle (fast5s)
+
+
+
+    
+    flagstat (bamprocess.out)
+    
+    depth (bamprocess.out)
+
+    bamindex (bamprocess.out)
+
+    nanoplot (bamprocess.out)
+
+
+separatereads (minimap2.out, reads)\
+
+
+
+params.samscombined = "$baseDir/results/sams/*.sam"
+
+    Channel
+    .fromPath(params.samscombined)
+    .set { samscombined }
+
+
+
+    fullsams = Channel.fromPath("$baseDir/results/fullsams/*.sam")
+    rrnasams = Channel.fromPath("$baseDir/results/samsrrna/*.sam")
+    norrnasams = Channel.fromPath("$baseDir/results/samsnorrna/*.sam")
+
+    samscombined = fullsams.mix (rrnasams, norrnasams)
+
+    NanoComp --bam sub1_full.sam sub2_full.sam sub3_full.sam --outdir compare-runs
+
+
+
+    process do_something {
+
+    input:
+      path minimapFiles
+      path minimap2rrnaFiles
+      path minimap2norrnaFiles
+
+  script:
+       // When using the inputs - they will expand to the full list of files
+}
+
+// Call to do_something():
+
+do_something(minimap.out.collect()
+                                minimap2rrna.out.collect(),
+                                minimap2norrna.out.collect())
+
+
+
+while ${reads.baseName} == ${sams.baseName} {
+        seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.mapped_ids.lst > ${sams.baseName}_mapped.fastq
+        seqtk subseq ${reads.baseName}.fastq ${sams.baseName}.unmapped_ids.lst > ${sams.baseName}_unmapped.fastq
+    }
+
+
+params.reference_norrna = "/data/bhargava/reference_files/K12/k12_norrna.fa"
+
+/* 
+ * Process: mapping the fastq files to the rRNA reference using minimap2
+*/
+
+process minimap2norrna {
+    
+    publishDir params.norrnasams, mode:'copy'
+
+    input:
+    path reference_norrna
+    path reads
+
+    output:
+    path "*_norrna.sam", emit: norrnasams
+
+    script:
+    """
+    minimap2 -ax splice -uf -k14 --secondary=no $reference_norrna $reads > ${reads.baseName}_norrna.sam
+    """
+
+}
+
+
+/* 
+ * Process: mapping the fastq files to the reference genome using minimap2
+*/
+
+process minimap2 {
+    
+    publishDir params.fullsams, mode:'copy'
+
+    input:
+    path reference
+    path reads
+
+    output:
+    path "*.sam", emit: fullsams
+
+    script:
+    """
+    minimap2 -ax splice -uf -k14 --secondary=no $reference $reads > ${reads.baseName}.sam
+    """
+
+}
+
+/* 
+ * Process: mapping the fastq files to the rRNA reference using minimap2
+*/
+
+process minimap2rrna {
+    
+    publishDir params.rrnasams, mode:'copy'
+
+    input:
+    path reference_rrna
+    path reads
+
+    output:
+    path "*_rrna.sam", emit: rrnasams
+
+    script:
+    """
+    minimap2 -ax splice -uf -k14 --secondary=no $reference_rrna $reads > ${reads.baseName}_rrna.sam
+    """
+
+}
+
+
+    when:
+    reads.baseName == sams.baseName
+
+
+seqtk subseq $reads ${sams.baseName}.mapped_ids.lst > ${sams.baseName}_mapped.fastq
+    seqtk subseq $reads ${sams.baseName}.unmapped_ids.lst > ${sams.baseName}_unmapped.fastq
+
+
+     publishDir params.mappedfastqs, mode:'copy', pattern: '*_mapped.fastq'
+    publishDir params.unmappedfastqs, mode:'copy', pattern: '*_unmapped.fastq'
+
+
+seqkit sample -n 10 g9-ivt-bc1_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc1_16s.fastq
+seqkit sample -n 10 g9-ivt-bc2_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc2_16s.fastq
+seqkit sample -n 10 g9-ivt-bc3_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc3_16s.fastq
+
+seqkit sample -n 10 g9-ivt-bc1_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc1_23s.fastq
+seqkit sample -n 10 g9-ivt-bc2_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc2_23s.fastq
+seqkit sample -n 10 g9-ivt-bc3_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/subsample_bc3_23s.fastq
+
+seqkit sample -n 10 g9-native_bc1_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc1_16s.fastq
+seqkit sample -n 10 g9-native_bc2_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc2_16s.fastq
+seqkit sample -n 10 g9-native_bc3_16s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc3_16s.fastq
+
+seqkit sample -n 10 g9-native_bc1_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc1_23s.fastq
+seqkit sample -n 10 g9-native_bc2_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc2_23s.fastq
+seqkit sample -n 10 g9-native_bc3_23s.fastq -o /data/bhargava/combinedrnamods/g9/data/native/native_bc3_23s.fastq
+
+
+seqkit fq2fa subsample_bc1_16s.fastq -o subsample_bc1_16s.fasta
+seqkit fq2fa subsample_bc1_23s.fastq -o subsample_bc1_23s.fasta
+
+
+seqkit seq subsample_bc1_16s.fasta -n -i > subsample_bc1_16s.txt
+seqkit seq subsample_bc1_23s.fasta -n -i > subsample_bc1_23s.txt
+
+seqkit fq2fa native_bc1_16s.fastq -o native_bc1_16s.fasta
+seqkit fq2fa native_bc1_23s.fastq -o native_bc1_23s.fasta
+
+seqkit seq native_bc1_16s.fasta -n -i > native_bc1_16s.txt
+seqkit seq native_bc1_23s.fasta -n -i > native_bc1_23s.txt
+
+
+    val flag
+
+    val true, emit: subsetdone_ch
+
+
+    val flag
+
+    val true, emit: multidone_ch
+
+
+process {
+    withName:minimap2 {
+        container = 'file:///data/bhargava/containers/minimap2.2.17.sif'
+    }
+    withName:bamprocess {
+        container = 'file:///data/bhargava/containers/samtools.1.10.sif'
+    }
+    withName:flagstat {
+        container = 'file:///data/bhargava/containers/samtools.1.10.sif'
+    }
+    withName:nanoplot {
+        container = 'file:///data/bhargava/containers/nanoplot.1.33.sif'
+    }
+}
+
+
+
+params.reads = "$baseDir/data/*.fastq"
+
+
+    Channel
+    .fromPath(params.reads, checkIfExists: true)
+    .set { reads }
+
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc1_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc2_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc3_16s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc1_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc2_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*native_bc3_23s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc1_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc2_16s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc3_16s*", mode:'copy'
+
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc1_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc2_23s*", mode:'copy'
+    publishDir "$params.outdir/$idtextfile.baseName/multifast5s", pattern: "*ivt_bc3_23s*", mode:'copy'
+
+
+
+
+
+    nanodoccompare_1_16s (reference_16s_ch, ivt_1_16s_nanodoc, native_1_16s_nanodoc, nanodocpreprocess_n_1_16s.out.ndocpre_done, nanodocpreprocess_i_1_16s.out.ndocpre_done)
+    nanodoccompare_2_16s (reference_16s_ch, ivt_2_16s_nanodoc, native_2_16s_nanodoc, nanodocpreprocess_n_2_16s.out.ndocpre_done, nanodocpreprocess_i_2_16s.out.ndocpre_done)
+    nanodoccompare_3_16s (reference_16s_ch, ivt_3_16s_nanodoc, native_3_16s_nanodoc, nanodocpreprocess_n_3_16s.out.ndocpre_done, nanodocpreprocess_i_3_16s.out.ndocpre_done)
+
+    nanodoccompare_1_23s (reference_23s_ch, ivt_1_23s_nanodoc, native_1_23s_nanodoc, nanodocpreprocess_n_1_23s.out.ndocpre_done, nanodocpreprocess_i_1_23s.out.ndocpre_done)
+    nanodoccompare_2_23s (reference_23s_ch, ivt_2_23s_nanodoc, native_2_23s_nanodoc, nanodocpreprocess_n_2_23s.out.ndocpre_done, nanodocpreprocess_i_2_23s.out.ndocpre_done)
+    nanodoccompare_3_23s (reference_23s_ch, ivt_3_23s_nanodoc, native_3_23s_nanodoc, nanodocpreprocess_n_3_23s.out.ndocpre_done, nanodocpreprocess_i_3_23s.out.ndocpre_done)

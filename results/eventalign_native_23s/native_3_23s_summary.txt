@@ -1,0 +1,1 @@
+read_index	read_name	fast5_path	model_name	strand	num_events	num_steps	num_skips	num_stays	total_duration	shift	scale	drift	var

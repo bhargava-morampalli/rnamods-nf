@@ -1,0 +1,18 @@
+2022-06-16 05:58:31	7.6s	distraught_varahamihira	OK	84112a60feaf4ccd0060cd8f9fabf24e	6ddae55e-efb0-47eb-9199-ce11c72c2aa6	nextflow run main.nf
+2022-06-16 05:58:59	9s	sick_volta	OK	9b388ccb140bc894832d277426a3e13e	82c9f97e-e541-4eba-a993-850fd1939549	nextflow run main2.nf
+2022-06-16 05:59:27	1m 26s	curious_woese	ERR	f5be4a894fe35787a504f894231d84c0	c093ed8a-8f94-43e9-9c75-8036350663d7	nextflow run main3.nf
+2022-06-16 06:02:10	13m 4s	distracted_church	ERR	f5be4a894fe35787a504f894231d84c0	c093ed8a-8f94-43e9-9c75-8036350663d7	nextflow run main3.nf -resume
+2022-06-16 06:15:19	1m 13s	disturbed_yonath	ERR	f5be4a894fe35787a504f894231d84c0	c093ed8a-8f94-43e9-9c75-8036350663d7	nextflow run main3.nf -resume
+2022-06-16 06:19:11	2m 44s	disturbed_kilby	ERR	f5be4a894fe35787a504f894231d84c0	c093ed8a-8f94-43e9-9c75-8036350663d7	nextflow run main3.nf -resume
+2022-06-16 07:36:53	-	cheeky_cajal	-	f5be4a894fe35787a504f894231d84c0	c093ed8a-8f94-43e9-9c75-8036350663d7	nextflow run main3.nf -resume
+2022-06-16 08:34:31	8.1s	furious_meninsky	OK	84112a60feaf4ccd0060cd8f9fabf24e	86866ee9-1ac8-4895-9c9d-9799f6e3fea5	nextflow run main.nf
+2022-06-16 08:34:46	8s	small_rosalind	ERR	abaca36dca956cd3560f639a1336e452	1a6a7cff-4016-46ce-b3bb-a341dd273597	nextflow run main2.nf
+2022-06-16 08:35:40	8.7s	berserk_hilbert	OK	abaca36dca956cd3560f639a1336e452	1a6a7cff-4016-46ce-b3bb-a341dd273597	nextflow run main2.nf -resume
+2022-06-16 08:36:02	26.2s	romantic_swanson	ERR	e1fad49311304e45fbcc82d3772cb6d5	2404cead-278f-4440-8e5a-07d2fcef9b32	nextflow run main3.nf
+2022-06-16 10:39:28	16.8s	maniac_roentgen	OK	abaca36dca956cd3560f639a1336e452	996b22a9-a5af-4dab-8435-510183e814b5	nextflow run main2.nf
+2022-06-16 10:53:46	14m 36s	irreverent_kalman	OK	84112a60feaf4ccd0060cd8f9fabf24e	e39910f5-6f3c-4f22-8ff7-ee70a2606d01	nextflow run main.nf
+2022-06-16 11:09:59	9.5s	shrivelled_kirch	OK	7e72c9636f22d8cac7c17979d2e65870	6a68e97f-2fd0-4656-8203-aef1cfb057df	nextflow run main2.nf
+2022-06-16 11:26:18	9s	sharp_bohr	OK	796041c9f971f63c9c2cc77f5ea14aee	7ff75a0f-eb31-4b0c-a697-2d89ddeddbcd	nextflow run main2.nf
+2022-06-16 11:56:03	4.2s	gigantic_meitner	ERR	7fcbbfc122c17ef0998bf0ab0e4a0b62	30677116-b52e-4d2d-83f8-2cccf0e0c91e	nextflow run main2.nf
+2022-06-16 11:59:03	3.9s	tender_knuth	ERR	7fcbbfc122c17ef0998bf0ab0e4a0b62	23c34ef0-0a21-4f96-9411-8b93b1f10c38	nextflow run main2.nf
+2022-06-16 12:09:49	9.3s	loving_shaw	OK	2df8110b3ac4a7516e1478dad8426731	f6afd7df-11c7-4dad-a630-c699dfc76d36	nextflow run main2.nf

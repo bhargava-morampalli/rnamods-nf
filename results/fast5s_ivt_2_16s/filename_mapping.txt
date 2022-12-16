@@ -1,0 +1,7 @@
+7000c666-9797-40e3-8669-f26b8b144ec6	ivt_2_16s-0.fast5
+21e4baba-cc3b-41c4-9f3f-18cfabfeaff8	ivt_2_16s-0.fast5
+8b7fbb64-52a6-4ddb-b8a8-59b204f81821	ivt_2_16s-0.fast5
+74c302c7-6b4e-4f9f-9a74-ab34ae7b4609	ivt_2_16s-0.fast5
+2db9e754-5408-4ecc-9118-99fa6a671d41	ivt_2_16s-0.fast5
+ad536719-29aa-4ddf-837d-4238c873541e	ivt_2_16s-0.fast5
+e7cb1f41-b195-4025-871a-9a95739ac17e	ivt_2_16s-0.fast5

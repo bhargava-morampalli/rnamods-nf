@@ -1,0 +1,277 @@
+[init_core::INFO][1;34m builtin RNA nucleotide model loaded[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [90bfc1ba-80d1-4129-864c-6527ae1d4d78] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [a28cc7b5-77e7-4712-912d-8df27d15e103] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [0b7b9328-711a-4828-8e1b-fcc1ff926951] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [c29128f4-8eb0-4bd6-b09b-f3f531632dcc] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [159b546e-f71a-4135-8e15-795b2fc230ef] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [61b8fd1d-5513-454c-a07e-41f9db6297e8] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [1b8e56c3-ecdb-4d91-9188-540462531efb] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [e34b0d23-81f9-4243-aab9-c5376ad3f98d] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [7f057e5d-f354-43cf-b609-2363a9ea33b0] is unreadable and will be skipped[0m
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5F.c line 604 in H5Fopen(): unable to open file
+    major: File accessibilty
+    minor: Unable to open file
+  #001: ../../../src/H5Fint.c line 992 in H5F_open(): unable to open file: time = Thu Jun 16 12:09:52 2022
+, name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', tent_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+  #002: ../../../src/H5FD.c line 993 in H5FD_open(): open failed
+    major: Virtual File Layer
+    minor: Unable to initialize object
+  #003: ../../../src/H5FDsec2.c line 339 in H5FD_sec2_open(): unable to open file: name = 'fast5s_ivt_1_16s/ivt_1_16s-0.fast5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0
+    major: File accessibilty
+    minor: Unable to open file
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 454 in H5Gopen2(): not a location
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+  #001: ../../../src/H5Gloc.c line 253 in H5G_loc(): invalid object ID
+    major: Invalid arguments to routine
+    minor: Bad value
+HDF5-DIAG: Error detected in HDF5 (1.8.16) thread 139856272310272:
+  #000: ../../../src/H5G.c line 812 in H5Gclose(): not a group
+    major: Invalid arguments to routine
+    minor: Inappropriate type
+[handle_bad_fast5::WARNING][1;33m Fast5 file [fast5s_ivt_1_16s/ivt_1_16s-0.fast5] for read [ed2f2b8a-09a5-4731-ae92-1a45ac47f84b] is unreadable and will be skipped[0m
+[meth_main::0.187*0.05] 0 Entries (0.0M bases) loaded
+[pthread_processor::0.214*0.07] 0 Entries (0.0M bases) processed
+[meth_main] total entries: 10, qc fail: 0, could not calibrate: 0, no alignment: 0, bad fast5: 10
+[meth_main] total bases: 0.0 Mbases
+[meth_main] Data loading time: 0.003 sec
+[meth_main]     - bam load time: 0.000 sec
+[meth_main]     - fasta load time: 0.001 sec
+[meth_main]     - fast5 load time: 0.002 sec
+[meth_main]         - fast5 open time: 0.002 sec
+[meth_main]         - fast5 read time: 0.000 sec
+[meth_main] Data processing time: 0.022 sec
+[meth_main] Data output time: 0.000 sec
+[main] Version: 0.7
+[main] CMD: /home/bhargavam/f5c-v0.7/f5c eventalign --scale-events --signal-index --print-read-names --rna -r ivt_1_16s.fastq -b ivt_1_16s_sorted.bam -g k12_16s_88_extended.fa --summary ivt_1_16s_summary.txt --threads 40
+[main] Real time: 0.214 sec; CPU time: 0.015 sec; Peak RAM: 0.008 GB
+

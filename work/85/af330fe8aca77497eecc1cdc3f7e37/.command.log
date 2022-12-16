@@ -1,0 +1,2 @@
+error: could not load the index files for input file ivt_1_23s.fastq
+Please run f5c index on your reads (see documentation)

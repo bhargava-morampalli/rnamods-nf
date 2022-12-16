@@ -1,0 +1,16 @@
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	38943924-30d4-4c19-a0e1-17e168b373c0.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	390b3fd5-a9c0-4975-be46-12b5313d88df.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	39593535-001e-45d0-b4fc-2d9d21f23074.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	4603e141-54e5-474c-ab60-12353f1600c6.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	471f3dea-6286-4086-ac33-35cfe30bb332.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	49424b3b-6f7b-46a3-8a57-ff9b0f5e493b.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	52557abb-643a-41cd-9ea4-cac1207e65ee.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	5e69e2eb-8f53-4164-a7df-416a0bfea6c5.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	8577498b-0388-44d5-9980-5288fe5d2d76.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	8b77803a-2988-46a4-8639-b065a5e5158f.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	99320785-9fd8-4214-b0d7-9c759f168d21.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	a80059ba-7ede-418c-a020-2f30205918cf.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	c1a73c6a-49ca-43e1-a181-845bb021fec5.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	d17da27a-2a37-4371-be0d-ca62b74adc61.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	d6ced1da-6577-4e67-be06-d984607d687f.fast5
+fast5s_ivt_2_23s/ivt_2_23s-0.fast5	f04f2b03-f000-4c57-ab6e-9ddd3c6ea3b7.fast5
