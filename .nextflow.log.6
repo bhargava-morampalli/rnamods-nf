@@ -1,645 +1,419 @@
-Jun-16 10:53:45.968 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
-Jun-16 10:53:46.041 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.3
-Jun-16 10:53:46.057 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/mapping-nf/nextflow.config
-Jun-16 10:53:46.058 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/mapping-nf/nextflow.config
-Jun-16 10:53:46.080 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Jun-16 10:53:46.626 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Jun-16 10:53:46.647 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [irreverent_kalman] DSL2 - revision: 84112a60fe
-Jun-16 10:53:46.659 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
-Jun-16 10:53:46.660 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Jun-16 10:53:46.670 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jun-16 10:53:46.671 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jun-16 10:53:46.674 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Jun-16 10:53:46.683 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jun-16 10:53:46.733 [main] DEBUG nextflow.Session - Session uuid: e39910f5-6f3c-4f22-8ff7-ee70a2606d01
-Jun-16 10:53:46.733 [main] DEBUG nextflow.Session - Run name: irreverent_kalman
-Jun-16 10:53:46.734 [main] DEBUG nextflow.Session - Executor pool size: 56
-Jun-16 10:53:46.760 [main] DEBUG nextflow.cli.CmdRun - 
+Jun-16 11:09:58.796 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main2.nf
+Jun-16 11:09:58.866 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.3
+Jun-16 11:09:58.883 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/bhargava/workflows/mapping-nf/nextflow.config
+Jun-16 11:09:58.883 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/bhargava/workflows/mapping-nf/nextflow.config
+Jun-16 11:09:58.904 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jun-16 11:09:59.442 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jun-16 11:09:59.461 [main] INFO  nextflow.cli.CmdRun - Launching `main2.nf` [shrivelled_kirch] DSL2 - revision: 7e72c9636f
+Jun-16 11:09:59.473 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/bhargavam/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Jun-16 11:09:59.474 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jun-16 11:09:59.484 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jun-16 11:09:59.485 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jun-16 11:09:59.488 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jun-16 11:09:59.497 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jun-16 11:09:59.548 [main] DEBUG nextflow.Session - Session uuid: 6a68e97f-2fd0-4656-8203-aef1cfb057df
+Jun-16 11:09:59.548 [main] DEBUG nextflow.Session - Run name: shrivelled_kirch
+Jun-16 11:09:59.549 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jun-16 11:09:59.588 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 22.04.3 build 5703
   Created: 18-05-2022 19:22 UTC (19-05-2022 07:22 NZDT)
   System: Linux 4.15.0-142-generic
   Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.8-internal+0-adhoc..src
   Encoding: UTF-8 (UTF-8)
-  Process: 20930@gru [127.0.1.1]
-  CPUs: 56 - Mem: 188.8 GB (169.6 GB) - Swap: 61 GB (61 GB)
-Jun-16 10:53:46.794 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/mapping-nf/work [ext2/ext3]
-Jun-16 10:53:46.794 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/mapping-nf/bin
-Jun-16 10:53:46.804 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Jun-16 10:53:46.816 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Jun-16 10:53:46.838 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Jun-16 10:53:46.850 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 57; maxThreads: 1000
-Jun-16 10:53:47.089 [main] DEBUG nextflow.Session - Session start invoked
-Jun-16 10:53:48.330 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jun-16 10:53:48.566 [main] DEBUG nextflow.Nextflow - No such file: /scratch/bhargava/workflows/mapping-nf/results/mappedfastqs_16s_native/ -- Skipping visit
-Jun-16 10:53:48.567 [main] DEBUG nextflow.Nextflow - No such file: /scratch/bhargava/workflows/mapping-nf/results/mappedfastqs_23s_native/ -- Skipping visit
-Jun-16 10:53:48.567 [main] DEBUG nextflow.Nextflow - No such file: /scratch/bhargava/workflows/mapping-nf/results/mappedfastqs_16s_ivt/ -- Skipping visit
-Jun-16 10:53:48.568 [main] DEBUG nextflow.Nextflow - No such file: /scratch/bhargava/workflows/mapping-nf/results/mappedfastqs_23s_ivt/ -- Skipping visit
-Jun-16 10:53:48.619 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.619 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.624 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Jun-16 10:53:48.629 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
-Jun-16 10:53:48.721 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.721 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.727 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.727 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.731 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.732 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.736 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.736 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.739 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.739 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.744 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.744 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.749 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.749 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.753 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.753 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.756 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.756 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.758 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.758 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.762 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.762 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.766 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.766 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.769 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.769 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.772 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.772 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.777 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.777 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.784 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.785 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.787 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.787 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.789 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.790 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.792 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.792 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.794 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.795 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.797 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.797 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.799 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.799 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.801 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.801 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.803 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.803 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.806 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.806 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.808 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.808 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.810 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.810 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.813 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.813 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.816 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.816 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.818 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.818 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.820 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.820 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.823 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.823 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.825 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.825 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.827 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.827 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.829 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.829 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.834 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.834 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.836 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.836 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.838 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.839 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.841 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.841 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.843 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.843 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.845 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.846 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.848 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.848 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.850 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.850 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.852 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.852 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.854 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.854 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.856 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.856 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.858 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Jun-16 10:53:48.858 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Jun-16 10:53:48.859 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: flagstat_16s_native, extract_16s_ivt, bamindex_23s_native, mappedbamindex_23s_native, nativereadidextract_23s, extractfast5s_ivt_16s, ivtreadidextract_16s, nanostats_16s_native, bam_23s_native, extract_fast5s, map_23s_native, depths_23s_ivt, coverageplot_16s_native, bamindex_16s_native, extract_23s_ivt, map_23s_ivt, mappedbams_23s_ivt, depths_23s_native, bam_16s_ivt, nativereadidextract_16s, nanostats_23s_native, coverageplot_16s_ivt, depths_16s_native, extractfast5s_native_16s, bam_16s_native, mappedbamindex_16s_native, flagstat_23s_ivt, mappedbamindex_16s_ivt, mappedbams_16s_ivt, extract_23s_native, nanostats_16s_ivt, extract_readids_ivt, map_16s_native, mappedbams_23s_native, bamindex_23s_ivt, extractfast5s_native_23s, coverageplot_23s_ivt, bam_23s_ivt, map_16s_ivt, flagstat_23s_native, extract_16s_native, mappedbamindex_23s_ivt, extract_readids_native, extractfast5s_ivt_23s, flagstat_16s_ivt, mappedbams_16s_native, nanostats_23s_ivt, depths_16s_ivt, ivtreadidextract_23s, coverageplot_23s_native, bamindex_16s_ivt
-Jun-16 10:53:48.860 [main] DEBUG nextflow.Session - Ignite dataflow network (58)
-Jun-16 10:53:48.865 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/mapping-nf/native/; pattern: *.fastq; options: [:]
-Jun-16 10:53:48.866 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > map_16s_native
-Jun-16 10:53:48.867 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/mapping-nf/ivt/; pattern: *.fastq; options: [:]
-Jun-16 10:53:48.867 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > map_16s_ivt
-Jun-16 10:53:48.868 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > map_23s_native
-Jun-16 10:53:48.868 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > map_23s_ivt
-Jun-16 10:53:48.869 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat_16s_native
-Jun-16 10:53:48.869 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat_16s_ivt
-Jun-16 10:53:48.870 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat_23s_native
-Jun-16 10:53:48.870 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > flagstat_23s_ivt
-Jun-16 10:53:48.871 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bam_16s_native
-Jun-16 10:53:48.871 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bam_16s_ivt
-Jun-16 10:53:48.872 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bam_23s_native
-Jun-16 10:53:48.872 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bam_23s_ivt
-Jun-16 10:53:48.873 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex_16s_native
-Jun-16 10:53:48.873 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex_16s_ivt
-Jun-16 10:53:48.873 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex_23s_native
-Jun-16 10:53:48.874 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > bamindex_23s_ivt
-Jun-16 10:53:48.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depths_16s_native
-Jun-16 10:53:48.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depths_16s_ivt
-Jun-16 10:53:48.875 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depths_23s_native
-Jun-16 10:53:48.876 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > depths_23s_ivt
-Jun-16 10:53:48.876 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > coverageplot_16s_native
-Jun-16 10:53:48.877 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > coverageplot_16s_ivt
-Jun-16 10:53:48.877 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > coverageplot_23s_native
-Jun-16 10:53:48.877 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > coverageplot_23s_ivt
-Jun-16 10:53:48.878 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanostats_16s_native
-Jun-16 10:53:48.879 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanostats_16s_ivt
-Jun-16 10:53:48.879 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanostats_23s_native
-Jun-16 10:53:48.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nanostats_23s_ivt
-Jun-16 10:53:48.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extract_16s_native
-Jun-16 10:53:48.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extract_16s_ivt
-Jun-16 10:53:48.882 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extract_23s_native
-Jun-16 10:53:48.882 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extract_23s_ivt
-Jun-16 10:53:48.883 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nativereadidextract_16s
-Jun-16 10:53:48.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivtreadidextract_16s
-Jun-16 10:53:48.884 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > nativereadidextract_23s
-Jun-16 10:53:48.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ivtreadidextract_23s
-Jun-16 10:53:48.885 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extractfast5s_native_16s
-Jun-16 10:53:48.886 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extractfast5s_ivt_16s
-Jun-16 10:53:48.887 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extractfast5s_native_23s
-Jun-16 10:53:48.888 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > extractfast5s_ivt_23s
-Jun-16 10:53:48.889 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbams_16s_native
-Jun-16 10:53:48.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbams_16s_ivt
-Jun-16 10:53:48.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbams_23s_native
-Jun-16 10:53:48.891 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbams_23s_ivt
-Jun-16 10:53:48.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbamindex_16s_native
-Jun-16 10:53:48.892 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbamindex_16s_ivt
-Jun-16 10:53:48.895 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbamindex_23s_native
-Jun-16 10:53:48.896 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mappedbamindex_23s_ivt
-Jun-16 10:53:48.896 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Jun-16 10:53:48.896 [main] DEBUG nextflow.Session - Session await
-Jun-16 10:53:49.117 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.122 [Task submitter] INFO  nextflow.Session - [96/c6315d] Submitted process > map_16s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.126 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.126 [Task submitter] INFO  nextflow.Session - [2c/506984] Submitted process > map_23s_native (map fastq to get sam file)
-Jun-16 10:53:49.129 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.130 [Task submitter] INFO  nextflow.Session - [a5/b41a53] Submitted process > map_23s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.133 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.133 [Task submitter] INFO  nextflow.Session - [7e/511531] Submitted process > map_23s_native (map fastq to get sam file)
-Jun-16 10:53:49.135 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.136 [Task submitter] INFO  nextflow.Session - [45/4bef05] Submitted process > map_23s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.138 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.139 [Task submitter] INFO  nextflow.Session - [9e/909cf1] Submitted process > map_16s_native (map fastq to get sam file)
-Jun-16 10:53:49.141 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.141 [Task submitter] INFO  nextflow.Session - [f8/736d95] Submitted process > map_23s_native (map fastq to get sam file)
-Jun-16 10:53:49.144 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.145 [Task submitter] INFO  nextflow.Session - [73/3bc494] Submitted process > map_16s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.147 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.147 [Task submitter] INFO  nextflow.Session - [ee/a8d2a9] Submitted process > map_16s_native (map fastq to get sam file)
-Jun-16 10:53:49.150 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.150 [Task submitter] INFO  nextflow.Session - [cf/8156e4] Submitted process > map_16s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.155 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.155 [Task submitter] INFO  nextflow.Session - [89/13d37d] Submitted process > map_16s_native (map fastq to get sam file)
-Jun-16 10:53:49.159 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.159 [Task submitter] INFO  nextflow.Session - [d2/5f91f6] Submitted process > map_23s_ivt (map fastq to get sam file)
-Jun-16 10:53:49.764 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: map_16s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/96/c6315d8d5324863d335c6e1cc74db6]
-Jun-16 10:53:49.787 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.787 [Task submitter] INFO  nextflow.Session - [b8/1558ac] Submitted process > extract_16s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.790 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.791 [Task submitter] INFO  nextflow.Session - [93/4a07ea] Submitted process > flagstat_16s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.794 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Jun-16 10:53:49.795 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.795 [Task submitter] INFO  nextflow.Session - [fc/fd19e6] Submitted process > bam_16s_ivt (convert sam to bam)
-Jun-16 10:53:49.798 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: map_23s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/2c/50698472838af25263c7a0246cbec4]
-Jun-16 10:53:49.802 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: map_23s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a5/b41a53583d7d0d88d50b49fecf8bb3]
-Jun-16 10:53:49.807 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: map_23s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/7e/5115318fc5d87ffb83bee264e8697f]
-Jun-16 10:53:49.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: map_23s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/45/4bef057126459a045d6797efef309f]
-Jun-16 10:53:49.818 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: map_16s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9e/909cf175e756ae4c43e8d9906717a4]
-Jun-16 10:53:49.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: map_23s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/f8/736d9535d740db25a4ddfadb977448]
-Jun-16 10:53:49.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: map_16s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/73/3bc49482f03d432cc43ffd4c37e1e3]
-Jun-16 10:53:49.832 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.832 [Task submitter] INFO  nextflow.Session - [08/8b9a1e] Submitted process > extract_23s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.837 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.838 [Task submitter] INFO  nextflow.Session - [fa/5dec4d] Submitted process > bam_23s_ivt (convert sam to bam)
-Jun-16 10:53:49.839 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.840 [Task submitter] INFO  nextflow.Session - [aa/a7dae6] Submitted process > flagstat_23s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.841 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.842 [Task submitter] INFO  nextflow.Session - [2a/3ba88a] Submitted process > bam_23s_native (convert sam to bam)
-Jun-16 10:53:49.843 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.844 [Task submitter] INFO  nextflow.Session - [bb/30f2bf] Submitted process > flagstat_23s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.845 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.846 [Task submitter] INFO  nextflow.Session - [43/22abd4] Submitted process > flagstat_23s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.848 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: map_16s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ee/a8d2a93ede99f71b82f8037ccb395f]
-Jun-16 10:53:49.848 [Task submitter] INFO  nextflow.Session - [c5/419004] Submitted process > extract_23s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.850 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.851 [Task submitter] INFO  nextflow.Session - [1f/1d9a6d] Submitted process > flagstat_23s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.851 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: map_16s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/cf/8156e43b046d272e27daac4923b92f]
-Jun-16 10:53:49.853 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.854 [Task submitter] INFO  nextflow.Session - [02/d4f861] Submitted process > bam_23s_native (convert sam to bam)
-Jun-16 10:53:49.855 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: map_16s_native (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/89/13d37d121efcbe4a3a5d19afd00b86]
-Jun-16 10:53:49.856 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.856 [Task submitter] INFO  nextflow.Session - [b2/b3981d] Submitted process > bam_23s_ivt (convert sam to bam)
-Jun-16 10:53:49.860 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: map_23s_ivt (map fastq to get sam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d2/5f91f6a473356e2f7e9d4a9f1dcc2e]
-Jun-16 10:53:49.860 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.861 [Task submitter] INFO  nextflow.Session - [5c/cb6108] Submitted process > extract_23s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.865 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.865 [Task submitter] INFO  nextflow.Session - [b5/dc1eaf] Submitted process > extract_23s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.868 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.868 [Task submitter] INFO  nextflow.Session - [ac/a481cb] Submitted process > flagstat_16s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.870 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.870 [Task submitter] INFO  nextflow.Session - [f7/4a470a] Submitted process > extract_16s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.873 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.873 [Task submitter] INFO  nextflow.Session - [7e/3c8355] Submitted process > bam_16s_native (convert sam to bam)
-Jun-16 10:53:49.876 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.876 [Task submitter] INFO  nextflow.Session - [e3/54df0f] Submitted process > bam_23s_native (convert sam to bam)
-Jun-16 10:53:49.879 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.879 [Task submitter] INFO  nextflow.Session - [e0/9a449a] Submitted process > flagstat_23s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.882 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.883 [Task submitter] INFO  nextflow.Session - [00/300292] Submitted process > extract_23s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.885 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.885 [Task submitter] INFO  nextflow.Session - [6f/3e2a46] Submitted process > bam_16s_ivt (convert sam to bam)
-Jun-16 10:53:49.887 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.887 [Task submitter] INFO  nextflow.Session - [bc/4041f2] Submitted process > flagstat_16s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.889 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.889 [Task submitter] INFO  nextflow.Session - [ca/c6a034] Submitted process > extract_16s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.893 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.893 [Task submitter] INFO  nextflow.Session - [f1/742e42] Submitted process > flagstat_16s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.896 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.897 [Task submitter] INFO  nextflow.Session - [60/c0c4cc] Submitted process > bam_16s_native (convert sam to bam)
-Jun-16 10:53:49.900 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.900 [Task submitter] INFO  nextflow.Session - [dd/5c325e] Submitted process > extract_16s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.902 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.902 [Task submitter] INFO  nextflow.Session - [7e/482092] Submitted process > bam_16s_ivt (convert sam to bam)
-Jun-16 10:53:49.904 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.904 [Task submitter] INFO  nextflow.Session - [19/7383d3] Submitted process > extract_16s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.906 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.906 [Task submitter] INFO  nextflow.Session - [82/0b383c] Submitted process > flagstat_16s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.908 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.909 [Task submitter] INFO  nextflow.Session - [b4/e67f98] Submitted process > flagstat_16s_native (mapping stats with samtools flagstat)
-Jun-16 10:53:49.911 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.911 [Task submitter] INFO  nextflow.Session - [8c/df1a79] Submitted process > bam_16s_native (convert sam to bam)
-Jun-16 10:53:49.913 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.914 [Task submitter] INFO  nextflow.Session - [41/1dc39f] Submitted process > extract_16s_native (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.916 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.916 [Task submitter] INFO  nextflow.Session - [d1/6908ea] Submitted process > flagstat_23s_ivt (mapping stats with samtools flagstat)
-Jun-16 10:53:49.918 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.919 [Task submitter] INFO  nextflow.Session - [4a/932b97] Submitted process > extract_23s_ivt (extract mapped reads from sam files into fastq)
-Jun-16 10:53:49.921 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:49.921 [Task submitter] INFO  nextflow.Session - [63/85c3d4] Submitted process > bam_23s_ivt (convert sam to bam)
-Jun-16 10:53:50.263 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: flagstat_16s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/93/4a07eabcf441fb841664167b2e0671]
-Jun-16 10:53:50.269 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: flagstat_23s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/aa/a7dae6487dae7b799a712d0ce9218b]
-Jun-16 10:53:50.271 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: flagstat_23s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/bb/30f2bf5bf69d1851a5e444ee28730a]
-Jun-16 10:53:50.276 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: flagstat_23s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/43/22abd44d2abb213734546c19e70382]
-Jun-16 10:53:50.281 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: flagstat_23s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/1f/1d9a6dd84965a93f08f3af636f3dd6]
-Jun-16 10:53:50.283 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: flagstat_16s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ac/a481cbaa014f4dea79bc575536be22]
-Jun-16 10:53:50.285 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: flagstat_23s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e0/9a449ad6190ce02c0dfbe7ad985894]
-Jun-16 10:53:50.287 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: flagstat_16s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/bc/4041f20d27efe78d686248a6733cbe]
-Jun-16 10:53:50.289 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: flagstat_16s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/f1/742e4240c6e968bef172e7fd8f5858]
-Jun-16 10:53:50.291 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: flagstat_16s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/82/0b383ce8b2f344625e907e19235b55]
-Jun-16 10:53:50.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: flagstat_16s_native (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b4/e67f98a0f39bff0a9c7ae0c9165534]
-Jun-16 10:53:50.309 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: extract_16s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/41/1dc39f7c0f5044e2dfd9a6ad249016]
-Jun-16 10:53:50.313 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: flagstat_23s_ivt (mapping stats with samtools flagstat); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d1/6908ea27564bdc7604b1a49333926a]
-Jun-16 10:53:50.319 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.320 [Task submitter] INFO  nextflow.Session - [13/422581] Submitted process > nativereadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.322 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.322 [Task submitter] INFO  nextflow.Session - [77/1c6445] Submitted process > mappedbams_16s_native (mapped 16s native fastqs to sorted bam files)
-Jun-16 10:53:50.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: extract_23s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/08/8b9a1efa04b6e859aeebb657c237ca]
-Jun-16 10:53:50.448 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: bam_23s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/fa/5dec4d8fd3671e764ac7b035058644]
-Jun-16 10:53:50.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: bam_23s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/2a/3ba88ae567b8cb1a7d064471850e8f]
-Jun-16 10:53:50.453 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: extract_23s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c5/419004fc574c48d5911d88aafcc883]
-Jun-16 10:53:50.454 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: extract_23s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/5c/cb61085b582cb60ae7626cdd1df174]
-Jun-16 10:53:50.456 [Task submitter] INFO  nextflow.Session - [21/8f1a7c] Submitted process > nativereadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.459 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: extract_23s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b5/dc1eaf215e17ee5acc50e841ca9c9b]
-Jun-16 10:53:50.460 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.460 [Task submitter] INFO  nextflow.Session - [de/e63c83] Submitted process > mappedbams_23s_native (mapped 23s native fastqs to sorted bam files)
-Jun-16 10:53:50.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: extract_16s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/f7/4a470aa8d252386af519a72f5c2b0a]
-Jun-16 10:53:50.463 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.464 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: extract_23s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/00/300292af96e4cd53119b4279774480]
-Jun-16 10:53:50.464 [Task submitter] INFO  nextflow.Session - [9c/596c79] Submitted process > nanostats_23s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.466 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: extract_16s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ca/c6a0347882fdae30d54b106cc42fc4]
-Jun-16 10:53:50.469 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: bam_16s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/60/c0c4cc6d901561f0cf97c251d86830]
-Jun-16 10:53:50.469 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.469 [Task submitter] INFO  nextflow.Session - [76/fdbde7] Submitted process > bamindex_23s_ivt (index the bam file)
-Jun-16 10:53:50.471 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: extract_16s_native (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/dd/5c325eb67a6a5418adb3e9496f2c67]
-Jun-16 10:53:50.472 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: bam_16s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/7e/4820926a516c18cd231c9a0fd6b868]
-Jun-16 10:53:50.473 [Task submitter] INFO  nextflow.Session - [16/6f7920] Submitted process > depths_23s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.475 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.475 [Task submitter] INFO  nextflow.Session - [e7/22b199] Submitted process > bamindex_23s_native (index the bam file)
-Jun-16 10:53:50.476 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: extract_16s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/19/7383d33fd577ea99b98695f1131f43]
-Jun-16 10:53:50.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: bam_16s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/8c/df1a7915feba9e0495030be7a38721]
-Jun-16 10:53:50.477 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.478 [Task submitter] INFO  nextflow.Session - [23/9040a8] Submitted process > depths_23s_native (calculate depth info from bam)
-Jun-16 10:53:50.479 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: extract_23s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/4a/932b97455b06c32e561dab83ad0f75]
-Jun-16 10:53:50.480 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.480 [Task submitter] INFO  nextflow.Session - [22/5718fc] Submitted process > mappedbams_23s_native (mapped 23s native fastqs to sorted bam files)
-Jun-16 10:53:50.481 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: bam_23s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/63/85c3d42b77783357496174dbd9c755]
-Jun-16 10:53:50.482 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.482 [Task submitter] INFO  nextflow.Session - [d6/687489] Submitted process > nanostats_23s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.483 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: mappedbams_16s_native (mapped 16s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/77/1c6445b6ef1d25bd697f901dffebb8]
-Jun-16 10:53:50.485 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.485 [Task submitter] INFO  nextflow.Session - [53/77b8d0] Submitted process > nativereadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.486 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.486 [Task submitter] INFO  nextflow.Session - [d2/9a44b0] Submitted process > ivtreadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.488 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.488 [Task submitter] INFO  nextflow.Session - [a2/3bb227] Submitted process > mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.493 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.493 [Task submitter] INFO  nextflow.Session - [58/14dd8e] Submitted process > ivtreadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.495 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.495 [Task submitter] INFO  nextflow.Session - [9d/840da9] Submitted process > mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.497 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.497 [Task submitter] INFO  nextflow.Session - [0b/7aea6f] Submitted process > mappedbams_16s_native (mapped 16s native fastqs to sorted bam files)
-Jun-16 10:53:50.498 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.499 [Task submitter] INFO  nextflow.Session - [54/80971d] Submitted process > nativereadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.500 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: extract_16s_ivt (extract mapped reads from sam files into fastq); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b8/1558ac7dda780eea1c3cbe12227bc0]
-Jun-16 10:53:50.501 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.501 [Task submitter] INFO  nextflow.Session - [5c/32cfdc] Submitted process > mappedbams_23s_native (mapped 23s native fastqs to sorted bam files)
-Jun-16 10:53:50.502 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: bam_16s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/fc/fd19e61688e9ec77bd24c99f02306e]
-Jun-16 10:53:50.503 [Task submitter] INFO  nextflow.Session - [80/b6bc60] Submitted process > nativereadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: bam_23s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/02/d4f861f6bfbc7519b8f1e9d278052f]
-Jun-16 10:53:50.508 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.508 [Task submitter] INFO  nextflow.Session - [70/f219c0] Submitted process > ivtreadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.508 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: bam_23s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b2/b3981d06aeac6b150b4233500585d1]
-Jun-16 10:53:50.510 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: bam_16s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/7e/3c83558026ad02c80438c1e4b97751]
-Jun-16 10:53:50.511 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.511 [Task submitter] INFO  nextflow.Session - [03/07ae21] Submitted process > mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.512 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: bam_23s_native (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e3/54df0f630c15d146e7be552bc2b061]
-Jun-16 10:53:50.513 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: bam_16s_ivt (convert sam to bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/6f/3e2a46dd10178de5790d80133806c5]
-Jun-16 10:53:50.514 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.514 [Task submitter] INFO  nextflow.Session - [e1/41e962] Submitted process > bamindex_16s_native (index the bam file)
-Jun-16 10:53:50.516 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: depths_23s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/16/6f7920e98623d43a9de803de418614]
-Jun-16 10:53:50.516 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.516 [Task submitter] INFO  nextflow.Session - [01/6e02d5] Submitted process > depths_16s_native (calculate depth info from bam)
-Jun-16 10:53:50.518 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.518 [Task submitter] INFO  nextflow.Session - [e6/5aa214] Submitted process > nanostats_16s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.519 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: depths_23s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/23/9040a8ba216307a33b84d5e78701ad]
-Jun-16 10:53:50.520 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.520 [Task submitter] INFO  nextflow.Session - [84/399f2d] Submitted process > nativereadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.522 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.522 [Task submitter] INFO  nextflow.Session - [83/2ea209] Submitted process > mappedbams_16s_native (mapped 16s native fastqs to sorted bam files)
-Jun-16 10:53:50.524 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.525 [Task submitter] INFO  nextflow.Session - [af/36d59b] Submitted process > depths_16s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.526 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.527 [Task submitter] INFO  nextflow.Session - [d8/a743e0] Submitted process > nanostats_16s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.528 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.528 [Task submitter] INFO  nextflow.Session - [89/495f73] Submitted process > bamindex_16s_ivt (index the bam file)
-Jun-16 10:53:50.530 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.530 [Task submitter] INFO  nextflow.Session - [4f/3ce39b] Submitted process > ivtreadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.532 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.532 [Task submitter] INFO  nextflow.Session - [3e/f54447] Submitted process > mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.533 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.533 [Task submitter] INFO  nextflow.Session - [14/63ca3a] Submitted process > bamindex_16s_native (index the bam file)
-Jun-16 10:53:50.535 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.535 [Task submitter] INFO  nextflow.Session - [e5/39dde9] Submitted process > depths_16s_native (calculate depth info from bam)
-Jun-16 10:53:50.537 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.537 [Task submitter] INFO  nextflow.Session - [27/25c0a7] Submitted process > nanostats_16s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.539 [Task submitter] INFO  nextflow.Session - [e4/6e2187] Submitted process > mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.541 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: depths_16s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/01/6e02d5479cf6cc4d52a81e1c3be62e]
-Jun-16 10:53:50.541 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.544 [Task submitter] INFO  nextflow.Session - [ea/34185f] Submitted process > ivtreadidextract_23s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.546 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.547 [Task submitter] INFO  nextflow.Session - [2b/08c8b5] Submitted process > nanostats_23s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: depths_16s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/af/36d59bb3a00887d6694ab62a70622f]
-Jun-16 10:53:50.548 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.548 [Task submitter] INFO  nextflow.Session - [6a/972616] Submitted process > bamindex_23s_ivt (index the bam file)
-Jun-16 10:53:50.550 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.550 [Task submitter] INFO  nextflow.Session - [26/aa78a0] Submitted process > depths_23s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.552 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.552 [Task submitter] INFO  nextflow.Session - [47/040c9d] Submitted process > mappedbamindex_16s_native (index the mapped bam file)
-Jun-16 10:53:50.553 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.554 [Task submitter] INFO  nextflow.Session - [d0/9d45c1] Submitted process > mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files)
-Jun-16 10:53:50.555 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.555 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: depths_16s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e5/39dde9c861f9e173bfc4441a687ab7]
-Jun-16 10:53:50.555 [Task submitter] INFO  nextflow.Session - [9a/092999] Submitted process > ivtreadidextract_16s (extract mapped read ids from fastqs to text file)
-Jun-16 10:53:50.557 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.557 [Task submitter] INFO  nextflow.Session - [9e/de5be9] Submitted process > bamindex_16s_ivt (index the bam file)
-Jun-16 10:53:50.559 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.559 [Task submitter] INFO  nextflow.Session - [55/d2f3bb] Submitted process > depths_16s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.560 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.560 [Task submitter] INFO  nextflow.Session - [ac/82e092] Submitted process > nanostats_16s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.562 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.562 [Task submitter] INFO  nextflow.Session - [e7/b88c06] Submitted process > bamindex_23s_native (index the bam file)
-Jun-16 10:53:50.563 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.563 [Task submitter] INFO  nextflow.Session - [c3/681275] Submitted process > nanostats_23s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.565 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.565 [Task submitter] INFO  nextflow.Session - [d4/a8ced3] Submitted process > depths_23s_native (calculate depth info from bam)
-Jun-16 10:53:50.566 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.566 [Task submitter] INFO  nextflow.Session - [8b/e5b91a] Submitted process > depths_23s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.567 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.567 [Task submitter] INFO  nextflow.Session - [e3/5f0762] Submitted process > bamindex_23s_ivt (index the bam file)
-Jun-16 10:53:50.569 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.569 [Task submitter] INFO  nextflow.Session - [68/6cf995] Submitted process > nanostats_23s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.571 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.571 [Task submitter] INFO  nextflow.Session - [14/5161e8] Submitted process > bamindex_16s_native (index the bam file)
-Jun-16 10:53:50.572 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.572 [Task submitter] INFO  nextflow.Session - [b3/4b8428] Submitted process > depths_16s_native (calculate depth info from bam)
-Jun-16 10:53:50.574 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: depths_23s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/26/aa78a07badd4066c8b69f9f3c1aa8c]
-Jun-16 10:53:50.574 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.574 [Task submitter] INFO  nextflow.Session - [e8/f4ecad] Submitted process > nanostats_16s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.576 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.576 [Task submitter] INFO  nextflow.Session - [49/95adf2] Submitted process > nanostats_23s_native (get read and alignment stats from bam)
-Jun-16 10:53:50.577 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.577 [Task submitter] INFO  nextflow.Session - [78/a810ca] Submitted process > bamindex_23s_native (index the bam file)
-Jun-16 10:53:50.579 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.579 [Task submitter] INFO  nextflow.Session - [12/a325be] Submitted process > depths_23s_native (calculate depth info from bam)
-Jun-16 10:53:50.580 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: depths_16s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/55/d2f3bb6c46194e9b6cfe28020b883e]
-Jun-16 10:53:50.586 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.587 [Task submitter] INFO  nextflow.Session - [12/418548] Submitted process > bamindex_16s_ivt (index the bam file)
-Jun-16 10:53:50.589 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.589 [Task submitter] INFO  nextflow.Session - [37/764573] Submitted process > depths_16s_ivt (calculate depth info from bam)
-Jun-16 10:53:50.591 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.591 [Task submitter] INFO  nextflow.Session - [94/9d77c6] Submitted process > nanostats_16s_ivt (get read and alignment stats from bam)
-Jun-16 10:53:50.593 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.593 [Task submitter] INFO  nextflow.Session - [50/d6458d] Submitted process > coverageplot_23s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.593 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: bamindex_23s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/76/fdbde790d66b060d472b459f046f71]
-Jun-16 10:53:50.596 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.596 [Task submitter] INFO  nextflow.Session - [d5/705f10] Submitted process > coverageplot_23s_native (coverage plot from depth file)
-Jun-16 10:53:50.597 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: depths_23s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d4/a8ced3419617cc185d922ffc899319]
-Jun-16 10:53:50.598 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.598 [Task submitter] INFO  nextflow.Session - [12/8f23d5] Submitted process > coverageplot_16s_native (coverage plot from depth file)
-Jun-16 10:53:50.599 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.599 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: depths_23s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/8b/e5b91a944c95f2573c1724aa6903ff]
-Jun-16 10:53:50.599 [Task submitter] INFO  nextflow.Session - [48/625111] Submitted process > coverageplot_16s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.601 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.601 [Task submitter] INFO  nextflow.Session - [77/948676] Submitted process > coverageplot_16s_native (coverage plot from depth file)
-Jun-16 10:53:50.601 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: depths_16s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b3/4b8428934c095d923fbe81fbffcc8b]
-Jun-16 10:53:50.603 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.604 [Task submitter] INFO  nextflow.Session - [80/9b621f] Submitted process > coverageplot_23s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.605 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.605 [Task submitter] INFO  nextflow.Session - [c5/8a9455] Submitted process > coverageplot_16s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.605 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 105; name: depths_23s_native (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/12/a325be0ede5ff30a0178a587a5bf9e]
-Jun-16 10:53:50.607 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.607 [Task submitter] INFO  nextflow.Session - [ae/0af835] Submitted process > coverageplot_23s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.612 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 109; name: depths_16s_ivt (calculate depth info from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/37/7645735d4098e0963de4f0a6a2988c]
-Jun-16 10:53:50.614 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.615 [Task submitter] INFO  nextflow.Session - [ad/3e0a7b] Submitted process > coverageplot_23s_native (coverage plot from depth file)
-Jun-16 10:53:50.691 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: mappedbams_16s_native (mapped 16s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0b/7aea6f5dc2d170537356bb70fc4ef6]
-Jun-16 10:53:50.696 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.696 [Task submitter] INFO  nextflow.Session - [6d/4bdabd] Submitted process > coverageplot_16s_native (coverage plot from depth file)
-Jun-16 10:53:50.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: bamindex_16s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e1/41e962c314e16dbe148d95b332a655]
-Jun-16 10:53:50.702 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.702 [Task submitter] INFO  nextflow.Session - [d8/f5dcc1] Submitted process > coverageplot_23s_native (coverage plot from depth file)
-Jun-16 10:53:50.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: bamindex_16s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/89/495f737c3f217ae770adf5c59f70f3]
-Jun-16 10:53:50.707 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.707 [Task submitter] INFO  nextflow.Session - [0e/046c84] Submitted process > coverageplot_16s_ivt (coverage plot from depth file)
-Jun-16 10:53:50.709 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: bamindex_16s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/14/63ca3a9c0f9bb359f65cb1aefe78d6]
-Jun-16 10:53:50.712 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: bamindex_23s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/6a/972616d5fdbe29a8426db0dc7e85c0]
-Jun-16 10:53:50.714 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: mappedbamindex_16s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/47/040c9d0102a632bfda4e326b0b74c3]
-Jun-16 10:53:50.717 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.718 [Task submitter] INFO  nextflow.Session - [41/01d387] Submitted process > mappedbamindex_16s_native (index the mapped bam file)
-Jun-16 10:53:50.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: bamindex_16s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9e/de5be9e728690da1f4f13a2087bd4f]
-Jun-16 10:53:50.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: bamindex_23s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e7/b88c06930472be38391aeba29b241e]
-Jun-16 10:53:50.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: bamindex_16s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/14/5161e8945edda68d2d0f83d6521319]
-Jun-16 10:53:50.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: mappedbams_23s_native (mapped 23s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/de/e63c83fcb0eb1ac4de7dce484c4867]
-Jun-16 10:53:50.757 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.757 [Task submitter] INFO  nextflow.Session - [56/b60308] Submitted process > mappedbamindex_23s_native (index the mapped bam file)
-Jun-16 10:53:50.762 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: bamindex_23s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e7/22b199a4cb1e04d632da9c3c6adc08]
-Jun-16 10:53:50.788 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: mappedbams_23s_native (mapped 23s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/22/5718fce05da81a5d6a5a5d542a9066]
-Jun-16 10:53:50.789 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a2/3bb227c6cca3b96d49e1d323743aa1]
-Jun-16 10:53:50.795 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.795 [Task submitter] INFO  nextflow.Session - [95/d0218b] Submitted process > mappedbamindex_23s_ivt (index the mapped bam file)
-Jun-16 10:53:50.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9d/840da9bb87d7d24d50534382e2b75b]
-Jun-16 10:53:50.800 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.800 [Task submitter] INFO  nextflow.Session - [ef/82aa30] Submitted process > mappedbamindex_23s_native (index the mapped bam file)
-Jun-16 10:53:50.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: mappedbams_23s_native (mapped 23s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/5c/32cfdcbf5fd79b1916e2cf01f9409d]
-Jun-16 10:53:50.805 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.805 [Task submitter] INFO  nextflow.Session - [88/426be5] Submitted process > mappedbamindex_23s_ivt (index the mapped bam file)
-Jun-16 10:53:50.807 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/03/07ae21abc3405ac06b776ec360fb61]
-Jun-16 10:53:50.808 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.808 [Task submitter] INFO  nextflow.Session - [44/37cab3] Submitted process > mappedbamindex_23s_native (index the mapped bam file)
-Jun-16 10:53:50.811 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: mappedbams_16s_native (mapped 16s native fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/83/2ea2095d4086e3ed67aab6fb531d3f]
-Jun-16 10:53:50.814 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/3e/f54447a8b1f870647d1148b20ed30b]
-Jun-16 10:53:50.816 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: mappedbams_23s_ivt (mapped 23s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e4/6e2187862c01f7ed6e62abb5b5e224]
-Jun-16 10:53:50.819 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: mappedbams_16s_ivt (mapped 16s IVT fastqs to sorted bam files); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d0/9d45c1e9b601d1d1a7f409216fc760]
-Jun-16 10:53:50.821 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.821 [Task submitter] INFO  nextflow.Session - [b5/ad8146] Submitted process > mappedbamindex_16s_native (index the mapped bam file)
-Jun-16 10:53:50.821 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: bamindex_23s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e3/5f0762843ef1e543561d01d1bc33a4]
-Jun-16 10:53:50.822 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.822 [Task submitter] INFO  nextflow.Session - [77/4475ab] Submitted process > mappedbamindex_16s_ivt (index the mapped bam file)
-Jun-16 10:53:50.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 106; name: bamindex_23s_native (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/78/a810ca8f3f2d0e5b5a8cabdbca8d22]
-Jun-16 10:53:50.824 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.824 [Task submitter] INFO  nextflow.Session - [24/9b94bd] Submitted process > mappedbamindex_23s_ivt (index the mapped bam file)
-Jun-16 10:53:50.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 108; name: bamindex_16s_ivt (index the bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/12/41854867e1e169c7c98bae1b427403]
-Jun-16 10:53:50.825 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.825 [Task submitter] INFO  nextflow.Session - [ed/8bf265] Submitted process > mappedbamindex_16s_ivt (index the mapped bam file)
-Jun-16 10:53:50.828 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:50.828 [Task submitter] INFO  nextflow.Session - [7d/0c3c9e] Submitted process > mappedbamindex_16s_ivt (index the mapped bam file)
-Jun-16 10:53:51.014 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 124; name: mappedbamindex_23s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/95/d0218bef4c068f6ed719ee12d2686d]
-Jun-16 10:53:51.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 129; name: mappedbamindex_16s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b5/ad8146a2fc0520fa5e27197eebe2e4]
-Jun-16 10:53:51.028 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 123; name: mappedbamindex_23s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/56/b603082a98dde3790265afe3ce6852]
-Jun-16 10:53:51.030 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 127; name: mappedbamindex_23s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/44/37cab320b49bdd25b1a58a3985c88e]
-Jun-16 10:53:51.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 128; name: mappedbamindex_16s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ed/8bf265b2334819194d250116bd9c63]
-Jun-16 10:53:51.038 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 132; name: mappedbamindex_16s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/7d/0c3c9e2d44c908aab094485bb590e5]
-Jun-16 10:53:51.049 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 122; name: mappedbamindex_16s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/41/01d387acd3944b970d935da958762b]
-Jun-16 10:53:51.079 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 125; name: mappedbamindex_23s_native (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ef/82aa30b72ac070d400fba298ebdd51]
-Jun-16 10:53:51.095 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 126; name: mappedbamindex_23s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/88/426be5a1d13b21b28453f99047319c]
-Jun-16 10:53:51.097 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 130; name: mappedbamindex_16s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/77/4475ab3d1d6202bc225a826ee2cb79]
-Jun-16 10:53:51.102 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 131; name: mappedbamindex_23s_ivt (index the mapped bam file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/24/9b94bd021efd11135d6df5f3545ead]
-Jun-16 10:53:51.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: nativereadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/21/8f1a7c5bb845ed035e40d5744e9ae2]
-Jun-16 10:53:51.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: nativereadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/53/77b8d0dad53f4b15f8db7c1f705c4b]
-Jun-16 10:53:51.526 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.526 [Task submitter] INFO  nextflow.Session - [c1/4d7fad] Submitted process > extractfast5s_native_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.527 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: ivtreadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d2/9a44b09c8d66fa9a05ac2868d42107]
-Jun-16 10:53:51.528 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.528 [Task submitter] INFO  nextflow.Session - [e4/00fac5] Submitted process > extractfast5s_native_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.529 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: ivtreadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/58/14dd8e640d3cf5b7b02c618c517406]
-Jun-16 10:53:51.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: nativereadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/54/80971d3ff4e402312baad447a0b416]
-Jun-16 10:53:51.534 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.535 [Task submitter] INFO  nextflow.Session - [54/2faae2] Submitted process > extractfast5s_ivt_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.535 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: nativereadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/80/b6bc60f82d2d8fce57327028796f7f]
-Jun-16 10:53:51.536 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.536 [Task submitter] INFO  nextflow.Session - [27/bcc78a] Submitted process > extractfast5s_ivt_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.537 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: ivtreadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/70/f219c00938f761b017efddd7256e60]
-Jun-16 10:53:51.538 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.538 [Task submitter] INFO  nextflow.Session - [a1/824d6f] Submitted process > extractfast5s_native_16s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.540 [Task submitter] INFO  nextflow.Session - [80/4af96c] Submitted process > extractfast5s_native_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.540 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: nativereadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/84/399f2d09381509c4dfdc1f7b8beca8]
-Jun-16 10:53:51.541 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.541 [Task submitter] INFO  nextflow.Session - [0d/ad2301] Submitted process > extractfast5s_ivt_16s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.543 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: ivtreadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/4f/3ce39b5e572340985e5924e2afcff7]
-Jun-16 10:53:51.544 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.544 [Task submitter] INFO  nextflow.Session - [9e/0f33b3] Submitted process > extractfast5s_native_16s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: ivtreadidextract_23s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ea/34185fa46458c36fb0456d7874073c]
-Jun-16 10:53:51.548 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: ivtreadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9a/092999b3a4ec9fdeeb2e87e369480f]
-Jun-16 10:53:51.548 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.548 [Task submitter] INFO  nextflow.Session - [1e/f82eb0] Submitted process > extractfast5s_ivt_16s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.550 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.550 [Task submitter] INFO  nextflow.Session - [df/a1c8b3] Submitted process > extractfast5s_ivt_23s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.552 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.552 [Task submitter] INFO  nextflow.Session - [ef/17caf9] Submitted process > extractfast5s_ivt_16s (extract multifast5s for mapped reads)
-Jun-16 10:53:51.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: nativereadidextract_16s (extract mapped read ids from fastqs to text file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/13/4225810b640374dc4ef0721f5ba666]
-Jun-16 10:53:51.627 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Jun-16 10:53:51.627 [Task submitter] INFO  nextflow.Session - [18/6af73b] Submitted process > extractfast5s_native_16s (extract multifast5s for mapped reads)
-Jun-16 10:54:04.548 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: nanostats_16s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/27/25c0a71d818d82a2e7c3f895ef78db]
-Jun-16 10:54:04.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: nanostats_23s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d6/687489249f266edc93dbee46a596e0]
-Jun-16 10:54:04.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: nanostats_16s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ac/82e092c2b00d06e311e9312deb898c]
-Jun-16 10:54:04.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: nanostats_23s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9c/596c791422f04c5864ecf8cff9f4c6]
-Jun-16 10:54:04.607 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: nanostats_23s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c3/6812756aa7f8f13bab63cea315155c]
-Jun-16 10:54:04.624 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: nanostats_23s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/49/95adf235867a4a5994bef4f0cee5ef]
-Jun-16 10:54:04.629 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: nanostats_23s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/2b/08c8b5c50b24c9b1bd47137daaa896]
-Jun-16 10:54:04.632 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: nanostats_16s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e6/5aa2141e90997e712525095e943ed0]
-Jun-16 10:54:04.634 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: nanostats_16s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d8/a743e07efa0015ecb6bb7c868cefb8]
-Jun-16 10:54:04.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 107; name: nanostats_16s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/94/9d77c6d4c381d96c18490058c00216]
-Jun-16 10:54:04.650 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: nanostats_23s_ivt (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/68/6cf995a0c2260c06ae98824211246c]
-Jun-16 10:54:04.653 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: nanostats_16s_native (get read and alignment stats from bam); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e8/f4ecad92fb1f1af26612c4536308ef]
-Jun-16 10:55:03.684 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 115; name: coverageplot_23s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/80/9b621fa4f5dd2a43c3c72edffd09af]
-Jun-16 10:55:03.687 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 119; name: coverageplot_16s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/6d/4bdabd66b85ac23baa2817ee19d1cf]
-Jun-16 10:55:03.689 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 120; name: coverageplot_23s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d8/f5dcc16fe90824259f5c73994f87a7]
-Jun-16 10:55:03.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 112; name: coverageplot_16s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/12/8f23d591a9140de4aaeb75715c4604]
-Jun-16 10:55:03.710 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 110; name: coverageplot_23s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/50/d6458df68e1301880603edaaf8abb4]
-Jun-16 10:55:03.717 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 111; name: coverageplot_23s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d5/705f10bce06ebbb4de696a018d7042]
-Jun-16 10:55:03.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 121; name: coverageplot_16s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0e/046c84f0e9a3505d83d9cc2cc1192b]
-Jun-16 10:55:03.729 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 118; name: coverageplot_23s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ae/0af8354518706446c581f77ba8f295]
-Jun-16 10:55:03.735 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 116; name: coverageplot_16s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c5/8a945546eef898d125f86db4aa2247]
-Jun-16 10:55:03.737 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 113; name: coverageplot_16s_ivt (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/48/62511113b6cac4b313bf1deeac6a98]
-Jun-16 10:55:03.738 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 114; name: coverageplot_16s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/77/948676f1637095d3889ca80d765932]
-Jun-16 10:55:03.740 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 117; name: coverageplot_23s_native (coverage plot from depth file); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ad/3e0a7b0aeb386c67dce8f3837aca99]
-Jun-16 10:58:48.842 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- submitted tasks are shown below
-~> TaskHandler[id: 133; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c1/4d7fadf6a53a70a9a0980486b25196]
-~> TaskHandler[id: 134; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e4/00fac5cf8c174dc1447785fa204723]
-~> TaskHandler[id: 135; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/54/2faae2ee0913f0d9ad71a6f6a6cdba]
-~> TaskHandler[id: 136; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/27/bcc78a660e3f1567d650df717a161d]
-~> TaskHandler[id: 137; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a1/824d6fbbdecc2ec2d5410a4dd8665e]
-~> TaskHandler[id: 138; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/80/4af96cab4ff177f56903ab9bec1965]
-~> TaskHandler[id: 139; name: extractfast5s_ivt_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0d/ad2301eb5d2157f12667da17cccbd1]
-~> TaskHandler[id: 140; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9e/0f33b3594a2433e42ab556ba401830]
-~> TaskHandler[id: 141; name: extractfast5s_ivt_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/1e/f82eb058e0f5459f8626d25a8051ed]
-~> TaskHandler[id: 142; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/df/a1c8b3d2873f0e20c5ade263032807]
-.. remaining tasks omitted.
-Jun-16 11:00:05.263 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 142; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/df/a1c8b3d2873f0e20c5ade263032807]
-Jun-16 11:00:05.279 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 143; name: extractfast5s_ivt_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ef/17caf947efbd5fdce7b4b2ef79ea86]
-Jun-16 11:00:05.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 139; name: extractfast5s_ivt_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0d/ad2301eb5d2157f12667da17cccbd1]
-Jun-16 11:00:05.284 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 141; name: extractfast5s_ivt_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/1e/f82eb058e0f5459f8626d25a8051ed]
-Jun-16 11:00:05.336 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 135; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/54/2faae2ee0913f0d9ad71a6f6a6cdba]
-Jun-16 11:00:05.338 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 136; name: extractfast5s_ivt_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/27/bcc78a660e3f1567d650df717a161d]
-Jun-16 11:03:48.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 6 -- submitted tasks are shown below
-~> TaskHandler[id: 133; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c1/4d7fadf6a53a70a9a0980486b25196]
-~> TaskHandler[id: 134; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e4/00fac5cf8c174dc1447785fa204723]
-~> TaskHandler[id: 137; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a1/824d6fbbdecc2ec2d5410a4dd8665e]
-~> TaskHandler[id: 138; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/80/4af96cab4ff177f56903ab9bec1965]
-~> TaskHandler[id: 140; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9e/0f33b3594a2433e42ab556ba401830]
-~> TaskHandler[id: 144; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: RUNNING; exit: -; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/18/6af73b255bca07bb5338870b743771]
-Jun-16 11:08:21.602 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 144; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/18/6af73b255bca07bb5338870b743771]
-Jun-16 11:08:21.609 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 133; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c1/4d7fadf6a53a70a9a0980486b25196]
-Jun-16 11:08:21.612 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 137; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a1/824d6fbbdecc2ec2d5410a4dd8665e]
-Jun-16 11:08:21.617 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 134; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e4/00fac5cf8c174dc1447785fa204723]
-Jun-16 11:08:21.621 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 140; name: extractfast5s_native_16s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9e/0f33b3594a2433e42ab556ba401830]
-Jun-16 11:08:21.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 138; name: extractfast5s_native_23s (extract multifast5s for mapped reads); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/80/4af96cab4ff177f56903ab9bec1965]
-Jun-16 11:08:21.707 [main] DEBUG nextflow.Session - Session await > all process finished
-Jun-16 11:08:21.805 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Jun-16 11:08:21.822 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=144; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2h 22m 32s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=55; peakCpus=55; peakMemory=0; ]
-Jun-16 11:08:22.057 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Jun-16 11:08:22.071 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 29213@gru [127.0.1.1]
+  CPUs: 56 - Mem: 188.8 GB (160.2 GB) - Swap: 61 GB (61 GB)
+Jun-16 11:09:59.614 [main] DEBUG nextflow.Session - Work-dir: /scratch/bhargava/workflows/mapping-nf/work [ext2/ext3]
+Jun-16 11:09:59.615 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /scratch/bhargava/workflows/mapping-nf/bin
+Jun-16 11:09:59.623 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jun-16 11:09:59.633 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jun-16 11:09:59.651 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jun-16 11:09:59.661 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 57; maxThreads: 1000
+Jun-16 11:09:59.897 [main] DEBUG nextflow.Session - Session start invoked
+Jun-16 11:10:00.608 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jun-16 11:10:01.248 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.249 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.253 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jun-16 11:10:01.259 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=188.8 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+Jun-16 11:10:01.355 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.356 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.360 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.361 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.364 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.364 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.367 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.367 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.372 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.372 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.376 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.382 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.382 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.387 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.387 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.389 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.389 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.391 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.391 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.394 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.394 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.399 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.399 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.403 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.403 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.410 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.410 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.414 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.414 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.420 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.420 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.423 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.423 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.425 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.426 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.428 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.428 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.431 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.431 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.434 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.434 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.436 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.439 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.439 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.443 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.443 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.446 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.446 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.449 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.449 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.451 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.451 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.454 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.454 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.457 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.457 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.461 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.461 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.464 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.464 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.466 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.467 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.469 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.469 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.472 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.472 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.474 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.474 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.477 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.477 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.480 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.480 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.483 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.483 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.486 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.486 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.489 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.489 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.492 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.492 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.502 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.502 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.506 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.506 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.510 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.510 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.514 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.514 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.522 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.522 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.527 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.527 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.530 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.530 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.535 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.535 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.541 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.541 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.544 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.544 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.549 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.549 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.553 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.553 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.557 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.558 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.559 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.559 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.561 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.561 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.564 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.564 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.566 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.566 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.567 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jun-16 11:10:01.567 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jun-16 11:10:01.569 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: tomboresquiggle_n_1_23s, tomboresquiggle_n_3_16s, f5cindex3_n_23s, tombocompare_2_16s, multitosingle_n_2_23s, f5cindex2_i_16s, f5ceventalign3_i_16s, multitosingle_n_3_16s, tomboresquiggle_n_2_16s, tombocompare, tomboextract_23s, f5cindex1_i_23s, tombocompare_3_16s, tomboextract_23s_3, f5ceventalign1_n_16s, f5ceventalign2_i_23s, tombocompare_1_23s, tomboextract_23s_2, multitosingle_n_1_23s, tomboextract_23s_1, multitosingle_i_1_16s, f5ceventalign3_n_23s, f5cindex3_n_16s, multitosingle_i_3_23s, f5cindex1_i_16s, tomboresquiggle_n_2_23s, tomboextract_16s_1, f5ceventalign1_i_16s, tomboextract_16s_3, tomboextract_16s_2, tomboextract_16s, f5cindex2_i_23s, f5ceventalign2_n_16s, tomboresquiggle_n_1_16s, multitosingle_i_2_16s, tomboresquiggle_n_3_23s, f5ceventalign3_n_16s, tomboresquiggle_i_3_16s, tomboresquiggle_i_2_16s, multitosingle_i_3_16s, multitosingle_i_1_23s, f5ceventalign1_i_23s, f5cindex, multitosingle_i_2_23s, f5cindex1_n_23s, f5cindex2_n_16s, f5cindex3_i_23s, tomboresquiggle_i_1_23s, f5ceventalign2_n_23s, multitosingle, tomboresquiggle_i_3_23s, tombocompare_2_23s, f5cindex3_i_16s, f5ceventalign2_i_16s, multitosingle_n_1_16s, tomboresquiggle_i_2_23s, f5ceventalign, multitosingle_n_3_23s, f5ceventalign1_n_23s, tombocompare_3_23s, f5cindex1_n_16s, tomboresquiggle, multitosingle_n_2_16s, f5cindex2_n_23s, tombocompare_1_16s, tomboresquiggle_i_1_16s, f5ceventalign3_i_23s
+Jun-16 11:10:01.570 [main] DEBUG nextflow.Session - Ignite dataflow network (102)
+Jun-16 11:10:01.575 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/mapping-nf/native/; pattern: *.fastq; options: [:]
+Jun-16 11:10:01.577 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /scratch/bhargava/workflows/mapping-nf/ivt/; pattern: *.fastq; options: [:]
+Jun-16 11:10:01.581 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_1_16s
+Jun-16 11:10:01.582 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_2_16s
+Jun-16 11:10:01.583 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_3_16s
+Jun-16 11:10:01.583 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_1_23s
+Jun-16 11:10:01.584 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_2_23s
+Jun-16 11:10:01.585 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_n_3_23s
+Jun-16 11:10:01.586 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_1_16s
+Jun-16 11:10:01.586 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_2_16s
+Jun-16 11:10:01.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_3_16s
+Jun-16 11:10:01.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_1_23s
+Jun-16 11:10:01.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_2_23s
+Jun-16 11:10:01.589 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multitosingle_i_3_23s
+Jun-16 11:10:01.590 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_1_16s
+Jun-16 11:10:01.590 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_2_16s
+Jun-16 11:10:01.591 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_3_16s
+Jun-16 11:10:01.592 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_1_23s
+Jun-16 11:10:01.593 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_2_23s
+Jun-16 11:10:01.594 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_n_3_23s
+Jun-16 11:10:01.596 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_1_16s
+Jun-16 11:10:01.596 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_2_16s
+Jun-16 11:10:01.597 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_3_16s
+Jun-16 11:10:01.599 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_1_23s
+Jun-16 11:10:01.599 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_2_23s
+Jun-16 11:10:01.600 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboresquiggle_i_3_23s
+Jun-16 11:10:01.601 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_1_16s
+Jun-16 11:10:01.601 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_2_16s
+Jun-16 11:10:01.602 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_3_16s
+Jun-16 11:10:01.603 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_1_23s
+Jun-16 11:10:01.603 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_2_23s
+Jun-16 11:10:01.604 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tombocompare_3_23s
+Jun-16 11:10:01.604 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex1_n_16s
+Jun-16 11:10:01.605 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex2_n_16s
+Jun-16 11:10:01.608 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex3_n_16s
+Jun-16 11:10:01.608 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex1_n_23s
+Jun-16 11:10:01.609 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex2_n_23s
+Jun-16 11:10:01.609 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex3_n_23s
+Jun-16 11:10:01.610 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex1_i_16s
+Jun-16 11:10:01.611 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex2_i_16s
+Jun-16 11:10:01.611 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex3_i_16s
+Jun-16 11:10:01.612 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex1_i_23s
+Jun-16 11:10:01.612 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex2_i_23s
+Jun-16 11:10:01.615 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5cindex3_i_23s
+Jun-16 11:10:01.615 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign1_n_16s
+Jun-16 11:10:01.620 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign2_n_16s
+Jun-16 11:10:01.620 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign3_n_16s
+Jun-16 11:10:01.620 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign1_i_16s
+Jun-16 11:10:01.621 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign2_i_16s
+Jun-16 11:10:01.621 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign3_i_16s
+Jun-16 11:10:01.622 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign1_n_23s
+Jun-16 11:10:01.622 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign2_n_23s
+Jun-16 11:10:01.624 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign3_n_23s
+Jun-16 11:10:01.624 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign1_i_23s
+Jun-16 11:10:01.625 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign2_i_23s
+Jun-16 11:10:01.626 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > f5ceventalign3_i_23s
+Jun-16 11:10:01.627 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_16s_1
+Jun-16 11:10:01.627 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_16s_2
+Jun-16 11:10:01.628 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_16s_3
+Jun-16 11:10:01.628 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_23s_1
+Jun-16 11:10:01.628 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_23s_2
+Jun-16 11:10:01.628 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > tomboextract_23s_3
+Jun-16 11:10:01.629 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jun-16 11:10:01.629 [main] DEBUG nextflow.Session - Session await
+Jun-16 11:10:01.851 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.856 [Task submitter] INFO  nextflow.Session - [ce/cc1aec] Submitted process > multitosingle_n_3_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.860 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.861 [Task submitter] INFO  nextflow.Session - [0e/2bd924] Submitted process > multitosingle_i_3_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.864 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.864 [Task submitter] INFO  nextflow.Session - [c3/b8a650] Submitted process > multitosingle_n_1_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.867 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.868 [Task submitter] INFO  nextflow.Session - [5a/9f5a3c] Submitted process > multitosingle_n_3_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.871 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.871 [Task submitter] INFO  nextflow.Session - [c9/ad045c] Submitted process > multitosingle_i_1_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.874 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.874 [Task submitter] INFO  nextflow.Session - [6c/ee4ada] Submitted process > multitosingle_i_1_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.877 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.877 [Task submitter] INFO  nextflow.Session - [a7/93f45f] Submitted process > multitosingle_n_2_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.880 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.881 [Task submitter] INFO  nextflow.Session - [a5/7331e0] Submitted process > multitosingle_n_1_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.883 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.884 [Task submitter] INFO  nextflow.Session - [38/cb7097] Submitted process > multitosingle_n_2_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.887 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.887 [Task submitter] INFO  nextflow.Session - [a8/8da650] Submitted process > multitosingle_i_2_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.890 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.890 [Task submitter] INFO  nextflow.Session - [30/6446f0] Submitted process > multitosingle_i_3_16s (convert multifast5s into single fast5s)
+Jun-16 11:10:01.893 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:01.893 [Task submitter] INFO  nextflow.Session - [8a/cfeaeb] Submitted process > multitosingle_i_2_23s (convert multifast5s into single fast5s)
+Jun-16 11:10:02.803 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: multitosingle_n_1_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c3/b8a6505c6527db2c62bb1ccc80ed46]
+Jun-16 11:10:02.823 [Actor Thread 9] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /scratch/bhargava/workflows/mapping-nf/results/fast5s_native_1_23s_single -- Cause: java.nio.file.NoSuchFileException: /scratch/bhargava/workflows/mapping-nf/results/fast5s_native_1_23s_single
+Jun-16 11:10:02.832 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.832 [Task submitter] INFO  nextflow.Session - [4c/762a66] Submitted process > tomboresquiggle_n_1_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.835 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jun-16 11:10:02.857 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: multitosingle_n_3_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/5a/9f5a3c4c536736e86c874ac14722cb]
+Jun-16 11:10:02.865 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: multitosingle_n_2_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/38/cb70976516bd4dca32285464d9f9dc]
+Jun-16 11:10:02.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: multitosingle_i_3_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/30/6446f01ba6ce8622ccd9756f50ace9]
+Jun-16 11:10:02.872 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.873 [Task submitter] INFO  nextflow.Session - [e6/65f13b] Submitted process > tomboresquiggle_n_3_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: multitosingle_n_3_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ce/cc1aecb1e58b94ebb3c8371a95587f]
+Jun-16 11:10:02.891 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.891 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: multitosingle_i_3_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0e/2bd9241340542a36ffd35f7848176e]
+Jun-16 11:10:02.891 [Task submitter] INFO  nextflow.Session - [f2/9ba4f2] Submitted process > tomboresquiggle_n_2_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.897 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: multitosingle_i_1_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c9/ad045c2004891ef2279c0f169c8caa]
+Jun-16 11:10:02.906 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: multitosingle_n_2_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a7/93f45f874bc32bf30686a8a327fea7]
+Jun-16 11:10:02.908 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.908 [Task submitter] INFO  nextflow.Session - [ea/6162ff] Submitted process > tomboresquiggle_i_3_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.915 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: multitosingle_n_1_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a5/7331e020ca5461263bd631ce4b2b33]
+Jun-16 11:10:02.915 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.915 [Task submitter] INFO  nextflow.Session - [b0/d95781] Submitted process > tomboresquiggle_n_3_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: multitosingle_i_2_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a8/8da65079292a9fd655f3074b2ab9bb]
+Jun-16 11:10:02.919 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.920 [Task submitter] INFO  nextflow.Session - [ab/426fe4] Submitted process > tomboresquiggle_i_3_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.923 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.924 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: multitosingle_i_2_23s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/8a/cfeaeb0b9062c6cb78c3adf6ccbd73]
+Jun-16 11:10:02.924 [Task submitter] INFO  nextflow.Session - [82/e69e0a] Submitted process > tomboresquiggle_i_1_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.927 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.928 [Task submitter] INFO  nextflow.Session - [3d/66d9a3] Submitted process > tomboresquiggle_n_2_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.930 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.931 [Task submitter] INFO  nextflow.Session - [d1/e6ff1c] Submitted process > tomboresquiggle_n_1_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.934 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.934 [Task submitter] INFO  nextflow.Session - [bc/1fe7a4] Submitted process > tomboresquiggle_i_2_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.936 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:02.937 [Task submitter] INFO  nextflow.Session - [c5/650bdb] Submitted process > tomboresquiggle_i_2_23s (resquiggle fast5s with tombo)
+Jun-16 11:10:02.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: multitosingle_i_1_16s (convert multifast5s into single fast5s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/6c/ee4ada9d0eca72107960df9a65688b]
+Jun-16 11:10:03.011 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:03.023 [Task submitter] INFO  nextflow.Session - [fe/cf3c45] Submitted process > tomboresquiggle_i_1_16s (resquiggle fast5s with tombo)
+Jun-16 11:10:04.772 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: tomboresquiggle_n_1_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/d1/e6ff1c66f6d76a82a04d2ad5a1e46d]
+Jun-16 11:10:04.854 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_1_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:04.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: tomboresquiggle_i_3_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ea/6162ff25fff9e92db1b24b6ab6b645]
+Jun-16 11:10:04.873 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_3_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:04.886 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: tomboresquiggle_i_2_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/bc/1fe7a40ca5ec1822bba56c1e8efadf]
+Jun-16 11:10:04.888 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_2_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:04.969 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: tomboresquiggle_i_1_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/fe/cf3c45867d48f0a6c7253c53759f08]
+Jun-16 11:10:04.975 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_1_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:04.986 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:04.986 [Task submitter] INFO  nextflow.Session - [37/af5c9c] Submitted process > tombocompare_1_16s (tombo level sample compare)
+Jun-16 11:10:05.176 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: tomboresquiggle_n_1_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/4c/762a661783326f17c769b02f8174cc]
+Jun-16 11:10:05.179 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_1_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.262 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: tomboresquiggle_n_2_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/f2/9ba4f2bd49c0f39149c5cda3f5b63b]
+Jun-16 11:10:05.265 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_2_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.267 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: tomboresquiggle_n_2_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/3d/66d9a3225284314dcdfdca7ee799a3]
+Jun-16 11:10:05.269 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_2_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.274 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:05.274 [Task submitter] INFO  nextflow.Session - [7f/ef4ad5] Submitted process > tombocompare_2_16s (tombo level sample compare)
+Jun-16 11:10:05.324 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: tomboresquiggle_i_1_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/82/e69e0af704e857186ee79b8c2c30b6]
+Jun-16 11:10:05.328 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_1_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.337 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:05.337 [Task submitter] INFO  nextflow.Session - [3e/51acb5] Submitted process > tombocompare_1_23s (tombo level sample compare)
+Jun-16 11:10:05.404 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: tomboresquiggle_i_3_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ab/426fe4dba14a8c2a5703fcb6ec4de7]
+Jun-16 11:10:05.409 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_3_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.418 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: tomboresquiggle_n_3_16s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e6/65f13b6768d8d203ff2d63b462874d]
+Jun-16 11:10:05.419 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_3_16s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.427 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:05.432 [Task submitter] INFO  nextflow.Session - [e0/924520] Submitted process > tombocompare_3_16s (tombo level sample compare)
+Jun-16 11:10:05.452 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: tomboresquiggle_n_3_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b0/d9578137ee2d0b8a4b3d5bb445eb87]
+Jun-16 11:10:05.453 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_n_3_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.457 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:05.457 [Task submitter] INFO  nextflow.Session - [13/58946f] Submitted process > tombocompare_3_23s (tombo level sample compare)
+Jun-16 11:10:05.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: tomboresquiggle_i_2_23s (resquiggle fast5s with tombo); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c5/650bdbc56a3d9a500da19beb771b7c]
+Jun-16 11:10:05.505 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process tomboresquiggle_i_2_23s > Skipping output binding because one or more optional files are missing: fileoutparam<0>
+Jun-16 11:10:05.514 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:05.515 [Task submitter] INFO  nextflow.Session - [74/6d8343] Submitted process > tombocompare_2_23s (tombo level sample compare)
+Jun-16 11:10:06.369 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: tombocompare_1_16s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/37/af5c9c386cc43d5de1795dd772e083]
+Jun-16 11:10:06.381 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.381 [Task submitter] INFO  nextflow.Session - [2a/8228b5] Submitted process > tomboextract_16s_1 (extracting p values from tombo stat files for 16s)
+Jun-16 11:10:06.384 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.384 [Task submitter] INFO  nextflow.Session - [84/1c0432] Submitted process > f5cindex1_n_16s (nanopolish index using f5c)
+Jun-16 11:10:06.387 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.387 [Task submitter] INFO  nextflow.Session - [01/98c536] Submitted process > f5cindex1_i_16s (nanopolish index using f5c)
+Jun-16 11:10:06.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: f5cindex1_n_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/84/1c0432941344d65b3d1f8310efc513]
+Jun-16 11:10:06.670 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.671 [Task submitter] INFO  nextflow.Session - [5e/b3280a] Submitted process > f5ceventalign1_n_16s (1)
+Jun-16 11:10:06.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: f5cindex1_i_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/01/98c536be45d608c5ed8ffb778727bf]
+Jun-16 11:10:06.695 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.695 [Task submitter] INFO  nextflow.Session - [89/59efc7] Submitted process > f5ceventalign1_i_16s (1)
+Jun-16 11:10:06.786 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: tombocompare_2_16s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/7f/ef4ad535a59afd066b93a7dd8beeb6]
+Jun-16 11:10:06.791 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: f5ceventalign1_n_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/5e/b3280a31f5c9a9b24a510b8ded4fe9]
+Jun-16 11:10:06.796 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.796 [Task submitter] INFO  nextflow.Session - [19/806d66] Submitted process > f5cindex2_i_16s (nanopolish index using f5c)
+Jun-16 11:10:06.799 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.800 [Task submitter] INFO  nextflow.Session - [cf/6f0989] Submitted process > f5cindex2_n_16s (nanopolish index using f5c)
+Jun-16 11:10:06.803 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.803 [Task submitter] INFO  nextflow.Session - [42/b7bc6b] Submitted process > tomboextract_16s_2 (extracting p values from tombo stat files for 16s)
+Jun-16 11:10:06.815 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: f5ceventalign1_i_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/89/59efc7721f2b8694bac6ae71cbaff5]
+Jun-16 11:10:06.921 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: tombocompare_3_16s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/e0/92452044649846f4d8071f3b1e5abf]
+Jun-16 11:10:06.932 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.937 [Task submitter] INFO  nextflow.Session - [af/2b22c2] Submitted process > f5cindex3_i_16s (nanopolish index using f5c)
+Jun-16 11:10:06.940 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.942 [Task submitter] INFO  nextflow.Session - [0b/d206fd] Submitted process > f5cindex3_n_16s (nanopolish index using f5c)
+Jun-16 11:10:06.945 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:06.947 [Task submitter] INFO  nextflow.Session - [3f/b401c3] Submitted process > tomboextract_16s_3 (extracting p values from tombo stat files for 16s)
+Jun-16 11:10:07.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: tombocompare_1_23s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/3e/51acb5f9ee38487c90235f55628e4f]
+Jun-16 11:10:07.012 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: f5cindex2_i_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/19/806d660399cff76ea3a6a1a751c640]
+Jun-16 11:10:07.015 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.015 [Task submitter] INFO  nextflow.Session - [f8/2eb043] Submitted process > tomboextract_23s_1 (extracting p values from tombo stat files for 23s)
+Jun-16 11:10:07.017 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.018 [Task submitter] INFO  nextflow.Session - [c5/037fef] Submitted process > f5cindex1_n_23s (nanopolish index using f5c)
+Jun-16 11:10:07.019 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: f5cindex2_n_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/cf/6f09892a50e0551457a1b4d8a72b36]
+Jun-16 11:10:07.020 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.020 [Task submitter] INFO  nextflow.Session - [23/4c5ed6] Submitted process > f5cindex1_i_23s (nanopolish index using f5c)
+Jun-16 11:10:07.023 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.023 [Task submitter] INFO  nextflow.Session - [08/8c195d] Submitted process > f5ceventalign2_i_16s (1)
+Jun-16 11:10:07.028 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.028 [Task submitter] INFO  nextflow.Session - [69/961a82] Submitted process > f5ceventalign2_n_16s (1)
+Jun-16 11:10:07.078 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: tombocompare_3_23s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/13/58946f379aa55440d24a5b9a7bbda0]
+Jun-16 11:10:07.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: tombocompare_2_23s (tombo level sample compare); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/74/6d8343f6850ac4f31397408b5c36a4]
+Jun-16 11:10:07.096 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.097 [Task submitter] INFO  nextflow.Session - [2d/8e2136] Submitted process > f5cindex3_n_23s (nanopolish index using f5c)
+Jun-16 11:10:07.102 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.110 [Task submitter] INFO  nextflow.Session - [31/405ebc] Submitted process > tomboextract_23s_3 (extracting p values from tombo stat files for 23s)
+Jun-16 11:10:07.126 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.126 [Task submitter] INFO  nextflow.Session - [63/3e14a6] Submitted process > f5cindex3_i_23s (nanopolish index using f5c)
+Jun-16 11:10:07.129 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.135 [Task submitter] INFO  nextflow.Session - [9c/22ad8c] Submitted process > f5cindex2_i_23s (nanopolish index using f5c)
+Jun-16 11:10:07.138 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.141 [Task submitter] INFO  nextflow.Session - [b3/c24d2f] Submitted process > f5cindex2_n_23s (nanopolish index using f5c)
+Jun-16 11:10:07.144 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.146 [Task submitter] INFO  nextflow.Session - [65/9d56ce] Submitted process > tomboextract_23s_2 (extracting p values from tombo stat files for 23s)
+Jun-16 11:10:07.305 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: f5ceventalign2_n_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/69/961a82ca37521d4dfbcdb706f0a97e]
+Jun-16 11:10:07.354 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: f5cindex3_n_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/0b/d206fdd90d5d7d5d6c3ecdb02ba780]
+Jun-16 11:10:07.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: f5cindex1_n_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/c5/037fef6f800e1b960043edcac54ac0]
+Jun-16 11:10:07.368 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.368 [Task submitter] INFO  nextflow.Session - [3d/5d4e46] Submitted process > f5ceventalign3_n_16s (1)
+Jun-16 11:10:07.370 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: f5cindex1_i_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/23/4c5ed6eee076cbc80a1f59f7e035b9]
+Jun-16 11:10:07.372 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.373 [Task submitter] INFO  nextflow.Session - [31/4f1d83] Submitted process > f5ceventalign1_n_23s (1)
+Jun-16 11:10:07.374 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: f5ceventalign2_i_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/08/8c195daf1dac8bddc0b25a6c99a9cc]
+Jun-16 11:10:07.377 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.377 [Task submitter] INFO  nextflow.Session - [8e/9dbdf0] Submitted process > f5ceventalign1_i_23s (1)
+Jun-16 11:10:07.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: f5cindex3_i_16s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/af/2b22c2e75eb62238dbd86769b965c5]
+Jun-16 11:10:07.422 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: f5cindex2_i_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/9c/22ad8c15635a0d71417f7d7e34c713]
+Jun-16 11:10:07.427 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.427 [Task submitter] INFO  nextflow.Session - [be/f4aecf] Submitted process > f5ceventalign3_i_16s (1)
+Jun-16 11:10:07.431 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.432 [Task submitter] INFO  nextflow.Session - [a3/bbbc0c] Submitted process > f5ceventalign2_i_23s (1)
+Jun-16 11:10:07.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: f5cindex3_i_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/63/3e14a615680a1afd369327cf2f7dd1]
+Jun-16 11:10:07.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: f5cindex2_n_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/b3/c24d2fce4d8f0afb6631122f8e9a73]
+Jun-16 11:10:07.506 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.506 [Task submitter] INFO  nextflow.Session - [82/288d79] Submitted process > f5ceventalign3_i_23s (1)
+Jun-16 11:10:07.507 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: f5ceventalign3_n_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/3d/5d4e464bf1874cadd3bdf9e39bea1a]
+Jun-16 11:10:07.512 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.512 [Task submitter] INFO  nextflow.Session - [ec/1b1226] Submitted process > f5ceventalign2_n_23s (1)
+Jun-16 11:10:07.539 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: tomboextract_16s_1 (extracting p values from tombo stat files for 16s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/2a/8228b5ec855435932cca82aa3c693d]
+Jun-16 11:10:07.541 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: f5cindex3_n_23s (nanopolish index using f5c); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/2d/8e21368f112c6aee1f69755c9125f4]
+Jun-16 11:10:07.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: f5ceventalign1_n_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/31/4f1d831f157acc93bfc8a75a0a9924]
+Jun-16 11:10:07.551 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: f5ceventalign1_i_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/8e/9dbdf058cff8f10923dde7d5d72808]
+Jun-16 11:10:07.552 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jun-16 11:10:07.552 [Task submitter] INFO  nextflow.Session - [84/a7977a] Submitted process > f5ceventalign3_n_23s (1)
+Jun-16 11:10:07.554 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: f5ceventalign3_i_16s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/be/f4aecfac1d769c69a27f3b13a45943]
+Jun-16 11:10:07.556 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: f5ceventalign2_i_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/a3/bbbc0ce0b2a5a952181215820a7153]
+Jun-16 11:10:07.629 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: f5ceventalign3_i_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/82/288d7909e24fe3b0997eaa53e0e0b2]
+Jun-16 11:10:07.669 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: f5ceventalign2_n_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/ec/1b1226ffd676d5213b4b05a16c5294]
+Jun-16 11:10:07.675 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: f5ceventalign3_n_23s (1); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/84/a7977aeab3d60fa1dca44ab9ba9be4]
+Jun-16 11:10:07.868 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: tomboextract_16s_2 (extracting p values from tombo stat files for 16s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/42/b7bc6b8f4ec6e3445dc01824362f1a]
+Jun-16 11:10:07.957 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: tomboextract_16s_3 (extracting p values from tombo stat files for 16s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/3f/b401c3216f1d21710da32221c9952a]
+Jun-16 11:10:08.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: tomboextract_23s_1 (extracting p values from tombo stat files for 23s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/f8/2eb0434db56b4aab4688fccc4bb230]
+Jun-16 11:10:08.109 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: tomboextract_23s_2 (extracting p values from tombo stat files for 23s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/65/9d56ce797de34067943f8fd80a3fef]
+Jun-16 11:10:08.209 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: tomboextract_23s_3 (extracting p values from tombo stat files for 23s); status: COMPLETED; exit: 0; error: -; workDir: /scratch/bhargava/workflows/mapping-nf/work/31/405ebc2cc2f07c15ac8b442963780d]
+Jun-16 11:10:08.212 [main] DEBUG nextflow.Session - Session await > all process finished
+Jun-16 11:10:08.311 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jun-16 11:10:08.333 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=60; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=57.3s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=16; peakCpus=16; peakMemory=0; ]
+Jun-16 11:10:08.534 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jun-16 11:10:08.547 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

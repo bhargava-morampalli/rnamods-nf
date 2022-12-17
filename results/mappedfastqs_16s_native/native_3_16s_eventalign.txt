@@ -1,1 +1,0 @@
-contig	position	reference_kmer	read_name	strand	event_index	event_level_mean	event_stdv	event_length	model_kmer	model_mean	model_stdv	standardized_level	start_idx	end_idx

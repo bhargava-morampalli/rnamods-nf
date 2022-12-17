@@ -16,3 +16,4 @@
 2022-06-16 11:56:03	4.2s	gigantic_meitner	ERR	7fcbbfc122c17ef0998bf0ab0e4a0b62	30677116-b52e-4d2d-83f8-2cccf0e0c91e	nextflow run main2.nf
 2022-06-16 11:59:03	3.9s	tender_knuth	ERR	7fcbbfc122c17ef0998bf0ab0e4a0b62	23c34ef0-0a21-4f96-9411-8b93b1f10c38	nextflow run main2.nf
 2022-06-16 12:09:49	9.3s	loving_shaw	OK	2df8110b3ac4a7516e1478dad8426731	f6afd7df-11c7-4dad-a630-c699dfc76d36	nextflow run main2.nf
+2022-12-17 09:49:02	12m 38s	pensive_heyrovsky	OK	84112a60feaf4ccd0060cd8f9fabf24e	d0623e58-8659-4105-b037-3f094d690a3f	nextflow run main.nf -with-report report1 -with-trace -with-timeline timeline -with-dag dag1.png

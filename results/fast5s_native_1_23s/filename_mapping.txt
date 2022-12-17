@@ -1,5 +1,5 @@
-e44766f0-9c62-4ec8-91f0-61f94627de27	native_1_23s-0.fast5
 c8e1a36f-209d-4fa1-ba32-6e882c635df2	native_1_23s-0.fast5
+e44766f0-9c62-4ec8-91f0-61f94627de27	native_1_23s-0.fast5
 fd73cce4-60a1-49f2-8c70-06966d3bbff7	native_1_23s-0.fast5
 4668041c-78b2-4303-95ba-c3292e6dff34	native_1_23s-0.fast5
 b75ae851-7da5-414e-b2b5-02578aefd4f6	native_1_23s-0.fast5

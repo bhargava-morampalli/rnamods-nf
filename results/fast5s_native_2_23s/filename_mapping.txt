@@ -5,6 +5,6 @@ eac74bc6-fad1-4ffe-a93b-372e2c1e3ba8	native_2_23s-0.fast5
 601919d1-1b72-45b6-964f-46430e1e9d6c	native_2_23s-0.fast5
 798d886b-28a4-4670-a737-5a92ac520f90	native_2_23s-0.fast5
 546e6024-d3fd-4b5a-bdfc-66af9485a549	native_2_23s-0.fast5
-0256eb96-6fb8-440c-8bdd-e447b2a85c9d	native_2_23s-0.fast5
 e15417f3-fced-41a6-9d8c-f57820522497	native_2_23s-0.fast5
+0256eb96-6fb8-440c-8bdd-e447b2a85c9d	native_2_23s-0.fast5
 e8459af8-765f-4fdc-a705-ffa099925e0f	native_2_23s-0.fast5
