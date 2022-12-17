@@ -1,14 +1,0 @@
-[11:26:25] Parsing Tombo index file(s).
-******************** WARNING ********************
-	Tombo index file does not exist for one or more directories.
-		If --skip-index was not set for re-squiggle command, ensure that the specified directory is the same as for the re-squiggle command.
-[11:26:25] Performing two-sample group comparison significance testing.
-[11:26:25] Parsing Tombo index file(s).
-******************** WARNING ********************
-	Tombo index file does not exist for one or more directories.
-		If --skip-index was not set for re-squiggle command, ensure that the specified directory is the same as for the re-squiggle command.
-[11:26:25] Calculating read coverage regions.
-[11:26:25] Calculating read coverage.
-[11:26:25] Calculating read coverage.
-[11:26:25] Performing modified base detection across genomic regions.
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  9.92it/s]

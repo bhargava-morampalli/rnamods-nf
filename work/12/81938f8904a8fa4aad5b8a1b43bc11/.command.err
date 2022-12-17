@@ -1,7 +1,0 @@
-[parse_index_options::INFO][1;34m Consider using --iop option for fast parallel indexing[0m
-[readdb] indexing fast5s_ivt_3_16s
-[readdb] num reads: 6, num reads with path to fast5: 6
-[main] Version: 0.7
-[main] CMD: /home/bhargavam/f5c-v0.7/f5c index -t 24 -d fast5s_ivt_3_16s ivt_3_16s.fastq
-[main] Real time: 0.374 sec; CPU time: 0.014 sec; Peak RAM: 0.007 GB
-

@@ -1,1 +1,0 @@
-/scratch/bhargava/workflows/mapping-nf/work/e5/39dde9c861f9e173bfc4441a687ab7/native_1_16s_sorted.txt

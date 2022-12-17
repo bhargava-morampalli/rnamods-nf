@@ -1,31 +1,0 @@
-[11:10:03] Loading minimap2 reference.
-[11:10:03] Getting file list.
-[11:10:04] Re-squiggling reads (raw signal to genomic sequence alignment).
-
-
-
-
-
-
-  0%|          | 0/11 [00:00<?, ?it/s]                                      [A[A[A[A[A[A5 most common unsuccessful read types (approx. %):
-     -----
-     -----
-     -----
-     -----
-     -----
-  0%|          | 0/11 [00:00<?, ?it/s]                                      [A[A[A[A[A[A5 most common unsuccessful read types (approx. %):
-     -----
-     -----
-     -----
-     -----
-     -----
-  0%|          | 0/11 [00:00<?, ?it/s] 82%|████████▏ | 9/11 [00:00<00:00, 17.92it/s]                                              [A[A[A[A[A[A5 most common unsuccessful read types (approx. %):
-    11.1% (      1 reads) : Poor raw to expected signal matching (revert with `tombo filter clear_filters`) 
-     -----
-     -----
-     -----
-     -----
- 82%|████████▏ | 9/11 [00:00<00:00, 17.90it/s]100%|██████████| 11/11 [00:01<00:00, 10.96it/s]
-[11:10:05] Final unsuccessful reads summary (9.1% reads unsuccessfully processed; 1 total reads):
-     9.1% (      1 reads) : Poor raw to expected signal matching (revert with `tombo filter clear_filters`) 
-[11:10:05] Saving Tombo reads index to file.

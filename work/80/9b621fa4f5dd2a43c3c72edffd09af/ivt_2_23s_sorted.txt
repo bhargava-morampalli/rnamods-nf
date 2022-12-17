@@ -1,1 +1,0 @@
-/scratch/bhargava/workflows/mapping-nf/work/26/aa78a07badd4066c8b69f9f3c1aa8c/ivt_2_23s_sorted.txt
