@@ -5,14 +5,14 @@ nextflow.enable.dsl=2
  */
 
 
-params.reference_16s = "/data/bhargava/reference_files/K12/k12_16s_88_extended.fa"
-params.reference_23s = "/data/bhargava/reference_files/K12/k12_23s_78_extended.fa"
+params.reference_16s = "/home/bhargavam/Documents/rnamods-nf/references/k12_16s.fa"
+params.reference_23s = "/home/bhargavam/Documents/rnamods-nf/references/k12_23s.fa"
 
 params.nativereads = "$baseDir/native/*.fastq"
 params.ivtreads = "$baseDir/ivt/*.fastq"
 
-params.nativefast5s = "/data/bhargava/k12_native_fast5/"
-params.ivtfast5s = "/data/bhargava/k12_ivt_fast5/"
+params.nativefast5s = "/home/bhargavam/Documents/rnamods-nf/k12_native_fast5"
+params.ivtfast5s = "/home/bhargavam/Documents/rnamods-nf/k12_ivt_fast5/"
 
 
 params.outdir = "results"
@@ -22,13 +22,35 @@ params.outdir = "results"
  * pipeline processes
  */
 
+include { map_16s as map_16s_native; map_16s as map_16s_ivt } from '/home/bhargavam/Documents/nextflowmodules/map_16s'
 
-include { extract_readids_native as nativereadidextract_16s; extract_readids_native as nativereadidextract_23s } from '/home/bhargavam/modules_nextflow/extract_readids_native'
+include { map_23s as map_23s_native; map_23s as map_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/map_23s'
 
-include { extract_readids_ivt as ivtreadidextract_16s; extract_readids_ivt as ivtreadidextract_23s } from '/home/bhargavam/modules_nextflow/extract_readids_ivt'
+include { mapstats_samtools as flagstat_16s_native; mapstats_samtools as flagstat_16s_ivt; mapstats_samtools as flagstat_23s_native; mapstats_samtools as flagstat_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/mapstats_samtools'
 
-include { extract_fast5s as extractfast5s_native_16s; extract_fast5s as extractfast5s_ivt_16s; extract_fast5s as extractfast5s_native_23s; extract_fast5s as extractfast5s_ivt_23s } from '/home/bhargavam/modules_nextflow/extract_fast5s'
+include { sortedbams as bam_16s_native; sortedbams as bam_16s_ivt; sortedbams as bam_23s_native; sortedbams as bam_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/sortedbams'
 
+include { indexbams as bamindex_16s_native; indexbams as bamindex_16s_ivt; indexbams as bamindex_23s_native; indexbams as bamindex_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/indexbams'
+
+include { calculatedepth as depths_16s_native; calculatedepth as depths_16s_ivt; calculatedepth as depths_23s_native; calculatedepth as depths_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/calculatedepth'
+
+include { coverageplots as coverageplot_16s_native; coverageplots as coverageplot_16s_ivt; coverageplots as coverageplot_23s_native; coverageplots as coverageplot_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/coverageplots'
+
+include { nanoget as nanostats_16s_native; nanoget as nanostats_16s_ivt; nanoget as nanostats_23s_native; nanoget as nanostats_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/nanoget'
+
+include { extractmappedreads as extract_16s_native; extractmappedreads as extract_16s_ivt; extractmappedreads as extract_23s_native; extractmappedreads as extract_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/extractmappedreads'
+
+include { extract_readids_native as nativereadidextract_16s; extract_readids_native as nativereadidextract_23s } from '/home/bhargavam/Documents/nextflowmodules/extract_readids_native'
+
+include { extract_readids_ivt as ivtreadidextract_16s; extract_readids_ivt as ivtreadidextract_23s } from '/home/bhargavam/Documents/nextflowmodules/extract_readids_ivt'
+
+include { extract_fast5s as extractfast5s_native_16s; extract_fast5s as extractfast5s_ivt_16s; extract_fast5s as extractfast5s_native_23s; extract_fast5s as extractfast5s_ivt_23s } from '/home/bhargavam/Documents/nextflowmodules/extract_fast5s'
+
+include { mapbam_16s as mappedbams_16s_native; mapbam_16s as mappedbams_16s_ivt } from '/home/bhargavam/Documents/nextflowmodules/mapbam_16s'
+
+include { mapbam_23s as mappedbams_23s_native; mapbam_23s as mappedbams_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/mapbam_23s'
+
+include { indexmappedbams as mappedbamindex_16s_native; indexmappedbams as mappedbamindex_16s_ivt; indexmappedbams as mappedbamindex_23s_native; indexmappedbams as mappedbamindex_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/indexmappedbams'
 
 
 /*
@@ -86,60 +108,60 @@ workflow {
     map_23s_native (reference_23s_ch, nativefastqs_ch)
     map_23s_ivt (reference_23s_ch, ivtfastqs_ch)
 
-    flagstat_16s_native (map_16s_native.out.native16sams)
-    flagstat_16s_ivt (map_16s_ivt.out.ivt16sams)
-    flagstat_23s_native (map_23s_native.out.native23sams)
-    flagstat_23s_ivt (map_23s_ivt.out.ivt23sams)
+    flagstat_16s_native (map_16s_native.out.sams)
+    flagstat_16s_ivt (map_16s_ivt.out.sams)
+    flagstat_23s_native (map_23s_native.out.sams)
+    flagstat_23s_ivt (map_23s_ivt.out.sams)
 
-    bam_16s_native (map_16s_native.out.native16sams)
-    bam_16s_ivt (map_16s_ivt.out.ivt16sams)
-    bam_23s_native (map_23s_native.out.native23sams)
-    bam_23s_ivt (map_23s_ivt.out.ivt23sams)
+    bam_16s_native (map_16s_native.out.sams)
+    bam_16s_ivt (map_16s_ivt.out.sams)
+    bam_23s_native (map_23s_native.out.sams)
+    bam_23s_ivt (map_23s_ivt.out.sams)
 
-    bamindex_16s_native (bam_16s_native.out.native16bams)
-    bamindex_16s_ivt (bam_16s_ivt.out.ivt16bams)
-    bamindex_23s_native (bam_23s_native.out.native23bams)
-    bamindex_23s_ivt (bam_23s_ivt.out.ivt23bams)
+    bamindex_16s_native (bam_16s_native.out.sortedbams)
+    bamindex_16s_ivt (bam_16s_ivt.out.sortedbams)
+    bamindex_23s_native (bam_23s_native.out.sortedbams)
+    bamindex_23s_ivt (bam_23s_ivt.out.sortedbams)
 
-    depths_16s_native (bam_16s_native.out.native16bams)
-    depths_16s_ivt (bam_16s_ivt.out.ivt16bams)
-    depths_23s_native (bam_23s_native.out.native23bams)
-    depths_23s_ivt (bam_23s_ivt.out.ivt23bams)
+    depths_16s_native (bam_16s_native.out.sortedbams)
+    depths_16s_ivt (bam_16s_ivt.out.sortedbams)
+    depths_23s_native (bam_23s_native.out.sortedbams)
+    depths_23s_ivt (bam_23s_ivt.out.sortedbams)
 
-    coverageplot_16s_native (depths_16s_native.out.native16depths)
-    coverageplot_16s_ivt (depths_16s_ivt.out.ivt16depths)
-    coverageplot_23s_native (depths_23s_native.out.native23depths)
-    coverageplot_23s_ivt (depths_23s_ivt.out.ivt23depths)
+    coverageplot_16s_native (depths_16s_native.out.depths)
+    coverageplot_16s_ivt (depths_16s_ivt.out.depths)
+    coverageplot_23s_native (depths_23s_native.out.depths)
+    coverageplot_23s_ivt (depths_23s_ivt.out.depths)
 
-    nanostats_16s_native (bam_16s_native.out.native16bams)
-    nanostats_16s_ivt (bam_16s_ivt.out.ivt16bams)
-    nanostats_23s_native (bam_23s_native.out.native23bams)
-    nanostats_23s_ivt (bam_23s_ivt.out.ivt23bams)
+    nanostats_16s_native (bam_16s_native.out.sortedbams)
+    nanostats_16s_ivt (bam_16s_ivt.out.sortedbams)
+    nanostats_23s_native (bam_23s_native.out.sortedbams)
+    nanostats_23s_ivt (bam_23s_ivt.out.sortedbams)
 
-    extract_16s_native(map_16s_native.out.native16sams)
-    extract_16s_ivt(map_16s_ivt.out.ivt16sams)
-    extract_23s_native(map_23s_native.out.native23sams)
-    extract_23s_ivt(map_23s_ivt.out.ivt23sams)
+    extract_16s_native(map_16s_native.out.sams)
+    extract_16s_ivt(map_16s_ivt.out.sams)
+    extract_23s_native(map_23s_native.out.sams)
+    extract_23s_ivt(map_23s_ivt.out.sams)
 
-    nativereadidextract_16s(extract_16s_native.out.native16mappedfastqs)
-    ivtreadidextract_16s(extract_16s_ivt.out.ivt16mappedfastqs)
-    nativereadidextract_23s(extract_23s_native.out.native23mappedfastqs)
-    ivtreadidextract_23s(extract_23s_ivt.out.ivt23mappedfastqs)
+    nativereadidextract_16s(extract_16s_native.out.mappedfastqs)
+    ivtreadidextract_16s(extract_16s_ivt.out.mappedfastqs)
+    nativereadidextract_23s(extract_23s_native.out.mappedfastqs)
+    ivtreadidextract_23s(extract_23s_ivt.out.mappedfastqs)
 
     extractfast5s_native_16s (nativefast5s_ch, nativereadidextract_16s.out.mappedreadids)
     extractfast5s_ivt_16s (ivtfast5s_ch, ivtreadidextract_16s.out.mappedreadids)
     extractfast5s_native_23s (nativefast5s_ch, nativereadidextract_23s.out.mappedreadids)
     extractfast5s_ivt_23s (ivtfast5s_ch, ivtreadidextract_23s.out.mappedreadids)
 
-    mappedbams_16s_native (reference_16s_ch, extract_16s_native.out.native16mappedfastqs)
-    mappedbams_16s_ivt (reference_16s_ch, extract_16s_ivt.out.ivt16mappedfastqs)
-    mappedbams_23s_native (reference_23s_ch, extract_23s_native.out.native23mappedfastqs)
-    mappedbams_23s_ivt (reference_23s_ch, extract_23s_ivt.out.ivt23mappedfastqs)
+    mappedbams_16s_native (reference_16s_ch, extract_16s_native.out.mappedfastqs)
+    mappedbams_16s_ivt (reference_16s_ch, extract_16s_ivt.out.mappedfastqs)
+    mappedbams_23s_native (reference_23s_ch, extract_23s_native.out.mappedfastqs)
+    mappedbams_23s_ivt (reference_23s_ch, extract_23s_ivt.out.mappedfastqs)
 
-    mappedbamindex_16s_native (mappedbams_16s_native.out.native16mappedbams)
-    mappedbamindex_16s_ivt (mappedbams_16s_ivt.out.ivt16mappedbams)
-    mappedbamindex_23s_native (mappedbams_23s_native.out.native23mappedbams)
-    mappedbamindex_23s_ivt (mappedbams_23s_ivt.out.ivt23mappedbams)
+    mappedbamindex_16s_native (mappedbams_16s_native.out.sortedbams)
+    mappedbamindex_16s_ivt (mappedbams_16s_ivt.out.sortedbams)
+    mappedbamindex_23s_native (mappedbams_23s_native.out.sortedbams)
+    mappedbamindex_23s_ivt (mappedbams_23s_ivt.out.sortedbams)
 
 
 
