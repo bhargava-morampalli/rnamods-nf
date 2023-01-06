@@ -52,6 +52,8 @@ include { mapbam_23s as mappedbams_23s_native; mapbam_23s as mappedbams_23s_ivt 
 
 include { indexmappedbams as mappedbamindex_16s_native; indexmappedbams as mappedbamindex_16s_ivt; indexmappedbams as mappedbamindex_23s_native; indexmappedbams as mappedbamindex_23s_ivt } from '/home/bhargavam/Documents/nextflowmodules/indexmappedbams'
 
+include { multitosingle as multitosingle_n_16s;  multitosingle as multitosingle_n_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
+
 
 /*
  *  WORKFLOW 
@@ -163,6 +165,9 @@ workflow {
     mappedbamindex_23s_native (mappedbams_23s_native.out.sortedbams)
     mappedbamindex_23s_ivt (mappedbams_23s_ivt.out.sortedbams)
 
+    Channel.fromPath(extractfast5s_native_16s.out.subsetfast5s).set {native_16s_fastqs_ch}
+   
+    multitosingle_n_16s (native_16s_fastqs_ch)
 
 
 }
