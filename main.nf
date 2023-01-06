@@ -54,6 +54,8 @@ include { indexmappedbams as mappedbamindex_16s_native; indexmappedbams as mappe
 
 include { multitosingle as multitosingle_n_16s;  multitosingle as multitosingle_n_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
 
+include { multitosingle as multitosingle_i_16s;  multitosingle as multitosingle_i_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
+
 
 /*
  *  WORKFLOW 
