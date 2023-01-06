@@ -165,9 +165,8 @@ workflow {
     mappedbamindex_23s_native (mappedbams_23s_native.out.sortedbams)
     mappedbamindex_23s_ivt (mappedbams_23s_ivt.out.sortedbams)
 
-    Channel.fromPath(extractfast5s_native_16s.out.subsetfast5s).set {native_16s_fastqs_ch}
-   
-    multitosingle_n_16s (native_16s_fastqs_ch)
+
+    multitosingle_n_16s (extractfast5s_native_16s.out.subsetfast5s)
 
 
 }
