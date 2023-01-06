@@ -167,7 +167,9 @@ workflow {
 
 
     multitosingle_n_16s (extractfast5s_native_16s.out.subsetfast5s)
-
+    multitosingle_n_23s (extractfast5s_native_23s.out.subsetfast5s)
+    multitosingle_i_16s (extractfast5s_ivt_16s.out.subsetfast5s)
+    multitosingle_i_23s (extractfast5s_ivt_23s.out.subsetfast5s)
 
 }
 
