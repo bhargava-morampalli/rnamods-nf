@@ -23,38 +23,38 @@ params.outdir = "results"
 
 
 
-include { nanodocpreprocess as nanodocpreprocess_n_1_16s; nanodocpreprocess as nanodocpreprocess_n_2_16s; nanodocpreprocess as nanodocpreprocess_n_3_16s; nanodocpreprocess as nanodocpreprocess_n_1_23s; nanodocpreprocess as nanodocpreprocess_n_2_23s; nanodocpreprocess as nanodocpreprocess_n_3_23s } from '/home/bhargavam/modules_nextflow/nanodocpreprocess'
+include { nanodocpreprocess as nanodocpreprocess_n_1_16s; nanodocpreprocess as nanodocpreprocess_n_2_16s; nanodocpreprocess as nanodocpreprocess_n_3_16s; nanodocpreprocess as nanodocpreprocess_n_1_23s; nanodocpreprocess as nanodocpreprocess_n_2_23s; nanodocpreprocess as nanodocpreprocess_n_3_23s } from '/home/bhargavam/Documents/nextflowmodules/nanodocpreprocess'
 
-include { nanodocpreprocess as nanodocpreprocess_i_1_16s; nanodocpreprocess as nanodocpreprocess_i_2_16s; nanodocpreprocess as nanodocpreprocess_i_3_16s; nanodocpreprocess as nanodocpreprocess_i_1_23s; nanodocpreprocess as nanodocpreprocess_i_2_23s; nanodocpreprocess as nanodocpreprocess_i_3_23s } from '/home/bhargavam/modules_nextflow/nanodocpreprocess'
+include { nanodocpreprocess as nanodocpreprocess_i_1_16s; nanodocpreprocess as nanodocpreprocess_i_2_16s; nanodocpreprocess as nanodocpreprocess_i_3_16s; nanodocpreprocess as nanodocpreprocess_i_1_23s; nanodocpreprocess as nanodocpreprocess_i_2_23s; nanodocpreprocess as nanodocpreprocess_i_3_23s } from '/home/bhargavam/Documents/nextflowmodules/nanodocpreprocess'
 
-include { nanodoccompare_16s as nanodoccompare_1_16s; nanodoccompare_16s as nanodoccompare_2_16s; nanodoccompare_16s as nanodoccompare_3_16s } from '/home/bhargavam/modules_nextflow/nanodoccompare_16s'
+include { nanodoccompare_16s as nanodoccompare_1_16s; nanodoccompare_16s as nanodoccompare_2_16s; nanodoccompare_16s as nanodoccompare_3_16s } from '/home/bhargavam/Documents/nextflowmodules/nanodoccompare_16s'
 
-include { nanodoccompare_23s as nanodoccompare_1_23s; nanodoccompare_23s as nanodoccompare_2_23s; nanodoccompare_23s as nanodoccompare_3_23s } from '/home/bhargavam/modules_nextflow/nanodoccompare_23s'
+include { nanodoccompare_23s as nanodoccompare_1_23s; nanodoccompare_23s as nanodoccompare_2_23s; nanodoccompare_23s as nanodoccompare_3_23s } from '/home/bhargavam/Documents/nextflowmodules/nanodoccompare_23s'
 
-include { xporeprep as xporeprep1_n_16s; xporeprep as xporeprep2_n_16s; xporeprep as xporeprep3_n_16s } from '/home/bhargavam/modules_nextflow/xporeprep'
+include { xporeprep as xporeprep1_n_16s; xporeprep as xporeprep2_n_16s; xporeprep as xporeprep3_n_16s } from '/home/bhargavam/Documents/nextflowmodules/xporeprep'
 
-include { xporeprep as xporeprep1_n_23s; xporeprep as xporeprep2_n_23s; xporeprep as xporeprep3_n_23s } from '/home/bhargavam/modules_nextflow/xporeprep'
+include { xporeprep as xporeprep1_n_23s; xporeprep as xporeprep2_n_23s; xporeprep as xporeprep3_n_23s } from '/home/bhargavam/Documents/nextflowmodules/xporeprep'
 
-include { xporeprep as xporeprep1_i_16s; xporeprep as xporeprep2_i_16s; xporeprep as xporeprep3_i_16s } from '/home/bhargavam/modules_nextflow/xporeprep'
+include { xporeprep as xporeprep1_i_16s; xporeprep as xporeprep2_i_16s; xporeprep as xporeprep3_i_16s } from '/home/bhargavam/Documents/nextflowmodules/xporeprep'
 
-include { xporeprep as xporeprep1_i_23s; xporeprep as xporeprep2_i_23s; xporeprep as xporeprep3_i_23s } from '/home/bhargavam/modules_nextflow/xporeprep'
+include { xporeprep as xporeprep1_i_23s; xporeprep as xporeprep2_i_23s; xporeprep as xporeprep3_i_23s } from '/home/bhargavam/Documents/nextflowmodules/xporeprep'
 
-include { yanocompprep as yanocompprep1_n_16s; yanocompprep as yanocompprep2_n_16s; yanocompprep as yanocompprep3_n_16s } from '/home/bhargavam/modules_nextflow/yanocompprep'
+include { yanocompprep as yanocompprep1_n_16s; yanocompprep as yanocompprep2_n_16s; yanocompprep as yanocompprep3_n_16s } from '/home/bhargavam/Documents/nextflowmodules/yanocompprep'
 
-include { yanocompprep as yanocompprep1_n_23s; yanocompprep as yanocompprep2_n_23s; yanocompprep as yanocompprep3_n_23s } from '/home/bhargavam/modules_nextflow/yanocompprep'
+include { yanocompprep as yanocompprep1_n_23s; yanocompprep as yanocompprep2_n_23s; yanocompprep as yanocompprep3_n_23s } from '/home/bhargavam/Documents/nextflowmodules/yanocompprep'
 
-include { yanocompprep as yanocompprep1_i_16s; yanocompprep as yanocompprep2_i_16s; yanocompprep as yanocompprep3_i_16s } from '/home/bhargavam/modules_nextflow/yanocompprep'
+include { yanocompprep as yanocompprep1_i_16s; yanocompprep as yanocompprep2_i_16s; yanocompprep as yanocompprep3_i_16s } from '/home/bhargavam/Documents/nextflowmodules/yanocompprep'
 
-include { yanocompprep as yanocompprep1_i_23s; yanocompprep as yanocompprep2_i_23s; yanocompprep as yanocompprep3_i_23s } from '/home/bhargavam/modules_nextflow/yanocompprep'
+include { yanocompprep as yanocompprep1_i_23s; yanocompprep as yanocompprep2_i_23s; yanocompprep as yanocompprep3_i_23s } from '/home/bhargavam/Documents/nextflowmodules/yanocompprep'
 
-include { yanocompanalysis as yanocompanalysis_1_16s; yanocompanalysis as yanocompanalysis_2_16s; yanocompanalysis as yanocompanalysis_3_16s } from '/home/bhargavam/modules_nextflow/yanocompanalysis'
+include { yanocompanalysis as yanocompanalysis_1_16s; yanocompanalysis as yanocompanalysis_2_16s; yanocompanalysis as yanocompanalysis_3_16s } from '/home/bhargavam/Documents/nextflowmodules/yanocompanalysis'
 
-include { yanocompanalysis as yanocompanalysis_1_23s; yanocompanalysis as yanocompanalysis_2_23s; yanocompanalysis as yanocompanalysis_3_23s } from '/home/bhargavam/modules_nextflow/yanocompanalysis'
+include { yanocompanalysis as yanocompanalysis_1_23s; yanocompanalysis as yanocompanalysis_2_23s; yanocompanalysis as yanocompanalysis_3_23s } from '/home/bhargavam/Documents/nextflowmodules/yanocompanalysis'
 
 
-include { xporeanalysis as xporeanalysis_1_16s; xporeanalysis as xporeanalysis_2_16s; xporeanalysis as xporeanalysis_3_16s } from '/home/bhargavam/modules_nextflow/xporeanalysis'
+include { xporeanalysis as xporeanalysis_1_16s; xporeanalysis as xporeanalysis_2_16s; xporeanalysis as xporeanalysis_3_16s } from '/home/bhargavam/Documents/nextflowmodules/xporeanalysis'
 
-include { xporeanalysis as xporeanalysis_1_23s; xporeanalysis as xporeanalysis_2_23s; xporeanalysis as xporeanalysis_3_23s } from '/home/bhargavam/modules_nextflow/xporeanalysis'
+include { xporeanalysis as xporeanalysis_1_23s; xporeanalysis as xporeanalysis_2_23s; xporeanalysis as xporeanalysis_3_23s } from '/home/bhargavam/Documents/nextflowmodules/xporeanalysis'
 
 
 /*

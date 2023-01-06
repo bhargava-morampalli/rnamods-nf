@@ -5,44 +5,44 @@ nextflow.enable.dsl=2
  */
 
 
-params.reference_16s = "/data/bhargava/reference_files/K12/k12_16s_88_extended.fa"
-params.reference_23s = "/data/bhargava/reference_files/K12/k12_23s_78_extended.fa"
+params.reference_16s = "/home/bhargavam/Documents/rnamods-nf/references/k12_16s.fa"
+params.reference_23s = "/home/bhargavam/Documents/rnamods-nf/references/k12_23s.fa"
 
 params.nativereads = "$baseDir/native/*.fastq"
 params.ivtreads = "$baseDir/ivt/*.fastq"
 
-params.nativefast5s = "/data/bhargava/k12_native_fast5/"
-params.ivtfast5s = "/data/bhargava/k12_ivt_fast5/"
+params.nativefast5s = "/home/bhargavam/Documents/data/k12_native_fast5_all"
+params.ivtfast5s = "/home/bhargavam/Documents/data/k12_ivt_fast5_all"
 
 
 params.outdir = "results"
 
 
-include { multitosingle as multitosingle_n_1_16s; multitosingle as multitosingle_n_2_16s; multitosingle as multitosingle_n_3_16s; multitosingle as multitosingle_n_1_23s; multitosingle as multitosingle_n_2_23s; multitosingle as multitosingle_n_3_23s } from '/home/bhargavam/modules_nextflow/multitosingle'
+include { multitosingle as multitosingle_n_1_16s; multitosingle as multitosingle_n_2_16s; multitosingle as multitosingle_n_3_16s; multitosingle as multitosingle_n_1_23s; multitosingle as multitosingle_n_2_23s; multitosingle as multitosingle_n_3_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
 
-include { multitosingle as multitosingle_i_1_16s; multitosingle as multitosingle_i_2_16s; multitosingle as multitosingle_i_3_16s; multitosingle as multitosingle_i_1_23s; multitosingle as multitosingle_i_2_23s; multitosingle as multitosingle_i_3_23s } from '/home/bhargavam/modules_nextflow/multitosingle'
+include { multitosingle as multitosingle_i_1_16s; multitosingle as multitosingle_i_2_16s; multitosingle as multitosingle_i_3_16s; multitosingle as multitosingle_i_1_23s; multitosingle as multitosingle_i_2_23s; multitosingle as multitosingle_i_3_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
 
-include { tomboresquiggle as tomboresquiggle_n_1_16s; tomboresquiggle as tomboresquiggle_n_2_16s; tomboresquiggle as tomboresquiggle_n_3_16s; tomboresquiggle as tomboresquiggle_n_1_23s; tomboresquiggle as tomboresquiggle_n_2_23s; tomboresquiggle as tomboresquiggle_n_3_23s } from '/home/bhargavam/modules_nextflow/tomboresquiggle'
+include { tomboresquiggle as tomboresquiggle_n_1_16s; tomboresquiggle as tomboresquiggle_n_2_16s; tomboresquiggle as tomboresquiggle_n_3_16s; tomboresquiggle as tomboresquiggle_n_1_23s; tomboresquiggle as tomboresquiggle_n_2_23s; tomboresquiggle as tomboresquiggle_n_3_23s } from '/home/bhargavam/Documents/nextflowmodules/tomboresquiggle'
 
-include { tomboresquiggle as tomboresquiggle_i_1_16s; tomboresquiggle as tomboresquiggle_i_2_16s; tomboresquiggle as tomboresquiggle_i_3_16s; tomboresquiggle as tomboresquiggle_i_1_23s; tomboresquiggle as tomboresquiggle_i_2_23s; tomboresquiggle as tomboresquiggle_i_3_23s } from '/home/bhargavam/modules_nextflow/tomboresquiggle'
+include { tomboresquiggle as tomboresquiggle_i_1_16s; tomboresquiggle as tomboresquiggle_i_2_16s; tomboresquiggle as tomboresquiggle_i_3_16s; tomboresquiggle as tomboresquiggle_i_1_23s; tomboresquiggle as tomboresquiggle_i_2_23s; tomboresquiggle as tomboresquiggle_i_3_23s } from '/home/bhargavam/Documents/nextflowmodules/tomboresquiggle'
 
-include { f5cindex as f5cindex1_n_16s; f5cindex as f5cindex1_n_23s ; f5cindex as f5cindex1_i_16s; f5cindex as f5cindex1_i_23s } from '/home/bhargavam/modules_nextflow/f5cindex'
+include { f5cindex as f5cindex1_n_16s; f5cindex as f5cindex1_n_23s ; f5cindex as f5cindex1_i_16s; f5cindex as f5cindex1_i_23s } from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
 
-include { f5cindex as f5cindex2_n_16s; f5cindex as f5cindex2_n_23s ; f5cindex as f5cindex2_i_16s; f5cindex as f5cindex2_i_23s} from '/home/bhargavam/modules_nextflow/f5cindex'
+include { f5cindex as f5cindex2_n_16s; f5cindex as f5cindex2_n_23s ; f5cindex as f5cindex2_i_16s; f5cindex as f5cindex2_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
 
-include { f5cindex as f5cindex3_n_16s; f5cindex as f5cindex3_n_23s ; f5cindex as f5cindex3_i_16s; f5cindex as f5cindex3_i_23s} from '/home/bhargavam/modules_nextflow/f5cindex'
+include { f5cindex as f5cindex3_n_16s; f5cindex as f5cindex3_n_23s ; f5cindex as f5cindex3_i_16s; f5cindex as f5cindex3_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
 
-include { f5ceventalign as f5ceventalign1_n_16s; f5ceventalign as f5ceventalign1_n_23s ; f5ceventalign as f5ceventalign1_i_16s; f5ceventalign as f5ceventalign1_i_23s} from '/home/bhargavam/modules_nextflow/f5ceventalign'
+include { f5ceventalign as f5ceventalign1_n_16s; f5ceventalign as f5ceventalign1_n_23s ; f5ceventalign as f5ceventalign1_i_16s; f5ceventalign as f5ceventalign1_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
 
-include { f5ceventalign as f5ceventalign2_n_16s; f5ceventalign as f5ceventalign2_n_23s ; f5ceventalign as f5ceventalign2_i_16s; f5ceventalign as f5ceventalign2_i_23s} from '/home/bhargavam/modules_nextflow/f5ceventalign'
+include { f5ceventalign as f5ceventalign2_n_16s; f5ceventalign as f5ceventalign2_n_23s ; f5ceventalign as f5ceventalign2_i_16s; f5ceventalign as f5ceventalign2_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
 
-include { f5ceventalign as f5ceventalign3_n_16s; f5ceventalign as f5ceventalign3_n_23s ; f5ceventalign as f5ceventalign3_i_16s; f5ceventalign as f5ceventalign3_i_23s} from '/home/bhargavam/modules_nextflow/f5ceventalign'
+include { f5ceventalign as f5ceventalign3_n_16s; f5ceventalign as f5ceventalign3_n_23s ; f5ceventalign as f5ceventalign3_i_16s; f5ceventalign as f5ceventalign3_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
 
-include { tombocompare as tombocompare_1_16s; tombocompare as tombocompare_2_16s; tombocompare as tombocompare_3_16s; tombocompare as tombocompare_1_23s; tombocompare as tombocompare_2_23s; tombocompare as tombocompare_3_23s } from '/home/bhargavam/modules_nextflow/tombocompare'
+include { tombocompare as tombocompare_1_16s; tombocompare as tombocompare_2_16s; tombocompare as tombocompare_3_16s; tombocompare as tombocompare_1_23s; tombocompare as tombocompare_2_23s; tombocompare as tombocompare_3_23s } from '/home/bhargavam/Documents/nextflowmodules/tombocompare'
 
-include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from '/home/bhargavam/modules_nextflow/tomboextract_16s'
+include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from '/home/bhargavam/Documents/nextflowmodules/tomboextract_16s'
 
-include { tomboextract_23s as tomboextract_23s_1 ; tomboextract_23s as tomboextract_23s_2 ; tomboextract_23s as tomboextract_23s_3 } from '/home/bhargavam/modules_nextflow/tomboextract_23s'
+include { tomboextract_23s as tomboextract_23s_1 ; tomboextract_23s as tomboextract_23s_2 ; tomboextract_23s as tomboextract_23s_3 } from '/home/bhargavam/Documents/nextflowmodules/tomboextract_23s'
 
 
 /*

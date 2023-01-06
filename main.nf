@@ -11,8 +11,8 @@ params.reference_23s = "/home/bhargavam/Documents/rnamods-nf/references/k12_23s.
 params.nativereads = "$baseDir/native/*.fastq"
 params.ivtreads = "$baseDir/ivt/*.fastq"
 
-params.nativefast5s = "/home/bhargavam/Documents/rnamods-nf/k12_native_fast5"
-params.ivtfast5s = "/home/bhargavam/Documents/rnamods-nf/k12_ivt_fast5/"
+params.nativefast5s = "/home/bhargavam/Documents/data/k12_native_fast5_all"
+params.ivtfast5s = "/home/bhargavam/Documents/data/k12_ivt_fast5_all"
 
 
 params.outdir = "results"
