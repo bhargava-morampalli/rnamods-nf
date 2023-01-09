@@ -183,7 +183,7 @@ workflow {
     tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
 
     tomboresquiggle_n_16s
-        .combine(tomboresquiggle_i_16s, by: 0)
+        .combine(tomboresquiggle_i_16s, by: 1 )
         .view()
 
 }
