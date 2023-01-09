@@ -185,6 +185,11 @@ workflow {
     tomboresquiggle_n_16s.out.resquiggledone
         .combine(tomboresquiggle_i_16s.out.resquiggledone)
         .view()
+
+    tomboresquiggle_n_16s_indexed = Channel.from(tomboresquiggle_n_16s.withIndex().collect {it,i -> [i,it]})
+    tomboresquiggle_i_16s_indexed = Channel.from(tomboresquiggle_i_16s.withIndex().collect {it,i -> [i,it]})
+    tomboresquiggle_n_16s_indexed.combine(tomboresquiggle_i_16s_indexed, by: 0)
+        .view()
     
     left = Channel.of(['A', 1], ['B', 2], ['A', 3])
     right = Channel.of(['B', 'x'], ['B', 'y'], ['A', 'z'], ['A', 'w'])
