@@ -56,6 +56,10 @@ include { multitosingle as multitosingle_n_16s;  multitosingle as multitosingle_
 
 include { multitosingle as multitosingle_i_16s;  multitosingle as multitosingle_i_23s } from '/home/bhargavam/Documents/nextflowmodules/multitosingle'
 
+include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresquiggle_n_23s } from '/home/bhargavam/Documents/nextflowmodules/tomboresquiggle'
+
+include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from '/home/bhargavam/Documents/nextflowmodules/tomboresquiggle'
+
 
 /*
  *  WORKFLOW 
@@ -172,6 +176,11 @@ workflow {
     multitosingle_n_23s (extractfast5s_native_23s.out.subsetfast5s)
     multitosingle_i_16s (extractfast5s_ivt_16s.out.subsetfast5s)
     multitosingle_i_23s (extractfast5s_ivt_23s.out.subsetfast5s)
+
+    tomboresquiggle_n_16s (multitosingle_n_16s.out.singlefast5s_ch, reference_16s_ch)
+    tomboresquiggle_n_23s (multitosingle_n_23s.out.singlefast5s_ch, reference_23s_ch)
+    tomboresquiggle_i_16s (multitosingle_i_16s.out.singlefast5s_ch, reference_16s_ch)
+    tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
 
 }
 
