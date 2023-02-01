@@ -60,7 +60,7 @@ include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresq
 
 include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from './modules/tomboresquiggle'
 
-include { tombocompare as tombocompare_1_16s; tombocompare as tombocompare_2_16s; tombocompare as tombocompare_3_16s; tombocompare as tombocompare_1_23s; tombocompare as tombocompare_2_23s; tombocompare as tombocompare_3_23s } from './modules/tombocompare'
+include { tombocompare as tombocompare_1_16s; tombocompare as tombocompare_1_23s } from './modules/tombocompare'
 
 include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from './modules/tomboextract_16s'
 
@@ -188,10 +188,9 @@ workflow {
     tomboresquiggle_i_16s (multitosingle_i_16s.out.singlefast5s_ch, reference_16s_ch)
     tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
 
-    
-    tomboresquiggle_n_16s.out.resquiggledone
-        .merge( tomboresquiggle_i_16s.out.resquiggledone )
-        .view()
+    tombocompare_1_16s (tomboresquiggle_n_16s.out.resquiggledone, tomboresquiggle_i_16s.out.resquiggledone)
+
+    tombocompare_1_23s (tomboresquiggle_n_23s.out.resquiggledone, tomboresquiggle_i_23s.out.resquiggledone)
 
 }
 
