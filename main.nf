@@ -22,43 +22,43 @@ params.outdir = "results"
  * pipeline processes
  */
 
-include { map_16s as map_16s_native; map_16s as map_16s_ivt } from '/modules/map_16s'
+include { map_16s as map_16s_native; map_16s as map_16s_ivt } from './modules/map_16s'
 
-include { map_23s as map_23s_native; map_23s as map_23s_ivt } from '/modules/map_23s'
+include { map_23s as map_23s_native; map_23s as map_23s_ivt } from './modules/map_23s'
 
-include { mapstats_samtools as flagstat_16s_native; mapstats_samtools as flagstat_16s_ivt; mapstats_samtools as flagstat_23s_native; mapstats_samtools as flagstat_23s_ivt } from '/modules/mapstats_samtools'
+include { mapstats_samtools as flagstat_16s_native; mapstats_samtools as flagstat_16s_ivt; mapstats_samtools as flagstat_23s_native; mapstats_samtools as flagstat_23s_ivt } from './modules/mapstats_samtools'
 
-include { sortedbams as bam_16s_native; sortedbams as bam_16s_ivt; sortedbams as bam_23s_native; sortedbams as bam_23s_ivt } from '/modules/sortedbams'
+include { sortedbams as bam_16s_native; sortedbams as bam_16s_ivt; sortedbams as bam_23s_native; sortedbams as bam_23s_ivt } from './modules/sortedbams'
 
-include { indexbams as bamindex_16s_native; indexbams as bamindex_16s_ivt; indexbams as bamindex_23s_native; indexbams as bamindex_23s_ivt } from '/modules/indexbams'
+include { indexbams as bamindex_16s_native; indexbams as bamindex_16s_ivt; indexbams as bamindex_23s_native; indexbams as bamindex_23s_ivt } from './modules/indexbams'
 
-include { calculatedepth as depths_16s_native; calculatedepth as depths_16s_ivt; calculatedepth as depths_23s_native; calculatedepth as depths_23s_ivt } from '/modules/calculatedepth'
+include { calculatedepth as depths_16s_native; calculatedepth as depths_16s_ivt; calculatedepth as depths_23s_native; calculatedepth as depths_23s_ivt } from './modules/calculatedepth'
 
-include { coverageplots as coverageplot_16s_native; coverageplots as coverageplot_16s_ivt; coverageplots as coverageplot_23s_native; coverageplots as coverageplot_23s_ivt } from '/modules/coverageplots'
+include { coverageplots as coverageplot_16s_native; coverageplots as coverageplot_16s_ivt; coverageplots as coverageplot_23s_native; coverageplots as coverageplot_23s_ivt } from './modules/coverageplots'
 
-include { nanoget as nanostats_16s_native; nanoget as nanostats_16s_ivt; nanoget as nanostats_23s_native; nanoget as nanostats_23s_ivt } from '/modules/nanoget'
+include { nanoget as nanostats_16s_native; nanoget as nanostats_16s_ivt; nanoget as nanostats_23s_native; nanoget as nanostats_23s_ivt } from './modules/nanoget'
 
-include { extractmappedreads as extract_16s_native; extractmappedreads as extract_16s_ivt; extractmappedreads as extract_23s_native; extractmappedreads as extract_23s_ivt } from '/modules/extractmappedreads'
+include { extractmappedreads as extract_16s_native; extractmappedreads as extract_16s_ivt; extractmappedreads as extract_23s_native; extractmappedreads as extract_23s_ivt } from './modules/extractmappedreads'
 
-include { extract_readids_native as nativereadidextract_16s; extract_readids_native as nativereadidextract_23s } from '/modules/extract_readids_native'
+include { extract_readids_native as nativereadidextract_16s; extract_readids_native as nativereadidextract_23s } from './modules/extract_readids_native'
 
-include { extract_readids_ivt as ivtreadidextract_16s; extract_readids_ivt as ivtreadidextract_23s } from '/modules/extract_readids_ivt'
+include { extract_readids_ivt as ivtreadidextract_16s; extract_readids_ivt as ivtreadidextract_23s } from './modules/extract_readids_ivt'
 
-include { extract_fast5s as extractfast5s_native_16s; extract_fast5s as extractfast5s_ivt_16s; extract_fast5s as extractfast5s_native_23s; extract_fast5s as extractfast5s_ivt_23s } from '/modules/extract_fast5s'
+include { extract_fast5s as extractfast5s_native_16s; extract_fast5s as extractfast5s_ivt_16s; extract_fast5s as extractfast5s_native_23s; extract_fast5s as extractfast5s_ivt_23s } from './modules/extract_fast5s'
 
-include { mapbam_16s as mappedbams_16s_native; mapbam_16s as mappedbams_16s_ivt } from '/modules/mapbam_16s'
+include { mapbam_16s as mappedbams_16s_native; mapbam_16s as mappedbams_16s_ivt } from './modules/mapbam_16s'
 
-include { mapbam_23s as mappedbams_23s_native; mapbam_23s as mappedbams_23s_ivt } from '/modules/mapbam_23s'
+include { mapbam_23s as mappedbams_23s_native; mapbam_23s as mappedbams_23s_ivt } from './modules/mapbam_23s'
 
-include { indexmappedbams as mappedbamindex_16s_native; indexmappedbams as mappedbamindex_16s_ivt; indexmappedbams as mappedbamindex_23s_native; indexmappedbams as mappedbamindex_23s_ivt } from '/modules/indexmappedbams'
+include { indexmappedbams as mappedbamindex_16s_native; indexmappedbams as mappedbamindex_16s_ivt; indexmappedbams as mappedbamindex_23s_native; indexmappedbams as mappedbamindex_23s_ivt } from './modules/indexmappedbams'
 
-include { multitosingle as multitosingle_n_16s;  multitosingle as multitosingle_n_23s } from '/modules/multitosingle'
+include { multitosingle as multitosingle_n_16s;  multitosingle as multitosingle_n_23s } from './modules/multitosingle'
 
-include { multitosingle as multitosingle_i_16s;  multitosingle as multitosingle_i_23s } from '/modules/multitosingle'
+include { multitosingle as multitosingle_i_16s;  multitosingle as multitosingle_i_23s } from './modules/multitosingle'
 
-include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresquiggle_n_23s } from '/modules/tomboresquiggle'
+include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresquiggle_n_23s } from './modules/tomboresquiggle'
 
-include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from '/modules/tomboresquiggle'
+include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from './modules/tomboresquiggle'
 
 
 /*
