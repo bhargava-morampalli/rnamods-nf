@@ -216,15 +216,13 @@ workflow {
     tomboresquiggle_n_23s (multitosingle_n_23s.out.singlefast5s_ch, reference_23s_ch)
     tomboresquiggle_i_16s (multitosingle_i_16s.out.singlefast5s_ch, reference_16s_ch)
     tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
+    
+    tomboresquiggle_16s = tomboresquiggle_n_16s.out.resquiggledone_ch.mix(tomboresquiggle_i_16s.out.resquiggledone_ch)..groupTuple(by: 1)
+    tomboresquiggle_23s = tomboresquiggle_n_23s.out.resquiggledone_ch.mix(tomboresquiggle_i_23s.out.resquiggledone_ch)..groupTuple(by: 1)
 
-    tombocompare_16s_1 (tombocompare_16s_1, tomboresquiggle_n_16s.out.resquiggledone_ch, tomboresquiggle_i_16s.out.resquiggledone_ch)
-    tombocompare_16s_2 (tombocompare_16s_2, tomboresquiggle_n_16s.out.resquiggledone_ch, tomboresquiggle_i_16s.out.resquiggledone_ch)
-    tombocompare_16s_3 (tombocompare_16s_3, tomboresquiggle_n_16s.out.resquiggledone_ch, tomboresquiggle_i_16s.out.resquiggledone_ch)
 
-    tombocompare_23s_1 (tombocompare_23s_1, tomboresquiggle_n_23s.out.resquiggledone_ch, tomboresquiggle_i_23s.out.resquiggledone_ch)
-    tombocompare_23s_2 (tombocompare_23s_2, tomboresquiggle_n_23s.out.resquiggledone_ch, tomboresquiggle_i_23s.out.resquiggledone_ch)
-    tombocompare_23s_3 (tombocompare_23s_3, tomboresquiggle_n_23s.out.resquiggledone_ch, tomboresquiggle_i_23s.out.resquiggledone_ch)
-
+    tombocompare_16s(tomboresquiggle_16s)
+    tombocompare_23s(tomboresquiggle_23s)
 }
 
 
