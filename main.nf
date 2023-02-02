@@ -60,7 +60,7 @@ include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresq
 
 include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from './modules/tomboresquiggle'
 
-include { tombocompare as tombocompare_1_16s; tombocompare as tombocompare_1_23s } from './modules/tombocompare'
+include { tombocompare as tombocompare_16s; tombocompare as tombocompare_23s } from './modules/tombocompare'
 
 include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from './modules/tomboextract_16s'
 
@@ -116,6 +116,14 @@ workflow {
     .value(file("$baseDir/results/mappedfastqs_23s_ivt/*.fastq"))
     .set {mappedfastqs_23s_ivt}
 
+    tombocompare_16s_1 = [
+        ("$baseDir/results/fast5s_native_1_16s_single"),
+        ("$baseDir/results/fast5s_ivt_1_16s_single")
+    ]
+    tombocompare_23s_1 = [
+        ("$baseDir/results/fast5s_native_1_23s_single"),
+        ("$baseDir/results/fast5s_ivt_1_23s_single")
+    ]
 
     map_16s_native (reference_16s_ch, nativefastqs_ch)
     map_16s_ivt (reference_16s_ch, ivtfastqs_ch)
@@ -188,9 +196,9 @@ workflow {
     tomboresquiggle_i_16s (multitosingle_i_16s.out.singlefast5s_ch, reference_16s_ch)
     tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
 
-    tombocompare_1_16s (tomboresquiggle_n_16s.out.resquiggledone, tomboresquiggle_i_16s.out.resquiggledone)
+    tombocompare_16s (tombocompare_16s_1, tomboresquiggle_n_16s.out.resquiggledone_ch, tomboresquiggle_i_16s.out.resquiggledone_ch)
 
-    tombocompare_1_23s (tomboresquiggle_n_23s.out.resquiggledone, tomboresquiggle_i_23s.out.resquiggledone)
+    tombocompare_23s (tombocompare_23s_1, tomboresquiggle_n_23s.out.resquiggledone_ch, tomboresquiggle_i_23s.out.resquiggledone_ch)
 
 }
 
