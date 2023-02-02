@@ -1,0 +1,35 @@
+tombo detect_modifications level_sample_compare \
+    --fast5-basedirs /home/bhargavam/Documents/rnamods-nf/results/fast5s_native_1_16s_single \
+    --alternate-fast5-basedirs /home/bhargavam/Documents/rnamods-nf/results/fast5s_ivt_1_16s_single \
+    --statistics-file-basename rep1 \
+    --store-p-value \
+    --statistic-type ks --processes 25
+
+
+    #! /usr/bin/env python
+    from tombo import tombo_helper, tombo_stats, resquiggle
+    import pandas as pd
+
+    sample_level_stats = tombo_stats.LevelStats("rep1.tombo.stats")
+    reg_level_stats = sample_level_stats.get_reg_stats('16s_88_rrsE', '+', 1, 1813)
+    pd.DataFrame(reg_level_stats).to_csv("rep1.csv")
+
+
+multi_to_single_fast5 --input_path /home/bhargavam/Documents/rnamods-nf/results/fast5s_native_1_16s --save_path /home/bhargavam/Documents/rnamods-nf/results/native_singlefast5s --recursive
+
+multi_to_single_fast5 --input_path /home/bhargavam/Documents/rnamods-nf/results/fast5s_ivt_1_16s --save_path /home/bhargavam/Documents/rnamods-nf/results/ivt_singlefast5s --recursive
+
+tombo resquiggle /home/bhargavam/Documents/rnamods-nf/results/native_singlefast5s /home/bhargavam/Documents/rnamods-nf/references/k12_16s.fa --rna --processes 25 --overwrite --num-most-common-errors 5
+
+tombo resquiggle /home/bhargavam/Documents/rnamods-nf/results/ivt_singlefast5s /home/bhargavam/Documents/rnamods-nf/references/k12_16s.fa --rna --processes 25 --overwrite --num-most-common-errors 5
+
+tombo detect_modifications level_sample_compare \
+    --fast5-basedirs /home/bhargavam/Documents/rnamods-nf/results/native_singlefast5s \
+    --alternate-fast5-basedirs /home/bhargavam/Documents/rnamods-nf/results/ivt_singlefast5s \
+    --statistics-file-basename test1 \
+    --store-p-value \
+    --statistic-type ks --processes 25
+
+sample_level_stats = tombo_stats.LevelStats("test1.tombo.stats")
+reg_level_stats = sample_level_stats.get_reg_stats('16s_88_rrsE', '+', 1, 1813)
+pd.DataFrame(reg_level_stats).to_csv("test1.csv")
