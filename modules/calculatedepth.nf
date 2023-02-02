@@ -1,5 +1,5 @@
 /*
- * Calculate depths from 16s bams for native and IVT data test
+ * Calculate depths from 16s bams for native and IVT data
  */
 
 process calculatedepth {
