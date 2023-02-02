@@ -12,9 +12,7 @@ process tombocompare {
     container '/home/bhargavam/Documents/containers/tombo_new.sif'
 
     input:
-    tuple path(native_singlefast5s), path (ivt_singlefast5s)
-    val flag
-    val flag
+    tuple val(rep), path(singlefast5s)
 
     output:
     path "*", emit: tombostat_ch
@@ -23,9 +21,9 @@ process tombocompare {
     script:
     """
     tombo detect_modifications level_sample_compare \
-    --fast5-basedirs $native_singlefast5s \
-    --alternate-fast5-basedirs $ivt_singlefast5s \
-    --statistics-file-basename ${native_singlefast5s.simpleName} \
+    --fast5-basedirs ${singlefast5s[0]} \
+    --alternate-fast5-basedirs ${singlefast5s[1]} \
+    --statistics-file-basename ${singlefast5s[1].simpleName} \
     --store-p-value \
     --statistic-type ks --processes 50
 
