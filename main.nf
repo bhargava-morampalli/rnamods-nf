@@ -137,7 +137,7 @@ workflow {
     ]
 
     tombocompare_23s_2 = [
-        ("$baseDir/results/fast5s_native_2_23s_single"),tombocompare as tombocompare_23s_1;
+        ("$baseDir/results/fast5s_native_2_23s_single"),
         ("$baseDir/results/fast5s_ivt_2_23s_single")
     ]
 
