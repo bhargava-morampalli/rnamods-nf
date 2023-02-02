@@ -60,7 +60,7 @@ include { tomboresquiggle as tomboresquiggle_n_16s; tomboresquiggle as tomboresq
 
 include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresquiggle_i_23s } from './modules/tomboresquiggle'
 
-include { tombocompare as tombocompare_16s_1; tombocompare as tombocompare_16s_2; tombocompare as tombocompare_16s_3; tombocompare as tombocompare_23s_1; tombocompare as tombocompare_23s_2; tombocompare as tombocompare_23s_3; } from './modules/tombocompare'
+include { tombocompare as tombocompare_16s_1; tombocompare as tombocompare_16s_2; tombocompare as tombocompare_16s_3; tombocompare as tombocompare_23s_1; tombocompare as tombocompare_23s_2; tombocompare as tombocompare_23s_3 } from './modules/tombocompare'
 
 include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from './modules/tomboextract_16s'
 
