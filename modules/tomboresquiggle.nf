@@ -1,7 +1,3 @@
-/*
- * Resuiggle the fast5s using tombo tool
- */
-
 process tomboresquiggle {
 
     fair true
@@ -16,11 +12,12 @@ process tomboresquiggle {
     path reference
 
     output:
-    path "*", optional: true, emit: resquiggledone
-    val true, emit: resquiggledone_ch
+    tuple path("*"), env(REP), optional: true, emit: resquiggledone
 
     script:
     """
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
+    path="$(basename -- $singlefast5s)"
+    REP="cut -d '_' -f 2- <<< $REP | cut -d '_' -f 2-"
     """
 }
