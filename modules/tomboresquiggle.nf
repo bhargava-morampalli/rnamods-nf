@@ -11,7 +11,7 @@ process tomboresquiggle {
     path reference
 
     output:
-    path("*"), optional: true, emit: resquiggledone_ch
+    path "*", optional: true, emit: resquiggledone_ch
 
     script:
     '''
