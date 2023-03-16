@@ -62,9 +62,9 @@ include { tomboresquiggle as tomboresquiggle_i_16s; tomboresquiggle as tomboresq
 
 include { tombocompare as tombocompare_16s; tombocompare as tombocompare_23s } from './modules/tombocompare'
 
-include { tomboextract_16s as tomboextract_16s_1 ; tomboextract_16s as tomboextract_16s_2 ; tomboextract_16s as tomboextract_16s_3 } from './modules/tomboextract_16s'
+include { tomboextract_16s as tomboextract_16s } from './modules/tomboextract_16s'
 
-include { tomboextract_23s as tomboextract_23s_1 ; tomboextract_23s as tomboextract_23s_2 ; tomboextract_23s as tomboextract_23s_3 } from './modules/tomboextract_23s'
+include { tomboextract_23s as tomboextract_23s } from './modules/tomboextract_23s'
 
 
 /*
@@ -194,6 +194,11 @@ workflow {
 
     tombocompare_16s(tomboresquiggle_16s)
     tombocompare_23s(tomboresquiggle_23s)
+
+    tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_1_16s.out.tombocomparedone)
+    tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_1_23s.out.tombocomparedone)
+
+
 }
 
 

@@ -4,6 +4,7 @@
 
 process tomboextract_23s {
 
+    fair true
     publishDir "$params.outdir/tombofinal_23s", mode:'copy'
 
     tag "extracting p values from tombo stat files for 23s"
