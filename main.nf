@@ -195,8 +195,8 @@ workflow {
     tombocompare_16s(tomboresquiggle_16s)
     tombocompare_23s(tomboresquiggle_23s)
 
-    tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_1_16s.out.tombocomparedone)
-    tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_1_23s.out.tombocomparedone)
+    tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_16s.out.tombocomparedone)
+    tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_23s.out.tombocomparedone)
 
 
 }
