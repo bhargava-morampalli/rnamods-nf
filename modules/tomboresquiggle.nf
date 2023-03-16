@@ -15,9 +15,9 @@ process tomboresquiggle {
     tuple path("*"), env(REP), optional: true, emit: resquiggledone_ch
 
     script:
+    prefix  =  singlefast5s.simpleName.toString()
     '''
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
-    path='${singlefast5s.simpleName}'
-    REP=$(echo $path | cut -d '_' -f 2-)
+    REP=$(echo $prefix | cut -d '_' -f 2-)
     '''
 }
