@@ -12,7 +12,7 @@ process tomboresquiggle {
     path reference
 
     output:
-    tuple path ("*"), env(REP), optional: true, emit: resquiggledone_ch
+    tuple path ("${singlefast5s.simpleName}"), env(REP), optional: true, emit: resquiggledone_ch
 
     script:
     path = singlefast5s.baseName.toString()
