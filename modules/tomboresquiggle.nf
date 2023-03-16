@@ -12,13 +12,10 @@ process tomboresquiggle {
     path reference
 
     output:
-    tuple path("*"), env(REP), optional: true, emit: resquiggledone_ch
+    path("*"), optional: true, emit: resquiggledone_ch
 
     script:
     '''
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
-    dir=$(ls -d */)
-    echo $dir
-    REP=1
     '''
 }
