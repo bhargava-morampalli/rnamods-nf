@@ -188,8 +188,8 @@ workflow {
     tomboresquiggle_i_16s (multitosingle_i_16s.out.singlefast5s_ch, reference_16s_ch)
     tomboresquiggle_i_23s (multitosingle_i_23s.out.singlefast5s_ch, reference_23s_ch)
     
-    tomboresquiggle_16s = tomboresquiggle_n_16s.out.resquiggledone_ch.mix(tomboresquiggle_i_16s.out.resquiggledone_ch).groupTuple(by: 1)
-    tomboresquiggle_23s = tomboresquiggle_n_23s.out.resquiggledone_ch.mix(tomboresquiggle_i_23s.out.resquiggledone_ch).groupTuple(by: 1)
+    tomboresquiggle_16s = tomboresquiggle_n_16s.out.resquiggledone_ch.mix(tomboresquiggle_i_16s.out.resquiggledone_ch).groupTuple(by: 1).view()
+    tomboresquiggle_23s = tomboresquiggle_n_23s.out.resquiggledone_ch.mix(tomboresquiggle_i_23s.out.resquiggledone_ch).groupTuple(by: 1).view()
 
 
     tombocompare_16s(tomboresquiggle_16s)
