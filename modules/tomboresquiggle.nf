@@ -14,7 +14,7 @@ process tomboresquiggle {
     path "*", optional: true, emit: resquiggledone_ch
 
     script:
-    '''
-    tombo resquiggle . $reference --rna --processes 50 --overwrite --num-most-common-errors 5
-    '''
+    """
+    tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
+    """
 }
