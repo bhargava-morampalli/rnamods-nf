@@ -1,5 +1,6 @@
 process tomboresquiggle {
-
+    
+    fair true
     publishDir "$params.outdir/${singlefast5s.simpleName}", mode:'copy'
 
     tag "resquiggle fast5s with tombo"
@@ -11,10 +12,12 @@ process tomboresquiggle {
     path reference
 
     output:
-    path "*", optional: true, emit: resquiggledone_ch
+    tuple path ("*"), env(REP), optional: true, emit: resquiggledone_ch
 
     script:
     """
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
+    path="$(basename -- $singlefast5s)"
+    REP=$(echo $path | cut -d '_' -f 2-)
     """
 }
