@@ -37,5 +37,6 @@ process tombocompare {
         --statistics-file-basename ${singlefast5s[1].simpleName} \
         --store-p-value \
         --statistic-type ks --processes 50
+    fi
     """
 }
