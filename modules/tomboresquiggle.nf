@@ -17,7 +17,7 @@ process tomboresquiggle {
     script:
     '''
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
-    path="${singlefast5s.getParent()}"
+    path=${singlefast5s.simpleName}
     REP=$(echo $path | cut -d '_' -f 2-)
     '''
 }
