@@ -22,7 +22,7 @@ process tombocompare {
     first = singlefast5s[0].baseName.toString()
     """
     type=\$(echo $first | cut -d '_' -f 2)
-    if [[ \$type == 'native']]; then 
+    if [[ \$type == 'native' ]]; then 
         tombo detect_modifications level_sample_compare \
         --fast5-basedirs ${singlefast5s[0]} \
         --alternate-fast5-basedirs ${singlefast5s[1]} \
