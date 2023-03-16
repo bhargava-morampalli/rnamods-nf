@@ -19,13 +19,23 @@ process tombocompare {
     val true, emit: tombocomparedone
 
     script:
+    first = singlefast5s[0].baseName.toString()
     """
-    tombo detect_modifications level_sample_compare \
-    --fast5-basedirs ${singlefast5s[0]} \
-    --alternate-fast5-basedirs ${singlefast5s[1]} \
-    --statistics-file-basename ${singlefast5s[1].simpleName} \
-    --store-p-value \
-    --statistic-type ks --processes 50
+    type=\$(echo $first | cut -d '_' -f 2)
+    if [[ $\type == 'native']]; then 
+        tombo detect_modifications level_sample_compare \
+        --fast5-basedirs ${singlefast5s[0]} \
+        --alternate-fast5-basedirs ${singlefast5s[1]} \
+        --statistics-file-basename ${singlefast5s[0].simpleName} \
+        --store-p-value \
+        --statistic-type ks --processes 50
 
+    else
+        tombo detect_modifications level_sample_compare \
+        --fast5-basedirs ${singlefast5s[1]} \
+        --alternate-fast5-basedirs ${singlefast5s[0]} \
+        --statistics-file-basename ${singlefast5s[1].simpleName} \
+        --store-p-value \
+        --statistic-type ks --processes 50
     """
 }
