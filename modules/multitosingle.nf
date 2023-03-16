@@ -15,7 +15,7 @@ process multitosingle {
 
     output:
     path "*", emit: singlefast5s_ch
-    val true, emit:multitosingledone
+    val true, emit: multitosingledone
 
     script:
 

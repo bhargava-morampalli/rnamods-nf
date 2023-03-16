@@ -1,6 +1,5 @@
 process tomboresquiggle {
 
-    fair true
     publishDir "$params.outdir/${singlefast5s.simpleName}", mode:'copy'
 
     tag "resquiggle fast5s with tombo"
