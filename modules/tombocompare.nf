@@ -12,7 +12,7 @@ process tombocompare {
     container '/home/bhargavam/Documents/containers/tombo_new.sif'
 
     input:
-    tuple val(rep), path(singlefast5s)
+    tuple  path(singlefast5s), val(rep)
 
     output:
     path "*", emit: tombostat_ch
