@@ -18,6 +18,6 @@ process tomboresquiggle {
     path = singlefast5s.baseName.toString()
     """
     tombo resquiggle $singlefast5s $reference --rna --processes 50 --overwrite --num-most-common-errors 5
-    REP=\$(echo $path | cut -d '_' -f 2-)
+    REP=\$(echo $path | cut -d '_' -f 3)
     """
 }
