@@ -66,6 +66,14 @@ include { tomboextract_16s as tomboextract_16s } from './modules/tomboextract_16
 
 include { tomboextract_23s as tomboextract_23s } from './modules/tomboextract_23s'
 
+include { f5cindex as f5cindex_n_16s; f5cindex as f5cindex_n_23s } from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
+
+include { f5cindex as f5cindex_i_16s; f5cindex as f5cindex_i_23s } from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
+
+include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n_23s } from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
+
+include { f5ceventalign as f5ceventalign_i_16s; f5ceventalign as f5ceventalign_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
+
 
 /*
  *  WORKFLOW 
@@ -197,6 +205,19 @@ workflow {
 
     tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_16s.out.tombocomparedone)
     tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_23s.out.tombocomparedone)
+
+    f5cindex_n_16s (multitosingle_n_16s.out.singlefast5s_ch, extract_16s_native.out.mappedfastqs)
+    f5cindex_n_23s (multitosingle_n_23s.out.singlefast5s_ch, extract_23s_native.out.mappedfastqs)
+
+    f5cindex_i_16s (multitosingle_i_16s.out.singlefast5s_ch, extract_16s_ivt.out.mappedfastqs)
+    f5cindex_i_23s (multitosingle_i_23s.out.singlefast5s_ch, extract_23s_ivt.out.mappedfastqs)
+
+
+    f5ceventalign1_n_16s (fastqinput1, baminput1, reference_16s_ch, f5cindex1_n_16s.out.f5cindexout)
+    f5ceventalign1_n_23s (fastqinput7, baminput7, reference_23s_ch, f5cindex1_n_23s.out.f5cindexout)
+
+    f5ceventalign1_i_16s (fastqinput4, baminput4, reference_16s_ch, f5cindex1_i_16s.out.f5cindexout)
+    f5ceventalign1_i_23s (fastqinput10, baminput10, reference_23s_ch, f5cindex1_i_23s.out.f5cindexout)
 
 
 }
