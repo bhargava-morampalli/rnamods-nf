@@ -66,9 +66,9 @@ include { tomboextract_16s as tomboextract_16s } from './modules/tomboextract_16
 
 include { tomboextract_23s as tomboextract_23s } from './modules/tomboextract_23s'
 
-include { f5cindex as f5cindex_n_16s; f5cindex as f5cindex_n_23s } from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
+include { f5cindex as f5cindex_n_16s; f5cindex as f5cindex_n_23s } from './modules/f5cindex'
 
-include { f5cindex as f5cindex_i_16s; f5cindex as f5cindex_i_23s } from '/home/bhargavam/Documents/nextflowmodules/f5cindex'
+include { f5cindex as f5cindex_i_16s; f5cindex as f5cindex_i_23s } from './modules/f5cindex'
 
 include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n_23s } from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
 

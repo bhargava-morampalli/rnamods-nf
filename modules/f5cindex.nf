@@ -19,8 +19,6 @@ process f5cindex {
     output:
     tuple path("*.fastq*")
 
-    val true, emit: f5cindexout
-
     script:
     """
     type=\$(echo $first | cut -d '.' -f 2)
