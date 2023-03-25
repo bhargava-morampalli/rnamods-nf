@@ -205,11 +205,11 @@ workflow {
     tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_16s.out.tombocomparedone)
     tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_23s.out.tombocomparedone)
 
-    f5xindex_n_16s = extractfast5s_native_16s.out.f5c_fast5.mix(extract_16s_native.out.f5c_fastq.mix).groupTuple(by: 1).view()
-    f5xindex_n_23s = extractfast5s_native_23s.out.f5c_fast5.mix(extract_23s_native.out.f5c_fastq.mix).groupTuple(by: 1).view()
+    f5c_n_16s = extractfast5s_native_16s.out.f5c_fast5.mix(extract_16s_native.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_n_23s = extractfast5s_native_23s.out.f5c_fast5.mix(extract_23s_native.out.f5c_fastq).groupTuple(by: 1).view()
 
-    f5xindex_i_16s = extractfast5s_ivt_16s.out.f5c_fast5.mix(extract_16s_ivt.out.f5c_fastq.mix).groupTuple(by: 1).view()
-    f5xindex_i_23s = extractfast5s_ivt_23s.out.f5c_fast5.mix(extract_23s_ivt.out.f5c_fastq.mix).groupTuple(by: 1).view()
+    f5c_i_16s = extractfast5s_ivt_16s.out.f5c_fast5.mix(extract_16s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_i_23s = extractfast5s_ivt_23s.out.f5c_fast5.mix(extract_23s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
 
 
 }
