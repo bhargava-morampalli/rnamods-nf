@@ -1,5 +1,5 @@
 /*
- * Calculate depths from 16s bams for native and IVT data
+ * Calculate depths from 16s and 23s bams for native and IVT data
  */
 
 process extractmappedreads {
@@ -18,10 +18,13 @@ process extractmappedreads {
 
     output:
     path "*.fastq", emit: mappedfastqs
+    tuple path ("*.fastq"), env(REP), optional: true, emit: f5c_fastq
+
 
     script:
 
     """
     samtools fastq -F4 $sams > ${sams.simpleName}.fastq
+    REP=\$(echo ${sams.simpleName} | cut -d '_' -f 2)
     """
 }

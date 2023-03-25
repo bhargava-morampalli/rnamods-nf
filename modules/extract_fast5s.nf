@@ -17,11 +17,13 @@ process extract_fast5s {
     output:
     path "fast5s*", emit: subsetfast5s
     val true, emit: extractdone_ch
+    tuple path ("fast5s*"), env(REP), optional: true, emit: f5c_fast5
 
     script:
 
     """
     mkdir -p fast5s_${idtextfile.simpleName}
     fast5_subset -i $fast5inputpath -s fast5s_${idtextfile.simpleName} -l *.txt -f ${idtextfile.simpleName}- --recursive
+    REP=\$(echo fast5s_${idtextfile.simpleName} | cut -d '_' -f 3)
     """
 }
