@@ -205,8 +205,8 @@ workflow {
     tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_16s.out.tombocomparedone)
     tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_23s.out.tombocomparedone)
 
-    fast5s_ch = extractfast5s_native_16s.out.collect()
-    fastqs_ch = extract_16s_native.out.collect()
+    fast5s_ch = extractfast5s_native_16s.out.subsetfast5s.collect()
+    fastqs_ch = extract_16s_native.out.mappedfastqs.collect()
     
     fast5_by_replicate = extractfast5s_native_16s.out.subsetfast5s.groupTuple(/fast5s_native_(\d+)_16s/, 1).view()
     fastq_by_replicate = extract_16s_native.out.mappedfastqs.groupTuple(/native_(\d+)_16s\.fastq/, 1).view()
