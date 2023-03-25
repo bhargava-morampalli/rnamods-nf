@@ -17,11 +17,12 @@ process indexmappedbams {
     path mappedsortedbams
 
     output:
-    path "*.bam.bai", emit: mappedsortedbamindex
+    tuple path "*.bam*", env(REP), emit: mappedbamindex
 
     script:
 
     """
     samtools index $mappedsortedbams
+    REP=\$(echo ${mappedsortedbams.simpleName} | cut -d '_' -f 2)
     """
 }

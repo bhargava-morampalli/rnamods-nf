@@ -14,10 +14,8 @@ process f5ceventalign {
     container '/home/bhargavam/Documents/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
-    tuple path(fastq), path(index), path(fai), path(gzi), path(readdb)
-    tuple path(bam), path(bai)
-    path referencefasta
-    val flag
+    tuple path(fastq_bam), val(rep)
+    path reference
 
     output:
     path "*_summary.txt", emit: f5csummary_ch
@@ -26,6 +24,6 @@ process f5ceventalign {
 
     script:
     """
-    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $referencefasta --summary ${fastq.simpleName}_summary.txt --threads 40 > ${fastq.simpleName}_eventalign.txt
+    f5c eventalign --scale-events --signal-index --print-read-names --rna -r ${fastq_bam[]} -b ${fastq_bam[]} -g $reference --summary ${fastq.simpleName}_summary.txt --threads 40 > ${fastq.simpleName}_eventalign.txt
     """
 }

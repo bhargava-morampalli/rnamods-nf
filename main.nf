@@ -134,13 +134,11 @@ workflow {
     flagstat_16s_ivt (map_16s_ivt.out.sams)
     flagstat_23s_native (map_23s_native.out.sams)
     flagstat_23s_ivt (map_23s_ivt.out.sams)
+    f5ceventalign1_n_16s (fastqinput1, baminput1, reference_16s_ch, f5cindex1_n_16s.out.f5cindexout)
+    f5ceventalign1_n_23s (fastqinput7, baminput7, reference_23s_ch, f5cindex1_n_23s.out.f5cindexout)
 
-    bam_16s_native (map_16s_native.out.sams)
-    bam_16s_ivt (map_16s_ivt.out.sams)
-    bam_23s_native (map_23s_native.out.sams)
-    bam_23s_ivt (map_23s_ivt.out.sams)
-
-    bamindex_16s_native (bam_16s_native.out.sortedbams)
+    f5ceventalign1_i_16s (fastqinput4, baminput4, reference_16s_ch, f5cindex1_i_16s.out.f5cindexout)
+    f5ceventalign1_i_23s (fastqinput10, baminput10, reference_23s_ch, f5cindex1_i_23s.out.f5cindexout)
     bamindex_16s_ivt (bam_16s_ivt.out.sortedbams)
     bamindex_23s_native (bam_23s_native.out.sortedbams)
     bamindex_23s_ivt (bam_23s_ivt.out.sortedbams)
@@ -216,6 +214,12 @@ workflow {
 
     f5cindex_i_16s(f5c_i_16s)
     f5cindex_i_23s(f5c_i_23s)
+
+    f5c_e_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 1).view()
+
+    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 1).view()
 
 }
 
