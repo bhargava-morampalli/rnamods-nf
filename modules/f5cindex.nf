@@ -14,7 +14,7 @@ process f5cindex {
     container '/home/bhargavam/Documents/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
-    tuple path(fast5_fastq), val(REP))
+    tuple path(fast5_fastq), val(rep)
 
     output:
     tuple path("*.fastq*")
