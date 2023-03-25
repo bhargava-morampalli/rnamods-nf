@@ -135,6 +135,11 @@ workflow {
     flagstat_23s_native (map_23s_native.out.sams)
     flagstat_23s_ivt (map_23s_ivt.out.sams)
 
+    bam_16s_native (map_16s_native.out.sams)
+    bam_16s_ivt (map_16s_ivt.out.sams)
+    bam_23s_native (map_23s_native.out.sams)
+    bam_23s_ivt (map_23s_ivt.out.sams)
+
     bamindex_16s_native (bam_16s_native.out.sortedbams)
     bamindex_16s_ivt (bam_16s_ivt.out.sortedbams)
     bamindex_23s_native (bam_23s_native.out.sortedbams)
