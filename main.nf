@@ -208,8 +208,8 @@ workflow {
     fast5s_ch = extractfast5s_native_16s.out.subsetfast5s.collect()
     fastqs_ch = extract_16s_native.out.mappedfastqs.collect()
     
-    fast5_by_replicate = extractfast5s_native_16s.out.subsetfast5s.groupTuple(/fast5s_native_(\d+)_16s/, 1).view()
-    fastq_by_replicate = extract_16s_native.out.mappedfastqs.groupTuple(/native_(\d+)_16s\.fastq/, 1).view()
+    fast5_by_replicate = fast5s_ch.groupTuple(/fast5s_native_(\d+)_16s/, 1).view()
+    fastq_by_replicate = fastqs_ch.groupTuple(/native_(\d+)_16s\.fastq/, 1).view()
 
 }
 
