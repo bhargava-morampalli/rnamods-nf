@@ -20,6 +20,7 @@ process f5cindex {
     tuple path("*.fastq*")
 
     script:
+    first = fast5_fastq[0].baseName.toString()
     """
     type=\$(echo $first | cut -d '.' -f 2)
     echo \$type
