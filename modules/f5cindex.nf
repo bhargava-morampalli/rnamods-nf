@@ -14,18 +14,21 @@ process f5cindex {
     container '/home/bhargavam/Documents/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
-    path multifast5s
-    path fastq
+    tuple path(fast5_fastq), val(REP))
 
     output:
-    path "*.fastq.index", emit: reads_index_ch
-	path "*.fastq.index.fai", emit: reads_fai_ch
-	path "*.fastq.index.gzi", emit: reads_gzi_ch
-	path "*.fastq.index.readdb", emit: reads_readdb_ch
+    tuple path("*.fastq*")
+
     val true, emit: f5cindexout
 
     script:
     """
-    f5c index -t 24 -d $multifast5s $fastq
+    type=\$(echo $first | cut -d '.' -f 2)
+    echo \$type
+    if [[ \$type == 'fastq' ]]; then
+    f5c index -t 24 -d ${fast5_fastq[1]} ${fast5_fastq[0]}
+    else
+    f5c index -t 24 -d ${fast5_fastq[0]} ${fast5_fastq[1]}
+    fi
     """
 }

@@ -211,6 +211,11 @@ workflow {
     f5c_i_16s = extractfast5s_ivt_16s.out.f5c_fast5.mix(extract_16s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
     f5c_i_23s = extractfast5s_ivt_23s.out.f5c_fast5.mix(extract_23s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
 
+    f5cindex_n_16s(f5c_n_16s)
+    f5cindex_n_23s(f5c_n_23s)
+
+    f5cindex_i_16s(f5c_i_16s)
+    f5cindex_i_23s(f5c_i_23s)
 
 }
 
