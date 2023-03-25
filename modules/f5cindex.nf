@@ -17,20 +17,17 @@ process f5cindex {
     tuple path(fast5_fastq), val(rep)
 
     output:
-    path "*.fastq.index", emit: reads_index_ch
-	path "*.fastq.index.fai", emit: reads_fai_ch
-	path "*.fastq.index.gzi", emit: reads_gzi_ch
-	path "*.fastq.index.readdb", emit: reads_readdb_ch
+    path "*.fastq*"
 
     script:
     first = fast5_fastq[0].baseName.toString()
     """
-    type=\$(echo $first | cut -d '.' -f 2)
+    type=\$(echo $first | cut -d '_' -f 1)
     echo \$type
-    if [[ \$type == 'fastq' ]]; then
-    f5c index -t 24 -d ${fast5_fastq[1]} ${fast5_fastq[0]}
-    else
+    if [[ \$type == 'fast5' ]]; then
     f5c index -t 24 -d ${fast5_fastq[0]} ${fast5_fastq[1]}
+    else
+    f5c index -t 24 -d ${fast5_fastq[1]} ${fast5_fastq[0]}
     fi
     """
 }
