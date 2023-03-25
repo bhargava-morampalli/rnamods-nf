@@ -17,7 +17,10 @@ process f5cindex {
     tuple path(fast5_fastq), val(rep)
 
     output:
-    path("*.fastq*")
+    path "*.fastq.index", emit: reads_index_ch
+	path "*.fastq.index.fai", emit: reads_fai_ch
+	path "*.fastq.index.gzi", emit: reads_gzi_ch
+	path "*.fastq.index.readdb", emit: reads_readdb_ch
 
     script:
     first = fast5_fastq[0].baseName.toString()
