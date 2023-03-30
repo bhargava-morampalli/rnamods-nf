@@ -15,6 +15,7 @@ process f5ceventalign {
 
     input:
     tuple path(fastq_bam), val(rep)
+    tuple path(fastq), path(bam)
     path reference
 
     output:
@@ -24,6 +25,6 @@ process f5ceventalign {
 
     script:
     """
-    f5c eventalign --scale-events --signal-index --print-read-names --rna -r ${fastq_bam[]} -b ${fastq_bam[]} -g $reference --summary ${fastq.simpleName}_summary.txt --threads 40 > ${fastq.simpleName}_eventalign.txt
+    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $reference --summary ${fastq.simpleName}_summary.txt --threads 40 > ${fastq.simpleName}_eventalign.txt
     """
 }
