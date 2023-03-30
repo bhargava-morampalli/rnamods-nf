@@ -223,7 +223,7 @@ workflow {
     f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
     f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
 
-    f5ceventalign_n_16s = ()
+    f5ceventalign_n_16s =
     f5ceventalign_n_23s = 
 
     f5ceventalign_i_16s = 

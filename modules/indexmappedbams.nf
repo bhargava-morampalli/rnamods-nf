@@ -17,7 +17,7 @@ process indexmappedbams {
     path mappedsortedbams
 
     output:
-    tuple mappedsortedbams, path ("*.bam*"), env(REP), emit: mappedbamindex
+    tuple val(mappedsortedbams), path ("*.bam*"), env(REP), emit: mappedbamindex
 
     script:
 
