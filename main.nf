@@ -220,8 +220,8 @@ workflow {
     f5c_e_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 1).view()
     f5c_e_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 1).view()
 
-    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 1).view()
-    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
 
 }
 
