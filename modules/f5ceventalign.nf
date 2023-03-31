@@ -14,8 +14,7 @@ process f5ceventalign {
     container '/home/bhargavam/Documents/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
-    tuple path(fastq_bam), val(rep)
-    tuple path(fastq), path(bam)
+    tuple path(bam_fastq), val(rep)
     path reference
 
     output:
@@ -24,7 +23,10 @@ process f5ceventalign {
     val true, emit: f5ceventaligndone_ch
 
     script:
+    firsttuple = bam_fastq[0]
+    bam = firsttuple[0]
+    fastq = firsttuple[1]
     """
-    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $reference --summary ${fastq.simpleName}_summary.txt --threads 40 > ${fastq.simpleName}_eventalign.txt
+    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $reference --summary ${bam_fastq[1].simpleName}_summary.txt --threads 40 > ${bam_fastq[1].simpleName}_eventalign.txt
     """
 }

@@ -17,9 +17,14 @@ process f5cindex {
     tuple path(fast5_fastq), val(rep)
 
     output:
-    tuple path("*.fastq*"), val(rep), emit: fastqindex
+    tuple val(second), path("*.fastq*"), val(rep), emit: fastqindex
 
     script:
+    if (!fast5_fastq[0].baseName.contains("fast5")) {
+        second = fast5_fastq[0]
+    } else {
+        second = fast5_fastq[1]
+    }
     first = fast5_fastq[0].baseName.toString()
     """
     type=\$(echo $first | cut -d '_' -f 1)

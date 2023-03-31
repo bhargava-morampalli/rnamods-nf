@@ -70,9 +70,9 @@ include { f5cindex as f5cindex_n_16s; f5cindex as f5cindex_n_23s } from './modul
 
 include { f5cindex as f5cindex_i_16s; f5cindex as f5cindex_i_23s } from './modules/f5cindex'
 
-include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n_23s } from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
+include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n_23s } from './modules/f5ceventalign'
 
-include { f5ceventalign as f5ceventalign_i_16s; f5ceventalign as f5ceventalign_i_23s} from '/home/bhargavam/Documents/nextflowmodules/f5ceventalign'
+include { f5ceventalign as f5ceventalign_i_16s; f5ceventalign as f5ceventalign_i_23s } from './modules/f5ceventalign'
 
 
 /*
@@ -217,17 +217,17 @@ workflow {
     f5cindex_i_16s(f5c_i_16s)
     f5cindex_i_23s(f5c_i_23s)
 
-    f5c_e_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 1).view()
-    f5c_e_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 2).view()
+    f5c_e_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 2).view()
 
-    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
-    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 1).view()
+    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 2).view()
+    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 2).view()
+    
+    f5ceventalign_n_16s = (f5c_e_n_16s, reference_16s_ch)
+    f5ceventalign_n_23s = (f5c_e_n_23s, reference_23s_ch)
 
-    f5ceventalign_n_16s =
-    f5ceventalign_n_23s = 
-
-    f5ceventalign_i_16s = 
-    f5ceventalign_i_23s = 
+    f5ceventalign_i_16s = (f5c_e_i_16s, reference_16s_ch)
+    f5ceventalign_i_23s = (f5c_e_i_23s, reference_23s_ch)
 
 }
 
