@@ -9,7 +9,7 @@ process yanocompprep {
 
     tag "prepare data for yanocomp"
 
-    container '/home/bhargavam/Documents/containers/yanocomp.sif'
+    container '/home/gandalf/containers/yanocomp.sif'
 
     input:
     path eventaligntext

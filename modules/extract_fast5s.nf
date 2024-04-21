@@ -8,7 +8,7 @@ process extract_fast5s {
     
     tag "extract multifast5s for mapped reads"
 
-    container '/home/bhargavam/Documents/containers/ont-fast5-api_4.1.0--pyhdfd78af_0.sif'
+    container '/home/gandalf/containers/ont-fast5-api_4.1.0--pyhdfd78af_0.sif'
 
     input:
     path fast5inputpath

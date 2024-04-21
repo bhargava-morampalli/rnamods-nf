@@ -11,10 +11,10 @@ process f5ceventalign {
 
     tag "eventalign using f5c (nanopolish)"
 
-    container '/home/bhargavam/Documents/containers/f5c_1.1--h0326b38_1.sif'
+    container '/home/gandalf/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
-    tuple path(bam_fastq), val(rep)
+    tuple path(fastq), path(index), path(fai), path(gzi), path(readdb), path(bam), path(bai), val(rep)
     path reference
 
     output:
@@ -23,10 +23,7 @@ process f5ceventalign {
     val true, emit: f5ceventaligndone_ch
 
     script:
-    firsttuple = bam_fastq[0]
-    bam = firsttuple[0]
-    fastq = firsttuple[1]
     """
-    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $reference --summary ${bam_fastq[1].simpleName}_summary.txt --threads 40 > ${bam_fastq[1].simpleName}_eventalign.txt
+    f5c eventalign --scale-events --signal-index --print-read-names --rna -r $fastq -b $bam -g $reference --summary ${rep}_${bam.simpleName}_summary.txt --threads 40 > ${rep}_${bam.simpleName}_eventalign.txt
     """
 }

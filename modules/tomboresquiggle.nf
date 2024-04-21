@@ -5,7 +5,7 @@ process tomboresquiggle {
 
     tag "resquiggle fast5s with tombo"
 
-    container '/home/bhargavam/Documents/containers/tombo_new.sif'
+    container '/home/gandalf/containers/tombo_new.sif'
 
     input:
     path singlefast5s

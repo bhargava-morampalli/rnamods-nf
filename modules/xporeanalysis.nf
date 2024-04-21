@@ -8,7 +8,7 @@ process xporeanalysis {
 
     tag "xpore analysis step"
 
-    container '/home/bhargavam/Documents/containers/xpore_2.1--pyh5e36f6f_0.sif'
+    container '/home/gandalf/containers/xpore_2.1--pyh5e36f6f_0.sif'
     
     input:
     path yamlfile

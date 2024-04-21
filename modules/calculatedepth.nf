@@ -11,7 +11,7 @@ process calculatedepth {
     
     tag "calculate depth info from sorted bam"
 
-    container '/home/bhargavam/Documents/containers/samtools_1.16.1--h6899075_1.sif'
+    container '/home/gandalf/containers/samtools_1.16.1--h6899075_1.sif'
 
     input:
     path sortedbams

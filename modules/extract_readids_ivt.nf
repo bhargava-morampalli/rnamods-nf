@@ -9,7 +9,7 @@ process extract_readids_ivt {
 
     tag "extract mapped read ids from fastqs to text file"
 
-    container '/home/bhargavam/Documents/containers/seqkit_2.3.1--h9ee0642_0.sif'
+    container '/home/gandalf/containers/seqkit_2.3.1--h9ee0642_0.sif'
 
     input:
     path mappedfastqs

@@ -10,7 +10,7 @@ process yanocompanalysis {
 
     tag "yanocomp compare to get mods"
 
-    container '/home/bhargavam/Documents/containers/yanocomp.sif'
+    container '/home/gandalf/containers/yanocomp.sif'
 
 
     input:

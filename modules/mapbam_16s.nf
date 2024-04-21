@@ -9,7 +9,7 @@ process mapbam_16s {
     
     tag "map native and ivt fastqs to 16s rRNA reference using minimap2"
 
-    container '/home/bhargavam/Documents/containers/minimap_samtools.sif'
+    container '/home/gandalf/containers/minimap_samtools.sif'
     
     input:
     path reference_16s

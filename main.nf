@@ -5,14 +5,14 @@ nextflow.enable.dsl=2
  */
 
 
-params.reference_16s = "/home/bhargavam/Documents/rnamods-nf/references/k12_16s.fa"
-params.reference_23s = "/home/bhargavam/Documents/rnamods-nf/references/k12_23s.fa"
+params.reference_16s = "$baseDir/references/k12_16s.fa"
+params.reference_23s = "$baseDir/references/k12_23s.fa"
 
 params.nativereads = "$baseDir/native/*.fastq"
 params.ivtreads = "$baseDir/ivt/*.fastq"
 
-params.nativefast5s = "/home/bhargavam/Documents/data/k12_native_fast5_all"
-params.ivtfast5s = "/home/bhargavam/Documents/data/k12_ivt_fast5_all"
+params.nativefast5s = "/home/gandalf/k12_native_fast5"
+params.ivtfast5s = "/home/gandalf/k12_ivt_fast5"
 
 
 params.outdir = "results"
@@ -217,17 +217,11 @@ workflow {
     f5cindex_i_16s(f5c_i_16s)
     f5cindex_i_23s(f5c_i_23s)
 
-    f5c_e_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 2).view()
-    f5c_e_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 2).view()
+    f5cindex_n_16s.out.fastqindex.view { println "f5cindex output: $it" }
+    mappedbamindex_16s_native.out.mappedbamindex.view { println "mappedbamindex output: $it" }
 
-    f5c_e_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 2).view()
-    f5c_e_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 2).view()
+
     
-    f5ceventalign_n_16s = (f5c_e_n_16s, reference_16s_ch)
-    f5ceventalign_n_23s = (f5c_e_n_23s, reference_23s_ch)
-
-    f5ceventalign_i_16s = (f5c_e_i_16s, reference_16s_ch)
-    f5ceventalign_i_23s = (f5c_e_i_23s, reference_23s_ch)
 
 }
 

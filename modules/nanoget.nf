@@ -20,6 +20,6 @@ process nanoget {
     script:
 
     """
-    /home/bhargavam/nanoget/scripts/create_feather.py --threads 20 --bam $bams --output ${bams.simpleName}.feather
+    $baseDir/scripts/create_feather.py --threads 20 --bam $bams --output ${bams.simpleName}.feather
     """
 }
