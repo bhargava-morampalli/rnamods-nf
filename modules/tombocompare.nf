@@ -30,7 +30,8 @@ process tombocompare {
         --alternate-fast5-basedirs ${singlefast5s[1]} \
         --statistics-file-basename ${singlefast5s[0].simpleName} \
         --store-p-value \
-        --statistic-type ks --processes 50
+        --minimum-test-reads 1 \
+        --statistic-type ks --processes 20
 
     else
         echo "ivt"
@@ -39,7 +40,8 @@ process tombocompare {
         --alternate-fast5-basedirs ${singlefast5s[0]} \
         --statistics-file-basename ${singlefast5s[1].simpleName} \
         --store-p-value \
-        --statistic-type ks --processes 50
+        --minimum-test-reads 1 \
+        --statistic-type ks --processes 20
     fi
     """
 }

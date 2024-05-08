@@ -205,21 +205,30 @@ workflow {
     tomboextract_16s (tombocompare_16s.out.tombostat_ch, tombocompare_16s.out.tombocomparedone)
     tomboextract_23s (tombocompare_23s.out.tombostat_ch, tombocompare_23s.out.tombocomparedone)
 
-    f5c_n_16s = extractfast5s_native_16s.out.f5c_fast5.mix(extract_16s_native.out.f5c_fastq).groupTuple(by: 1).view()
-    f5c_n_23s = extractfast5s_native_23s.out.f5c_fast5.mix(extract_23s_native.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_index_n_16s = extractfast5s_native_16s.out.f5c_fast5.mix(extract_16s_native.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_index_n_23s = extractfast5s_native_23s.out.f5c_fast5.mix(extract_23s_native.out.f5c_fastq).groupTuple(by: 1).view()
 
-    f5c_i_16s = extractfast5s_ivt_16s.out.f5c_fast5.mix(extract_16s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
-    f5c_i_23s = extractfast5s_ivt_23s.out.f5c_fast5.mix(extract_23s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_index_i_16s = extractfast5s_ivt_16s.out.f5c_fast5.mix(extract_16s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
+    f5c_index_i_23s = extractfast5s_ivt_23s.out.f5c_fast5.mix(extract_23s_ivt.out.f5c_fastq).groupTuple(by: 1).view()
 
-    f5cindex_n_16s(f5c_n_16s)
-    f5cindex_n_23s(f5c_n_23s)
+    f5cindex_n_16s(f5c_index_n_16s)
+    f5cindex_n_23s(f5c_index_n_23s)
 
-    f5cindex_i_16s(f5c_i_16s)
-    f5cindex_i_23s(f5c_i_23s)
+    f5cindex_i_16s(f5c_index_i_16s)
+    f5cindex_i_23s(f5c_index_i_23s)
 
     f5cindex_n_16s.out.fastqindex.view { println "f5cindex output: $it" }
     mappedbamindex_16s_native.out.mappedbamindex.view { println "mappedbamindex output: $it" }
 
+    f5c_event_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
+    f5c_event_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
+    f5c_event_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
+    f5c_event_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
+
+    f5ceventalign_n_16s(f5c_event_n_16s, reference_16s_ch)
+    f5ceventalign_i_16s(f5c_event_i_16s, reference_16s_ch)
+    f5ceventalign_n_23s(f5c_event_n_23s, reference_23s_ch)
+    f5ceventalign_i_23s(f5c_event_i_23s, reference_23s_ch)
 
     
 
