@@ -5,22 +5,20 @@
 
 process yanocompprep {
 
-    publishDir "$params.outdir/yano_${summarytext.simpleName}", mode:'copy'
+    publishDir "$params.outdir/yano_${summary.simpleName}", mode:'copy'
 
     tag "prepare data for yanocomp"
 
     container '/home/gandalf/containers/yanocomp.sif'
 
     input:
-    path eventaligntext
-    path summarytext
+    tuple path (summary), path (eventalign), val(rep)
 
     output:
-    path "*.hdf5", emit: yanohdf5
-    val true, emit: yanoprepdone
+    tuple path ("*.hdf5"), val (rep), emit: yanohdf5
 
     script:
     """
-    yanocomp prep -p 50 -e $eventaligntext -s $summarytext -h ${summarytext.simpleName}.hdf5
+    yanocomp prep -p 50 -e $eventalign -s $summary -h ${summary.simpleName}.hdf5
     """
 }

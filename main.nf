@@ -74,6 +74,16 @@ include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n
 
 include { f5ceventalign as f5ceventalign_i_16s; f5ceventalign as f5ceventalign_i_23s } from './modules/f5ceventalign'
 
+include { xporeprep as xporeprep_n_16s; xporeprep as xporeprep_n_23s } from './modules/xporeprep'
+
+include { xporeprep as xporeprep_i_16s; xporeprep as xporeprep_i_23s } from './modules/xporeprep'
+
+include { yanocompprep as yanocompprep_n_16s; yanocompprep as yanocompprep_n_23s } from './modules/yanocompprep'
+
+include { yanocompprep as yanocompprep_i_16s; yanocompprep as yanocompprep_i_23s } from './modules/yanocompprep'
+
+include { yanocompanalysis as yanoanalysis_16s; yanocompanalysis as yanoanalysis_23s } from './modules/yanocompanalysis'
+
 
 /*
  *  WORKFLOW 
@@ -220,17 +230,37 @@ workflow {
     f5cindex_n_16s.out.fastqindex.view { println "f5cindex output: $it" }
     mappedbamindex_16s_native.out.mappedbamindex.view { println "mappedbamindex output: $it" }
 
-    f5c_event_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
-    f5c_event_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
-    f5c_event_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
-    f5c_event_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep) }.view()
+    f5c_event_n_16s = f5cindex_n_16s.out.fastqindex.mix(mappedbamindex_16s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep, fast5 -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep, fast5) }.view()
+    f5c_event_i_16s = f5cindex_i_16s.out.fastqindex.mix(mappedbamindex_16s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep, fast5 -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep, fast5) }.view()
+    f5c_event_n_23s = f5cindex_n_23s.out.fastqindex.mix(mappedbamindex_23s_native.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep, fast5 -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep, fast5) }.view()
+    f5c_event_i_23s = f5cindex_i_23s.out.fastqindex.mix(mappedbamindex_23s_ivt.out.mappedbamindex).groupTuple(by: 2).map { id, files, rep, fast5 -> tuple(files[1][0], files[1][1], files[1][2], files[1][3], files[1][4], files[0][0], files[0][1], rep, fast5) }.view()
 
     f5ceventalign_n_16s(f5c_event_n_16s, reference_16s_ch)
-    f5ceventalign_i_16s(f5c_event_i_16s, reference_16s_ch)
     f5ceventalign_n_23s(f5c_event_n_23s, reference_23s_ch)
+    
+    f5ceventalign_i_16s(f5c_event_i_16s, reference_16s_ch)
     f5ceventalign_i_23s(f5c_event_i_23s, reference_23s_ch)
 
+    yanocompprep_n_16s(f5ceventalign_n_16s.out.tuple_ch1)
+    yanocompprep_n_23s(f5ceventalign_n_23s.out.tuple_ch1)
     
+    yanocompprep_i_16s(f5ceventalign_i_16s.out.tuple_ch1)
+    yanocompprep_i_23s(f5ceventalign_i_23s.out.tuple_ch1)
+
+    yanocompprep_n_16s.out.yanohdf5.view()
+    yanocompprep_i_16s.out.yanohdf5.view()
+
+    yanocompprep_n_23s.out.yanohdf5.view()
+    yanocompprep_i_23s.out.yanohdf5.view()
+
+    yanoprep_16s = yanocompprep_n_16s.out.yanohdf5.join(yanocompprep_i_16s.out.yanohdf5, by:1).view { println "yanocompprep 16s output: $it" }
+    yanoprep_23s = yanocompprep_n_23s.out.yanohdf5.join(yanocompprep_i_23s.out.yanohdf5, by:1).view { println "yanocompprep 23s output: $it" }
+
+    yanoanalysis_16s(yanoprep_16s)
+    yanoanalysis_23s(yanoprep_23s)
+
+    yanoanalysis_16s.out.yano_out.view{ println "yanoanalysis 16s output: $it" }
+    yanoanalysis_23s.out.yano_out.view{ println "yanoanalysis 23s output: $it" }
 
 }
 

@@ -12,8 +12,7 @@ process xporeprep {
     container '/home/gandalf/containers/xpore_2.1--pyh5e36f6f_0.sif'
 
     input:
-    path eventalign
-    val flag
+    tuple path(summary), path(eventalign), val(rep)
 
     output:
     path "dataprep/data.log", emit: xporelog
@@ -21,13 +20,13 @@ process xporeprep {
     path "dataprep/data.json", emit: xporejson
     path "dataprep/data.readcount", emit: xporereadcount
     path "dataprep/eventalign.index", emit: eventalignindex
-    val true, emit: xporeprepdone
+    val rep, emit: xporeprepdone
 
     script:
     """
     xpore dataprep \
     --eventalign $eventalign \
     --out_dir dataprep \
-    --n_processes 50
+    --n_processes 25
     """
 }
