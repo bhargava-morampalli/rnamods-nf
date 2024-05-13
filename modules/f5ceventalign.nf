@@ -11,7 +11,7 @@ process f5ceventalign {
 
     tag "eventalign using f5c (nanopolish)"
 
-    container '/home/gandalf/containers/f5c_1.1--h0326b38_1.sif'
+    container '/home/gandalf/containers/f5c_new.sif'
 
     input:
     tuple path(fastq), path(index), path(fai), path(gzi), path(readdb), path(bam), path(bai), val(rep), path(fast5s)

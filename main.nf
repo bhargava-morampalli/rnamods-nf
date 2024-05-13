@@ -74,15 +74,15 @@ include { f5ceventalign as f5ceventalign_n_16s; f5ceventalign as f5ceventalign_n
 
 include { f5ceventalign as f5ceventalign_i_16s; f5ceventalign as f5ceventalign_i_23s } from './modules/f5ceventalign'
 
-include { xporeprep as xporeprep_n_16s; xporeprep as xporeprep_n_23s } from './modules/xporeprep'
-
-include { xporeprep as xporeprep_i_16s; xporeprep as xporeprep_i_23s } from './modules/xporeprep'
-
 include { yanocompprep as yanocompprep_n_16s; yanocompprep as yanocompprep_n_23s } from './modules/yanocompprep'
 
 include { yanocompprep as yanocompprep_i_16s; yanocompprep as yanocompprep_i_23s } from './modules/yanocompprep'
 
 include { yanocompanalysis as yanoanalysis_16s; yanocompanalysis as yanoanalysis_23s } from './modules/yanocompanalysis'
+
+include { xporeprep as xporeprep_n_16s; xporeprep as xporeprep_n_23s } from './modules/xporeprep'
+
+include { xporeprep as xporeprep_i_16s; xporeprep as xporeprep_i_23s } from './modules/xporeprep'
 
 
 /*
