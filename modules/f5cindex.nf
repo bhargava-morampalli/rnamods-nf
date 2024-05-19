@@ -11,7 +11,7 @@ process f5cindex {
 
     tag "nanopolish index using f5c"
 
-    container '/home/gandalf/containers/f5c_0.7.sif'
+    container '/home/gandalf/containers/f5c_1.1--h0326b38_1.sif'
 
     input:
     tuple path(fast5_fastq), val(rep)

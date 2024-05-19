@@ -4,7 +4,8 @@
 
 process xporeanalysis {
     
-    publishDir "$params.outdir/xporefinal_${yaml.simpleName}", mode:'copy'
+    publishDir "$params.outdir/xporefinal_16s", pattern:"", mode:'copy'
+    publishDir "$params.outdir/xporefinal_23s", pattern:"", mode:'copy'
 
     tag "xpore analysis step"
 
@@ -12,13 +13,9 @@ process xporeanalysis {
     
     input:
     path yamlfile
-    val flag
-    val flag
 
     output:
-    path "diffmod.table", emit: xporetable
-    path "diffmod.log", emit: xporelog
-    val true, emit: xporeanalysis
+    path "diffmod*", emit: xpore_diffmod_outputs
 
     script:
     """

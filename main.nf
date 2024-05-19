@@ -262,6 +262,15 @@ workflow {
     yanoanalysis_16s.out.yano_out.view{ println "yanoanalysis 16s output: $it" }
     yanoanalysis_23s.out.yano_out.view{ println "yanoanalysis 23s output: $it" }
 
+    xporeprep_n_16s(f5ceventalign_n_16s.out.tuple_ch1)
+    xporeprep_n_23s(f5ceventalign_n_23s.out.tuple_ch1)
+
+    xporeprep_i_16s(f5ceventalign_i_16s.out.tuple_ch1)
+    xporeprep_i_23s(f5ceventalign_i_23s.out.tuple_ch1)
+
+    xporeprep_n_16s.out.xporeout.join(xporeprep_i_16s.out.xporeout, by:1).view { println "xporeprep 16s output: $it" }
+    xporeprep_n_23s.out.xporeout.join(xporeprep_i_23s.out.xporeout, by:1).view { println "xporeprep 23s output: $it" }
+
 }
 
 
