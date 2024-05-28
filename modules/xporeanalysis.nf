@@ -12,7 +12,7 @@ process xporeanalysis {
     container '/home/gandalf/containers/xpore_2.1--pyh5e36f6f_0.sif'
     
     input:
-    path yamlfile
+    tuple 
 
     output:
     path "diffmod*", emit: xpore_diffmod_outputs
