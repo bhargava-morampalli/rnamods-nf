@@ -12,13 +12,15 @@ process xporeanalysis {
     container '/home/gandalf/containers/xpore_2.1--pyh5e36f6f_0.sif'
     
     input:
-    tuple 
+    tuple val(rep), path(xpore_native), path(xpore_ivt)
 
     output:
     path "diffmod*", emit: xpore_diffmod_outputs
 
     script:
+    diffmod_config = "--config diffmod_config.yml"
     """
-    xpore diffmod --config $yamlfile
+    create_yml.py diffmod_config.yml $xpore_native $xpore_ivt
+    xpore diffmod $diffmod_config --n_processes $task.cpus
     """
 }

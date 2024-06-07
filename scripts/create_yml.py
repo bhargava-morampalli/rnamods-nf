@@ -28,14 +28,9 @@ for condition in dict:
 outfile.write("\n" + "out: ./diffmod_outputs" + "\n" + "\n")
 
 outfile.write(
-    "method:"
+    "criteria:"
     + "\n"
-    + "    prefiltering:"
-    + "\n"
-    + "        method: t-test"
-    + "\n"
-    + "        threshold: 0.1"
-    + "\n"
+    + "    readcount_min: 1"
     + "\n"
 )
 
