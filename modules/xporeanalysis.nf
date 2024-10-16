@@ -9,7 +9,7 @@ process xporeanalysis {
 
     tag "xpore analysis step"
 
-    container '/home/gandalf/containers/xpore_2.1--pyh5e36f6f_0.sif'
+    container '/home/bmorampa/containers/xpore_2.1--pyh5e36f6f_0.sif'
     
     input:
     tuple val(rep), path(xpore_native), path(xpore_ivt)

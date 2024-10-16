@@ -11,7 +11,7 @@ process sortedbams {
 
     tag "convert sam to sorted bam"
 
-    container '/home/gandalf/containers/samtools_1.16.1--h6899075_1.sif'
+    container '/home/bmorampa/containers/samtools_1.16.1--h6899075_1.sif'
 
     input:
     path sams

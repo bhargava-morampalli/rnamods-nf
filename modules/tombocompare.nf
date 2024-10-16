@@ -9,7 +9,7 @@ process tombocompare {
 
     tag "tombo level sample compare"
 
-    container '/home/gandalf/containers/tombo_new.sif'
+    container '/home/bmorampa/containers/tombo_new.sif'
 
     input:
     tuple  path(singlefast5s), val(rep)

@@ -9,7 +9,7 @@ process tomboextract_16s {
 
     tag "extracting p values from tombo stat files for 16s"
 
-    container '/home/gandalf/containers/tombo_new.sif'
+    container '/home/bmorampa/containers/tombo_new.sif'
 
     input:
     path statfile

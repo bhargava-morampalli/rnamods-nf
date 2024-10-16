@@ -10,7 +10,7 @@ process yanocompanalysis {
 
     tag "yanocomp compare to get mods"
 
-    container '/home/gandalf/containers/yanocomp.sif'
+    container '/home/bmorampa/containers/yanocomp.sif'
 
     input:
     tuple val(rep), path (hdf5_native), path(hdf5_ivt)

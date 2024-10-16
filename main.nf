@@ -11,8 +11,8 @@ params.reference_23s = "$baseDir/references/k12_23s.fa"
 params.nativereads = "$baseDir/native/*.fastq"
 params.ivtreads = "$baseDir/ivt/*.fastq"
 
-params.nativefast5s = "/home/gandalf/k12_native_fast5"
-params.ivtfast5s = "/home/gandalf/k12_ivt_fast5"
+params.nativefast5s = "/home/bmorampa/k12_native_fast5"
+params.ivtfast5s = "/home/bmorampa/k12_ivt_fast5"
 
 
 params.outdir = "results"

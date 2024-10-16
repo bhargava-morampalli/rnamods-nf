@@ -9,7 +9,7 @@ process yanocompprep {
 
     tag "prepare data for yanocomp"
 
-    container '/home/gandalf/containers/yanocomp.sif'
+    container '/home/bmorampa/containers/yanocomp.sif'
 
     input:
     tuple path (summary), path (eventalign), val(rep)

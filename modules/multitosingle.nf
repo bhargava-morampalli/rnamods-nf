@@ -8,7 +8,7 @@ process multitosingle {
 
     tag "convert multifast5s into single fast5s"
 
-    container '/home/gandalf/containers/ont-fast5-api_4.1.0--pyhdfd78af_0.sif'
+    container '/home/bmorampa/containers/ont-fast5-api_4.1.0--pyhdfd78af_0.sif'
 
     input:
     path multitosingleinputpath
