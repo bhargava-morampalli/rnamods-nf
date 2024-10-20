@@ -18,6 +18,7 @@ process tomboextract_16s {
     output:
     path "*.csv", emit: tomboextract_ch
     val true, emit: tomboextractdone
+    path "versions.yml", emit: versions
 
     script:
     """

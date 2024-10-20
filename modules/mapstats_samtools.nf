@@ -15,6 +15,7 @@ process mapstats_samtools {
 
     output:
     path "*_flagstat.txt", emit: flagstatfile
+    path "versions.yml", emit: versions
 
     script:
 

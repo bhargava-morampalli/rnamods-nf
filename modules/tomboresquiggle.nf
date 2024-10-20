@@ -13,6 +13,7 @@ process tomboresquiggle {
 
     output:
     tuple path ("${singlefast5s.simpleName}"), env(REP), optional: true, emit: resquiggledone_ch
+    path "versions.yml", emit: versions
 
     script:
     path = singlefast5s.baseName.toString()

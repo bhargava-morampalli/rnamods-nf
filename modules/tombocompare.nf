@@ -17,6 +17,7 @@ process tombocompare {
     output:
     path "*", emit: tombostat_ch
     val true, emit: tombocomparedone
+    path "versions.yml", emit: versions
 
     script:
     first = singlefast5s[0].baseName.toString()

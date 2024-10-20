@@ -16,6 +16,7 @@ process multitosingle {
     output:
     path "*", emit: singlefast5s_ch
     val true, emit: multitosingledone
+    path "versions.yml", emit: versions
 
     script:
 

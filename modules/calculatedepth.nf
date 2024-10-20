@@ -18,10 +18,17 @@ process calculatedepth {
 
     output:
     path "*.txt", emit: depths
+    path "versions.yml", emit: versions
 
     script:
 
     """
     samtools depth -a -m 0 $sortedbams > ${sortedbams.simpleName}.txt
+
+    samtools --version | grep samtools | cut -d ' ' -f2 > samtools_version.txt
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        samtools: \$(cat samtools_version.txt)
+    END_VERSIONS
     """
 }

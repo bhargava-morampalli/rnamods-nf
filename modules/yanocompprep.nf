@@ -16,6 +16,7 @@ process yanocompprep {
 
     output:
     tuple path ("*.hdf5"), val (rep), emit: yanohdf5
+    path "versions.yml", emit: versions
 
     script:
     """

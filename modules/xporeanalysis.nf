@@ -16,6 +16,7 @@ process xporeanalysis {
 
     output:
     path "diffmod*", emit: xpore_diffmod_outputs
+    path "versions.yml", emit: versions
 
     script:
     diffmod_config = "--config diffmod_config.yml"

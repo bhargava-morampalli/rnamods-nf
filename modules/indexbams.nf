@@ -18,6 +18,7 @@ process indexbams {
 
     output:
     path "*.bam.bai", emit: sortedbamindex
+    path "versions.yml", emit: versions
 
     script:
 

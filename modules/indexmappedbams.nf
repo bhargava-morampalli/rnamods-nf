@@ -18,6 +18,7 @@ process indexmappedbams {
 
     output:
     tuple val(mappedsortedbams), path ("*.bam*", includeInputs:true), env(REP), emit: mappedbamindex
+    path "versions.yml", emit: versions
 
     script:
 
