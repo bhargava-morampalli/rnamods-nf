@@ -17,6 +17,7 @@ process mapbam_23s {
 
     output:
     path "*_sorted.bam", emit: sortedbams
+    path "versions.yml", emit: versions
 
     script:
 

@@ -18,6 +18,7 @@ process extract_fast5s {
     path "fast5s*", emit: subsetfast5s
     val true, emit: extractdone_ch
     tuple path ("fast5s*"), env(REP), optional: true, emit: f5c_fast5
+    path "versions.yml", emit: versions
 
     script:
 

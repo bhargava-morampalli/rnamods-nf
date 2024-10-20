@@ -17,6 +17,7 @@ process extract_readids_native {
     output:
     path "*.fasta", emit: mappedfastas
     path "*.txt", emit: mappedreadids
+    path "versions.yml", emit: versions
     
     script:
 

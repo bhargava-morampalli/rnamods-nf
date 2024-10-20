@@ -19,6 +19,7 @@ process f5ceventalign {
 
     output:
     tuple path ("*_summary.txt"), path ("*_eventalign.txt"), val(rep), emit: tuple_ch1
+    path "versions.yml", emit: versions
 
     script:
     """

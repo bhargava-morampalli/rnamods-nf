@@ -17,6 +17,7 @@ process yanocompanalysis {
 
     output:
     tuple path ("*.bed"), path ("*_sm_preds.json"), val (rep), emit: yano_out
+    path "versions.yml", emit: versions
 
     script:
     """

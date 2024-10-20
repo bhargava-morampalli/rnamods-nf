@@ -16,6 +16,7 @@ process xporeprep {
 
     output:
     tuple path("dataprep"), val(rep), emit: xporeout
+    path "versions.yml", emit: versions
 
     script:
     """

@@ -18,6 +18,7 @@ process sortedbams {
 
     output:
     path "*_sorted.bam", emit: sortedbams
+    path "versions.yml", emit: versions
 
     script:
 

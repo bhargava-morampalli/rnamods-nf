@@ -17,6 +17,7 @@ process map_16s {
 
     output:
     path "*_16s.sam", emit: sams
+    path "versions.yml", emit: versions
 
     script:
 

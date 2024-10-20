@@ -18,6 +18,7 @@ process f5cindex {
 
     output:
     tuple val(second), path("*.fastq*", includeInputs:true), val(rep), path ("fast5s*", includeInputs:true), emit: fastqindex
+    path "versions.yml", emit: versions
 
     script:
     if (!fast5_fastq[0].baseName.contains("fast5")) {

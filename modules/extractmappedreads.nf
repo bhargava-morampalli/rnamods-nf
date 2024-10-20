@@ -19,6 +19,7 @@ process extractmappedreads {
     output:
     path "*.fastq", emit: mappedfastqs
     tuple path ("*.fastq"), env(REP), optional: true, emit: f5c_fastq
+    path "versions.yml", emit: versions
 
 
     script:
